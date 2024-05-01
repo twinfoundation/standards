@@ -7,3 +7,4 @@ export * from "./models/IDidPresentationVerification";
 export * from "./models/IDidService";
 export * from "./models/IDidVerifiableCredential";
 export * from "./models/IDidVerifiablePresentation";
+export * from "./models/didVerificationMethodType";
