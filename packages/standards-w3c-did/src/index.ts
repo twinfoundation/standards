@@ -4,6 +4,7 @@ export * from "./models/IDidCredentialStatus";
 export * from "./models/IDidDocument";
 export * from "./models/IDidDocumentVerificationMethod";
 export * from "./models/IDidPresentationVerification";
+export * from "./models/IDidProof";
 export * from "./models/IDidService";
 export * from "./models/IDidVerifiableCredential";
 export * from "./models/IDidVerifiablePresentation";

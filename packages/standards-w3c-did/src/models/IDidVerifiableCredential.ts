@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-
 import type { IDidCredentialStatus } from "./IDidCredentialStatus";
+import type { IDidProof } from "./IDidProof";
 
 /**
  * Interface describing a verifiable credential.
@@ -42,4 +42,10 @@ export interface IDidVerifiableCredential<T = unknown> {
 	 * The date the verifiable credential was issued.
 	 */
 	issuanceDate: string;
+
+	/**
+	 * Proofs that the verifiable credential is valid.
+	 * Optional if a different proof method is used, such as JWT.
+	 */
+	proof?: IDidProof | IDidProof[];
 }
