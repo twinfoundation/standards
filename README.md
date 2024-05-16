@@ -1,4 +1,4 @@
-# GTSC / Standards
+# GTSC Standards
 
 This mono-repository contains packages defining standards.
 
