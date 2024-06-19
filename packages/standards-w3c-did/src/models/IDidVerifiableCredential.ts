@@ -15,7 +15,7 @@ export interface IDidVerifiableCredential<T = unknown> {
 	/**
 	 * The identifier for the verifiable credential.
 	 */
-	id: string;
+	id?: string;
 
 	/**
 	 * The types of the data stored in the verifiable credential.
@@ -36,12 +36,12 @@ export interface IDidVerifiableCredential<T = unknown> {
 	/**
 	 * The issuing identity.
 	 */
-	issuer: string;
+	issuer?: string;
 
 	/**
 	 * The date the verifiable credential was issued.
 	 */
-	issuanceDate: string;
+	issuanceDate?: string;
 
 	/**
 	 * Proofs that the verifiable credential is valid.
