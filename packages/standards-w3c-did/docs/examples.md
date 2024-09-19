@@ -1,1 +1,1 @@
-# @gtsc/standards-w3c-did - Examples
+# @twin.org/standards-w3c-did - Examples

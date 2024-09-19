@@ -1,4 +1,4 @@
-# Type alias: DidVerificationMethodType
+# Type Alias: DidVerificationMethodType
 
 > **DidVerificationMethodType**: *typeof* [`DidVerificationMethodType`](../variables/DidVerificationMethodType.md)\[keyof *typeof* [`DidVerificationMethodType`](../variables/DidVerificationMethodType.md)\]
 

@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IJwk } from "@gtsc/web";
+import type { IJwk } from "@twin.org/web";
 
 /**
  * Interface describing a DID document verification method.

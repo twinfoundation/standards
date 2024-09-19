@@ -1,4 +1,4 @@
-# GTSC Standards
+# TWIN Standards
 
 This mono-repository contains packages defining standards.
 
