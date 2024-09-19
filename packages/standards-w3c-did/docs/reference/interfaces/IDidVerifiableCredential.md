@@ -2,7 +2,7 @@
 
 Interface describing a verifiable credential.
 
-## Type parameters
+## Type Parameters
 
 • **T** = `unknown`
 

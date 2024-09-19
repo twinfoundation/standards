@@ -1,4 +1,4 @@
-# @gtsc/standards-w3c-did
+# @twin.org/standards-w3c-did
 
 ## Interfaces
 

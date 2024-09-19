@@ -4,6 +4,6 @@
 
 The types of verification method.
 
-## Index signature
+## Index Signature
 
  \[`id`: `string`\]: keyof `Pick`\<[`IDidDocument`](../interfaces/IDidDocument.md), `"verificationMethod"` \| `"authentication"` \| `"assertionMethod"` \| `"keyAgreement"` \| `"capabilityInvocation"` \| `"capabilityDelegation"`\>

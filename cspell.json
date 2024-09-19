@@ -17,6 +17,6 @@
 		".eslintrc.cjs",
 		"**/wordlists/**"
 	],
-	"words": ["gtsc", "Multibase", "nameof", "Stiftung"],
+	"words": ["Multibase", "nameof", "Stiftung"],
 	"ignoreRegExpList": ["/from\\s+(['\"]).*\\1/", "/eslint-disable.*/"]
 }
