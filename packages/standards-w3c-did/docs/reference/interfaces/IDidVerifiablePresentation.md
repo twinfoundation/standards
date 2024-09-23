@@ -30,7 +30,7 @@ The types of the data stored in the verifiable credential.
 
 ### verifiableCredential
 
-> **verifiableCredential**: `string`[]
+> **verifiableCredential**: (`string` \| `IJsonLdNodeObject`)[]
 
 The data for the verifiable credentials.
 

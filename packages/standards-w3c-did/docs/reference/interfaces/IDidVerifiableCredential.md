@@ -1,10 +1,6 @@
-# Interface: IDidVerifiableCredential\<T\>
+# Interface: IDidVerifiableCredential
 
 Interface describing a verifiable credential.
-
-## Type Parameters
-
-• **T** = `unknown`
 
 ## Properties
 
@@ -34,7 +30,7 @@ The types of the data stored in the verifiable credential.
 
 ### credentialSubject
 
-> **credentialSubject**: `T` \| `T`[]
+> **credentialSubject**: `IJsonLdNodeObject` \| `IJsonLdNodeObject`[]
 
 The data for the verifiable credential.
 
