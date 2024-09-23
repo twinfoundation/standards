@@ -6,7 +6,7 @@ Interface describing a verifiable presentation.
 
 ### @context
 
-> **@context**: `string` \| `string`[]
+> **@context**: `IJsonLdContextDefinitionRoot`
 
 The context for the verifiable credential.
 

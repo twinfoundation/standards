@@ -1,5 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
+import type { IJsonLdContextDefinitionRoot } from "@twin.org/data-json-ld";
 import type { IDidCredentialStatus } from "./IDidCredentialStatus";
 import type { IDidProof } from "./IDidProof";
 
@@ -10,7 +11,7 @@ export interface IDidVerifiableCredential<T = unknown> {
 	/**
 	 * The context for the verifiable credential.
 	 */
-	"@context": string | string[];
+	"@context": IJsonLdContextDefinitionRoot;
 
 	/**
 	 * The identifier for the verifiable credential.
