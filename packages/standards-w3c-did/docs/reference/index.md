@@ -13,8 +13,10 @@
 
 ## Type Aliases
 
+- [DidContexts](type-aliases/DidContexts.md)
 - [DidVerificationMethodType](type-aliases/DidVerificationMethodType.md)
 
 ## Variables
 
+- [DidContexts](variables/DidContexts.md)
 - [DidVerificationMethodType](variables/DidVerificationMethodType.md)
