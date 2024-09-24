@@ -7,7 +7,7 @@ import type { IDidProof } from "./IDidProof";
 /**
  * Interface describing a verifiable credential.
  */
-export interface IDidVerifiableCredential {
+export interface IDidVerifiableCredential<T extends IJsonLdNodeObject = IJsonLdNodeObject> {
 	/**
 	 * The context for the verifiable credential.
 	 */
@@ -26,7 +26,7 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The data for the verifiable credential.
 	 */
-	credentialSubject: IJsonLdNodeObject | IJsonLdNodeObject[];
+	credentialSubject: T | T[];
 
 	/**
 	 * Used to discover information about the current status of the
