@@ -18,6 +18,10 @@
 		"**/wordlists/**"
 	],
 	"words": ["Multibase", "nameof", "Stiftung"],
-	"ignoreRegExpList": ["/from\\s+(['\"]).*\\1/", "/eslint-disable.*/",
-		"/^```shell[\\s\\S]*?```$/gm", "/^```json[\\s\\S]*?```$/gm"]
+	"ignoreRegExpList": [
+		"/from\\s+(['\"]).*\\1/",
+		"/eslint-disable.*/",
+		"/^```shell[\\s\\S]*?```$/gm",
+		"/^```json[\\s\\S]*?```$/gm"
+	]
 }
