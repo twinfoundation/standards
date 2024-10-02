@@ -14,7 +14,27 @@ export const DidTypes = {
 	/**
 	 * The type for Verifiable Presentation.
 	 */
-	VerifiablePresentation: "VerifiablePresentation"
+	VerifiablePresentation: "VerifiablePresentation",
+
+	/**
+	 * The type for Data Integrity Proof.
+	 */
+	DataIntegrityProof: "DataIntegrityProof",
+
+	/**
+	 * The type for Ed25519VerificationKey2020.
+	 */
+	Ed25519VerificationKey2020: "Ed25519VerificationKey2020",
+
+	/**
+	 * The type for JsonWebKey2020.
+	 */
+	JsonWebKey2020: "JsonWebKey2020",
+
+	/**
+	 * The type for LinkedDomains.
+	 */
+	LinkedDomains: "LinkedDomains"
 } as const;
 
 /**

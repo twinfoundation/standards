@@ -5,6 +5,14 @@ https://www.w3.org/TR/vc-data-integrity/
 
 ## Properties
 
+### @context?
+
+> `optional` **@context**: `IJsonLdContextDefinitionRoot`
+
+The context for the document.
+
+***
+
 ### id?
 
 > `optional` **id**: `string`
