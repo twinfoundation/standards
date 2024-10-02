@@ -7,9 +7,17 @@ https://www.w3.org/TR/vc-data-integrity/
 
 ### @context?
 
-> `optional` **@context**: `IJsonLdContextDefinitionRoot`
+> `optional` **@context**: `"https://w3id.org/security/data-integrity/v2"` \| [`"https://w3id.org/security/data-integrity/v2"`, `...string[]`]
 
-The context for the document.
+JSON-LD Context.
+
+***
+
+### type
+
+> **type**: `"DataIntegrityProof"`
+
+JSON-LD Type.
 
 ***
 
@@ -18,14 +26,6 @@ The context for the document.
 > `optional` **id**: `string`
 
 The id of the proof.
-
-***
-
-### type
-
-> **type**: `string`
-
-The type of the proof.
 
 ***
 
