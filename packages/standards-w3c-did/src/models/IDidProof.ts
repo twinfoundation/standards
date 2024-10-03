@@ -11,7 +11,7 @@ export interface IDidProof {
 	/**
 	 * JSON-LD Context.
 	 */
-	"@context"?:
+	"@context":
 		| typeof DidContexts.ContextVCDataIntegrity
 		| [typeof DidContexts.ContextVCDataIntegrity, ...string[]];
 

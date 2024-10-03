@@ -1,0 +1,19 @@
+{
+	"baseUrl": "https://schema.twindev.org/did/",
+	"sources": ["./src/models/**/*.ts"],
+	"types": [
+		"IDidCredentialStatus",
+		"IDidDocument",
+		"IDidDocumentVerificationMethod",
+		"IDidPresentationVerification",
+		"IDidProof",
+		"IDidService",
+		"IDidVerifiableCredential",
+		"IDidVerifiablePresentation",
+		"DidVerificationMethodType"
+	],
+	"externalReferences": {
+		"IJsonLd(.*)": "https://schema.twindev.org/json-ld/JsonLd$1",
+		"IJwk": "https://schema.twindev.org/framework/Jwk"
+	}
+}
