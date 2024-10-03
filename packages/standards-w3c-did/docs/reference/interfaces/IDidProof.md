@@ -7,7 +7,7 @@ https://www.w3.org/TR/vc-data-integrity/
 
 ### @context?
 
-> `optional` **@context**: `string`
+> `optional` **@context**: `"https://w3id.org/security/data-integrity/v2"` \| [`"https://w3id.org/security/data-integrity/v2"`, `...string[]`]
 
 JSON-LD Context.
 
@@ -15,9 +15,17 @@ JSON-LD Context.
 
 ### type
 
-> **type**: `string`
+> **type**: `"DataIntegrityProof"`
 
 JSON-LD Type.
+
+***
+
+### cryptosuite
+
+> **cryptosuite**: `string`
+
+An identifier for the cryptographic suite that can be used to verify the proof.
 
 ***
 
@@ -33,7 +41,7 @@ The id of the proof.
 
 > **proofPurpose**: `string`
 
-The purpose of the proof.
+The reason the proof was created.
 
 ***
 

@@ -17,7 +17,7 @@
 		".eslintrc.cjs",
 		"**/wordlists/**"
 	],
-	"words": ["Multibase", "nameof", "Stiftung"],
+	"words": ["cryptosuite", "Multibase", "nameof", "Stiftung"],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",
 		"/eslint-disable.*/",
