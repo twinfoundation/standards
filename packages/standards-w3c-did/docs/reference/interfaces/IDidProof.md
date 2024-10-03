@@ -45,9 +45,9 @@ The reason the proof was created.
 
 ***
 
-### proofValue?
+### proofValue
 
-> `optional` **proofValue**: `string`
+> **proofValue**: `string`
 
 Contains the base-encoded binary data necessary to verify the
 digital proof using the verificationMethod specified.

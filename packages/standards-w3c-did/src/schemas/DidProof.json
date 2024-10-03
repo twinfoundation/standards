@@ -29,7 +29,14 @@
 			"description": "JSON-LD Type."
 		},
 		"cryptosuite": {
-			"type": "string",
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/did/DidCryptoSuites"
+				},
+				{
+					"type": "string"
+				}
+			],
 			"description": "An identifier for the cryptographic suite that can be used to verify the proof."
 		},
 		"id": {
@@ -97,7 +104,8 @@
 		"@context",
 		"type",
 		"cryptosuite",
-		"proofPurpose"
+		"proofPurpose",
+		"proofValue"
 	],
 	"additionalProperties": false,
 	"description": "Interface describing a did proof. https://www.w3.org/TR/vc-data-integrity/"

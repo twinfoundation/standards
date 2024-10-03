@@ -1,6 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import type { DidContexts } from "./didContexts";
+import type { DidCryptoSuites } from "./didCryptoSuites";
 import type { DidTypes } from "./didTypes";
 
 /**
@@ -23,7 +24,7 @@ export interface IDidProof {
 	/**
 	 * An identifier for the cryptographic suite that can be used to verify the proof.
 	 */
-	cryptosuite: string;
+	cryptosuite: DidCryptoSuites | string;
 
 	/**
 	 * The id of the proof.
@@ -39,7 +40,7 @@ export interface IDidProof {
 	 * Contains the base-encoded binary data necessary to verify the
 	 * digital proof using the verificationMethod specified.
 	 */
-	proofValue?: string;
+	proofValue: string;
 
 	/**
 	 * The verification method of the proof.

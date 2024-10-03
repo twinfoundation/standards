@@ -1,6 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 export * from "./models/didContexts";
+export * from "./models/didCryptoSuites";
 export * from "./models/didTypes";
 export * from "./models/didVerificationMethodType";
 export * from "./models/IDidCredentialStatus";
