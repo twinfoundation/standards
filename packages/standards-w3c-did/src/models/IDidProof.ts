@@ -1,7 +1,5 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { DidContexts } from "./didContexts";
-import type { DidTypes } from "./didTypes";
 
 /**
  * Interface describing a did proof.
@@ -11,14 +9,12 @@ export interface IDidProof {
 	/**
 	 * JSON-LD Context.
 	 */
-	"@context"?:
-		| typeof DidContexts.ContextVCDataIntegrity
-		| [typeof DidContexts.ContextVCDataIntegrity, ...string[]];
+	"@context"?: string;
 
 	/**
 	 * JSON-LD Type.
 	 */
-	type: typeof DidTypes.DataIntegrityProof;
+	type: string;
 
 	/**
 	 * The id of the proof.

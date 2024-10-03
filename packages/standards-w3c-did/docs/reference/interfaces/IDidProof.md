@@ -7,7 +7,7 @@ https://www.w3.org/TR/vc-data-integrity/
 
 ### @context?
 
-> `optional` **@context**: `"https://w3id.org/security/data-integrity/v2"` \| [`"https://w3id.org/security/data-integrity/v2"`, `...string[]`]
+> `optional` **@context**: `string`
 
 JSON-LD Context.
 
@@ -15,7 +15,7 @@ JSON-LD Context.
 
 ### type
 
-> **type**: `"DataIntegrityProof"`
+> **type**: `string`
 
 JSON-LD Type.
 
