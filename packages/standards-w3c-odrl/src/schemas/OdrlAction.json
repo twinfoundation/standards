@@ -1,0 +1,38 @@
+{
+	"type": "object",
+	"properties": {
+		"rdf:value": {
+			"type": "object",
+			"properties": {
+				"@id": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"@id"
+			],
+			"additionalProperties": false,
+			"description": "The value/identifier of the action."
+		},
+		"refinement": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "Refinements applied to the action."
+		},
+		"includedIn": {
+			"$ref": "https://schema.twindev.org/odrl/ActionType",
+			"description": "Reference to the action this action is included in."
+		},
+		"implies": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/ActionType"
+			},
+			"description": "References to actions this action implies."
+		}
+	},
+	"additionalProperties": false,
+	"description": "Interface for ODRL Actions."
+}

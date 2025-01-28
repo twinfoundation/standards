@@ -1,0 +1,21 @@
+{
+	"type": "string",
+	"enum": [
+		"Policy",
+		"Set",
+		"Offer",
+		"Agreement",
+		"Asset",
+		"AssetCollection",
+		"Party",
+		"PartyCollection",
+		"Action",
+		"Rule",
+		"Permission",
+		"Prohibition",
+		"Duty",
+		"Constraint",
+		"LogicalConstraint"
+	],
+	"description": "The types for ODRL."
+}

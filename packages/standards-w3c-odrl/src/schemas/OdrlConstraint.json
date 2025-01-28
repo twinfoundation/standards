@@ -1,0 +1,62 @@
+{
+	"type": "object",
+	"properties": {
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the constraint."
+		},
+		"leftOperand": {
+			"type": "string",
+			"description": "The left operand of the constraint."
+		},
+		"operator": {
+			"$ref": "https://schema.twindev.org/odrl/OperatorType",
+			"description": "The operator of the constraint."
+		},
+		"rightOperand": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "object",
+					"properties": {
+						"@value": {
+							"type": "string"
+						},
+						"@type": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"@value"
+					],
+					"additionalProperties": false
+				}
+			],
+			"description": "The right operand of the constraint."
+		},
+		"rightOperandReference": {
+			"type": "string",
+			"description": "Reference to the right operand."
+		},
+		"dataType": {
+			"type": "string",
+			"description": "The data type of the right operand."
+		},
+		"unit": {
+			"type": "string",
+			"description": "The unit for the right operand value."
+		},
+		"status": {
+			"$ref": "https://schema.twindev.org/odrl/StatusType",
+			"description": "The status value for comparison."
+		}
+	},
+	"required": [
+		"leftOperand",
+		"operator"
+	],
+	"additionalProperties": false,
+	"description": "Interface for ODRL Constraints."
+}

@@ -1,0 +1,87 @@
+{
+	"type": "object",
+	"properties": {
+		"@context": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The context for the policy. Must include \"http://www.w3.org/ns/odrl.jsonld\""
+		},
+		"@type": {
+			"type": "string",
+			"description": "The type of policy. Must be one of: \"Set\", \"Offer\", \"Agreement\""
+		},
+		"uid": {
+			"type": "string",
+			"description": "The unique identifier for the policy. Must be an IRI."
+		},
+		"profile": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The profile(s) this policy conforms to. IRIs identifying the ODRL Profile(s)."
+		},
+		"inheritFrom": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The parent policy(ies) this policy inherits from. IRIs identifying the parent Policy(ies)."
+		},
+		"conflict": {
+			"$ref": "https://schema.twindev.org/odrl/ConflictStrategyType",
+			"description": "The conflict resolution strategy."
+		},
+		"permission": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlPermission"
+			},
+			"description": "The permissions in the policy. At least one of permission, prohibition, or obligation must be present."
+		},
+		"prohibition": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlProhibition"
+			},
+			"description": "The prohibitions in the policy. At least one of permission, prohibition, or obligation must be present."
+		},
+		"obligation": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
+			},
+			"description": "The obligations in the policy. At least one of permission, prohibition, or obligation must be present."
+		}
+	},
+	"required": [
+		"@context",
+		"@type",
+		"uid"
+	],
+	"additionalProperties": false,
+	"description": "Interface representing an ODRL Policy."
+}

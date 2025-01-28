@@ -1,0 +1,36 @@
+{
+	"type": "object",
+	"properties": {
+		"uid": {
+			"type": "string",
+			"description": "The unique identifier for the party. Must be an IRI."
+		},
+		"@type": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
+			"description": "The type of the party. Can be used to specify additional type information (e.g., \"Party\", \"vcard:Organization\", \"vcard:Individual\")."
+		},
+		"partOf": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlPartyCollection"
+				}
+			],
+			"description": "Reference to the party collection this party is part of. Used to identify a PartyCollection that a Party entity is a member of."
+		}
+	},
+	"additionalProperties": false,
+	"description": "Interface for ODRL Parties."
+}

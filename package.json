@@ -39,7 +39,8 @@
 		"prettier": "3.4.2"
 	},
 	"workspaces": [
-		"packages/standards-w3c-did"
+		"packages/standards-w3c-did",
+		"packages/standards-w3c-odrl"
 	],
 	"type": "module"
 }

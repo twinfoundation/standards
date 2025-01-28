@@ -1,0 +1,26 @@
+{
+	"type": "object",
+	"properties": {
+		"uid": {
+			"type": "string",
+			"description": "The unique identifier for the asset. Should be an IRI."
+		},
+		"@type": {
+			"type": "string",
+			"description": "The type of the asset. Can be used to specify additional type information."
+		},
+		"partOf": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAssetCollection"
+				}
+			],
+			"description": "Reference to the asset collection this asset is part of. Used to identify an AssetCollection that this Asset is a member of."
+		}
+	},
+	"additionalProperties": false,
+	"description": "Interface for ODRL Assets."
+}

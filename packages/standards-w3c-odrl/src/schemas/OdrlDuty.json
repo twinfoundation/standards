@@ -1,0 +1,79 @@
+{
+	"type": "object",
+	"properties": {
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the rule."
+		},
+		"action": {
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/ActionType"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+				}
+			],
+			"description": "The action associated with the rule."
+		},
+		"target": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+				}
+			],
+			"description": "The target asset for the rule."
+		},
+		"assigner": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assigner of the rule."
+		},
+		"assignee": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assignee of the rule."
+		},
+		"constraint": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "Constraints applied to the rule."
+		},
+		"consequence": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
+			},
+			"description": "The consequences if the duty is not fulfilled. Only applicable when the Duty is referenced by a Rule with duty or obligation properties."
+		},
+		"remedy": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlDuty"
+			},
+			"description": "The remedies that may be fulfilled to cure the violation."
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"action"
+	],
+	"description": "Interface for Duty Rules. A Duty is the obligation to exercise an action, with all refinements satisfied. A Duty is fulfilled if all constraints are satisfied and if its action has been exercised."
+}
