@@ -1,7 +1,8 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 
-import type { OperatorType, StatusType } from "./odrlTypes";
+import type { OperatorType } from "./types/operatorTypes";
+import type { StatusType } from "./types/statusTypes";
 
 /**
  * Interface for ODRL Constraints.

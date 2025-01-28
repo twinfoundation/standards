@@ -6,10 +6,10 @@ Interface representing an ODRL Policy.
 
 ### @context
 
-> **@context**: `string` \| `string`[]
+> **@context**: `"https://www.w3.org/ns/odrl.jsonld"` \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `...string[]`\]
 
 The context for the policy.
-Must include "http://www.w3.org/ns/odrl.jsonld"
+Must include "https://www.w3.org/ns/odrl.jsonld"
 
 ***
 

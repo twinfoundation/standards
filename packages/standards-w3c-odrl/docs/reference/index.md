@@ -19,17 +19,25 @@
 ## Type Aliases
 
 - [OdrlContexts](type-aliases/OdrlContexts.md)
+- [ActionType](type-aliases/ActionType.md)
+- [ConflictStrategyType](type-aliases/ConflictStrategyType.md)
+- [DataType](type-aliases/DataType.md)
+- [LogicalConstraintType](type-aliases/LogicalConstraintType.md)
 - [OdrlTypes](type-aliases/OdrlTypes.md)
+- [OperatorType](type-aliases/OperatorType.md)
 - [PolicyType](type-aliases/PolicyType.md)
 - [RuleType](type-aliases/RuleType.md)
-- [ConflictStrategyType](type-aliases/ConflictStrategyType.md)
-- [OperatorType](type-aliases/OperatorType.md)
 - [StatusType](type-aliases/StatusType.md)
-- [LogicalConstraintType](type-aliases/LogicalConstraintType.md)
-- [ActionType](type-aliases/ActionType.md)
-- [DataType](type-aliases/DataType.md)
 
 ## Variables
 
 - [OdrlContexts](variables/OdrlContexts.md)
+- [ActionTypes](variables/ActionTypes.md)
+- [ConflictStrategyTypes](variables/ConflictStrategyTypes.md)
+- [DataType](variables/DataType.md)
+- [LogicalConstraintType](variables/LogicalConstraintType.md)
 - [OdrlTypes](variables/OdrlTypes.md)
+- [OperatorType](variables/OperatorType.md)
+- [PolicyType](variables/PolicyType.md)
+- [RuleType](variables/RuleType.md)
+- [StatusType](variables/StatusType.md)

@@ -1,0 +1,33 @@
+{
+	"type": "string",
+	"enum": [
+		"use",
+		"transfer",
+		"display",
+		"print",
+		"play",
+		"distribute",
+		"index",
+		"reproduce",
+		"compensate",
+		"modify",
+		"derive",
+		"delete",
+		"move",
+		"sell",
+		"lend",
+		"give",
+		"lease",
+		"execute",
+		"present",
+		"read",
+		"write",
+		"extract",
+		"notify",
+		"archive",
+		"share",
+		"install",
+		"uninstall"
+	],
+	"description": "The types for ODRL Actions."
+}

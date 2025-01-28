@@ -1,5 +1,5 @@
 # Type Alias: DataType
 
-> **DataType**: `"xsd:string"` \| `"xsd:boolean"` \| `"xsd:integer"` \| `"xsd:decimal"` \| `"xsd:double"` \| `"xsd:date"` \| `"xsd:dateTime"`
+> **DataType**: *typeof* [`DataType`](../variables/DataType.md)\[keyof *typeof* [`DataType`](../variables/DataType.md)\]
 
 The types for ODRL Data Types.

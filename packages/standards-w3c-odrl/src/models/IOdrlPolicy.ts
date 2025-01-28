@@ -4,7 +4,8 @@
 import type { IOdrlDuty } from "./IOdrlDuty";
 import type { IOdrlPermission } from "./IOdrlPermission";
 import type { IOdrlProhibition } from "./IOdrlProhibition";
-import type { ConflictStrategyType } from "./odrlTypes";
+import type { OdrlContexts } from "./odrlContexts";
+import type { ConflictStrategyType } from "./types/conflictStrategyTypes";
 
 /**
  * Interface representing an ODRL Policy.
@@ -12,9 +13,9 @@ import type { ConflictStrategyType } from "./odrlTypes";
 export interface IOdrlPolicy {
 	/**
 	 * The context for the policy.
-	 * Must include "http://www.w3.org/ns/odrl.jsonld"
+	 * Must include "https://www.w3.org/ns/odrl.jsonld"
 	 */
-	"@context": string | string[];
+	"@context": typeof OdrlContexts.Context | [typeof OdrlContexts.Context, ...string[]];
 	/**
 	 * The type of policy.
 	 * Must be one of: "Set", "Offer", "Agreement"

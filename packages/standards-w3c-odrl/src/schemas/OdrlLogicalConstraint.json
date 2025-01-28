@@ -1,0 +1,39 @@
+{
+	"type": "object",
+	"properties": {
+		"uid": {
+			"type": "string",
+			"description": "Optional unique identifier for the logical constraint. Must be an IRI."
+		},
+		"and": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "AND operator - all constraints must be satisfied."
+		},
+		"or": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "OR operator - at least one constraint must be satisfied."
+		},
+		"xone": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "XOR operator - exactly one constraint must be satisfied."
+		},
+		"andSequence": {
+			"type": "array",
+			"items": {
+				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			},
+			"description": "AND Sequence operator - all constraints must be satisfied in order."
+		}
+	},
+	"additionalProperties": false,
+	"description": "Interface for ODRL Logical Constraints. A Logical Constraint compares two or more existing Constraints by one logical operator. If the comparison returns a logical match, then the Logical Constraint is satisfied."
+}

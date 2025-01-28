@@ -4,16 +4,25 @@
 	"types": [
 		"IOdrlAction",
 		"IOdrlAsset",
+		"IOdrlAssetCollection",
 		"IOdrlConstraint",
 		"IOdrlDuty",
+		"IOdrlLogicalConstraint",
 		"IOdrlParty",
+		"IOdrlPartyCollection",
 		"IOdrlPermission",
 		"IOdrlPolicy",
 		"IOdrlPolicyMetadata",
 		"IOdrlProhibition",
 		"IOdrlRule",
+		"LogicalConstraintType",
 		"OdrlContexts",
-		"OdrlTypes"
+		"OdrlTypes",
+		"OperatorType",
+		"PolicyType",
+		"RuleType",
+		"StatusType",
+		"ActionType"
 	],
 	"externalReferences": {}
 }

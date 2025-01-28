@@ -1,5 +1,5 @@
 # Type Alias: ConflictStrategyType
 
-> **ConflictStrategyType**: `"perm"` \| `"prohibit"` \| `"invalid"`
+> **ConflictStrategyType**: *typeof* [`ConflictStrategyTypes`](../variables/ConflictStrategyTypes.md)\[keyof *typeof* [`ConflictStrategyTypes`](../variables/ConflictStrategyTypes.md)\]
 
 The types for ODRL Conflict Resolution Strategies.

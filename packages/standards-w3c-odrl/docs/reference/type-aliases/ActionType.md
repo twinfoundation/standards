@@ -1,5 +1,5 @@
 # Type Alias: ActionType
 
-> **ActionType**: `"use"` \| `"transfer"` \| `"display"` \| `"print"` \| `"play"` \| `"distribute"` \| `"reproduce"` \| `"modify"` \| `"derive"` \| `"delete"` \| `"move"` \| `"sell"` \| `"lend"` \| `"give"` \| `"lease"` \| `"execute"` \| `"present"` \| `"read"` \| `"write"` \| `"extract"` \| `"notify"` \| `"archive"` \| `"share"` \| `"install"` \| `"uninstall"`
+> **ActionType**: *typeof* [`ActionTypes`](../variables/ActionTypes.md)\[keyof *typeof* [`ActionTypes`](../variables/ActionTypes.md)\]
 
-The types for ODRL Common Actions.
+The types for ODRL Actions.

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IOdrlConstraint } from "./IOdrlConstraint";
-import type { ActionType } from "./odrlTypes";
+import type { ActionType } from "./types/actionTypes";
 
 /**
  * Interface for ODRL Actions.

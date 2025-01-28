@@ -1,5 +1,5 @@
 # Type Alias: OperatorType
 
-> **OperatorType**: `"eq"` \| `"gt"` \| `"gteq"` \| `"lt"` \| `"lteq"` \| `"neq"` \| `"isA"` \| `"hasPart"` \| `"isPartOf"` \| `"isAllOf"` \| `"isAnyOf"` \| `"isNoneOf"` \| `"locTimeEq"` \| `"locTimeGteq"`
+> **OperatorType**: *typeof* [`OperatorType`](../variables/OperatorType.md)\[keyof *typeof* [`OperatorType`](../variables/OperatorType.md)\]
 
 The types for ODRL Operators.

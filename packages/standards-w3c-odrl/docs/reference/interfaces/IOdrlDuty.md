@@ -42,7 +42,7 @@ Optional unique identifier for the rule.
 
 ### action
 
-> **action**: [`ActionType`](../type-aliases/ActionType.md) \| [`IOdrlAction`](IOdrlAction.md)
+> **action**: [`ActionType`](../type-aliases/ActionType.md) \| [`IOdrlAction`](IOdrlAction.md) \| ActionType \| IOdrlAction[]
 
 The action associated with the rule.
 

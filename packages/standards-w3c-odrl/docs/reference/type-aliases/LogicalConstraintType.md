@@ -1,5 +1,5 @@
 # Type Alias: LogicalConstraintType
 
-> **LogicalConstraintType**: `"and"` \| `"or"` \| `"xone"` \| `"andSequence"`
+> **LogicalConstraintType**: *typeof* [`LogicalConstraintType`](../variables/LogicalConstraintType.md)\[keyof *typeof* [`LogicalConstraintType`](../variables/LogicalConstraintType.md)\]
 
 The types for ODRL Logical Constraints.

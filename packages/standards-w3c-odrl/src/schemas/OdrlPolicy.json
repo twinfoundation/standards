@@ -4,16 +4,24 @@
 		"@context": {
 			"anyOf": [
 				{
-					"type": "string"
+					"type": "string",
+					"const": "https://www.w3.org/ns/odrl.jsonld"
 				},
 				{
 					"type": "array",
-					"items": {
+					"minItems": 1,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://www.w3.org/ns/odrl.jsonld"
+						}
+					],
+					"additionalItems": {
 						"type": "string"
 					}
 				}
 			],
-			"description": "The context for the policy. Must include \"http://www.w3.org/ns/odrl.jsonld\""
+			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""
 		},
 		"@type": {
 			"type": "string",

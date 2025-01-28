@@ -1,5 +1,5 @@
 # Type Alias: StatusType
 
-> **StatusType**: `"active"` \| `"inactive"` \| `"pending"` \| `"revoked"`
+> **StatusType**: *typeof* [`StatusType`](../variables/StatusType.md)\[keyof *typeof* [`StatusType`](../variables/StatusType.md)\]
 
 The types for ODRL Status.

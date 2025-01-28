@@ -12,6 +12,19 @@
 				},
 				{
 					"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "https://schema.twindev.org/odrl/ActionType"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlAction"
+							}
+						]
+					}
 				}
 			],
 			"description": "The action associated with the rule."
