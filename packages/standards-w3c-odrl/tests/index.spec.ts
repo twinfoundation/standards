@@ -173,7 +173,7 @@ describe("ODRL Examples from Specification", () => {
 		expect(policy).toBeDefined();
 	});
 
-	it("Example 10: should validate policy with datetime constraint", () => {
+	it("Example 13: should validate policy with datetime constraint", () => {
 		const policy: IOdrlPolicy = {
 			"@context": OdrlContexts.Context,
 			"@type": OdrlTypes.Offer,
@@ -200,7 +200,7 @@ describe("ODRL Examples from Specification", () => {
 		expect(policy).toBeDefined();
 	});
 
-	it("Example 11: should validate agreement with payment obligation", () => {
+	it("Example 20: should validate agreement with payment obligation", () => {
 		const policy: IOdrlPolicy = {
 			"@context": OdrlContexts.Context,
 			"@type": OdrlTypes.Agreement,
