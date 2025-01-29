@@ -24,21 +24,21 @@ Greater than type.
 
 Greater than or equal to type.
 
-### lt
+### Lt
 
-> `readonly` **lt**: `"lt"` = `"lt"`
+> `readonly` **Lt**: `"lt"` = `"lt"`
 
 Less than type.
 
-### lteq
+### Lteq
 
-> `readonly` **lteq**: `"lteq"` = `"lteq"`
+> `readonly` **Lteq**: `"lteq"` = `"lteq"`
 
 Less than or equal to type.
 
-### neq
+### Neq
 
-> `readonly` **neq**: `"neq"` = `"neq"`
+> `readonly` **Neq**: `"neq"` = `"neq"`
 
 Not equal to type.
 

@@ -9,13 +9,31 @@ import type { IOdrlRule } from "./IOdrlRule";
  */
 export interface IOdrlDuty extends IOdrlRule {
 	/**
+	 * The party to be attributed
+	 * Used when the duty involves attribution
+	 */
+	attributedParty?: string;
+
+	/**
+	 * The party performing the tracking
+	 * Used when the duty involves tracking
+	 */
+	trackingParty?: string;
+	/**
 	 * The consequences if the duty is not fulfilled.
 	 * Only applicable when the Duty is referenced by a Rule with duty or obligation
 	 * properties.
 	 */
 	consequence?: IOdrlDuty[];
+
 	/**
 	 * The remedies that may be fulfilled to cure the violation.
 	 */
 	remedy?: IOdrlDuty[];
+
+	/**
+	 * The party to be compensated
+	 * Used when the duty involves compensation
+	 */
+	compensatedParty?: string;
 }

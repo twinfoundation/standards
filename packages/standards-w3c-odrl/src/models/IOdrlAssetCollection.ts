@@ -13,7 +13,7 @@ export interface IOdrlAssetCollection extends IOdrlAsset {
 	 * Reference to the source of the asset collection.
 	 * Must be an IRI that references the AssetCollection.
 	 */
-	source?: string;
+	source: string;
 
 	/**
 	 * Refinements applied to the asset collection.

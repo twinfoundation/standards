@@ -9,6 +9,7 @@ Interface for ODRL Actions.
 > `optional` **rdf:value**: `object`
 
 The value/identifier of the action.
+Used in complex action definitions.
 
 #### @id
 
@@ -16,9 +17,18 @@ The value/identifier of the action.
 
 ***
 
+### @id?
+
+> `optional` **@id**: `string`
+
+Direct action identifier.
+Used in simple action references.
+
+***
+
 ### refinement?
 
-> `optional` **refinement**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
+> `optional` **refinement**: [`IOdrlConstraint`](IOdrlConstraint.md) \| [`IOdrlLogicalConstraint`](IOdrlLogicalConstraint.md) \| ([`IOdrlConstraint`](IOdrlConstraint.md) \| [`IOdrlLogicalConstraint`](IOdrlLogicalConstraint.md))[]
 
 Refinements applied to the action.
 

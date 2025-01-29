@@ -17,30 +17,46 @@ Must be an IRI.
 
 ### and?
 
-> `optional` **and**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
+> `optional` **and**: `object`
 
 AND operator - all constraints must be satisfied.
+
+#### @list
+
+> **@list**: `object`[]
 
 ***
 
 ### or?
 
-> `optional` **or**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
+> `optional` **or**: `object`
 
 OR operator - at least one constraint must be satisfied.
+
+#### @list
+
+> **@list**: `object`[]
 
 ***
 
 ### xone?
 
-> `optional` **xone**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
+> `optional` **xone**: `object`
 
 XOR operator - exactly one constraint must be satisfied.
+
+#### @list
+
+> **@list**: `object`[]
 
 ***
 
 ### andSequence?
 
-> `optional` **andSequence**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
+> `optional` **andSequence**: `object`
 
 AND Sequence operator - all constraints must be satisfied in order.
+
+#### @list
+
+> **@list**: `object`[]

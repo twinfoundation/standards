@@ -1,6 +1,8 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 
+import type { DataType } from "./types/dataTypes";
+import type { LeftOperandType } from "./types/leftOperandTypes";
 import type { OperatorType } from "./types/operatorTypes";
 import type { StatusType } from "./types/statusTypes";
 
@@ -16,7 +18,7 @@ export interface IOdrlConstraint {
 	/**
 	 * The left operand of the constraint.
 	 */
-	leftOperand: string;
+	leftOperand: string | LeftOperandType;
 
 	/**
 	 * The operator of the constraint.
@@ -25,12 +27,17 @@ export interface IOdrlConstraint {
 
 	/**
 	 * The right operand of the constraint.
+	 * value with optional @type is used for literal values (like "5.00" with type "xsd:decimal")
+	 * id is used when referencing a URI/identifier (like odrl:policyUsage)
 	 */
 	rightOperand?:
 		| string
 		| {
 				"@value": string;
-				"@type"?: string;
+				"@type"?: DataType;
+		  }
+		| {
+				"@id": string;
 		  };
 
 	/**
@@ -41,7 +48,7 @@ export interface IOdrlConstraint {
 	/**
 	 * The data type of the right operand.
 	 */
-	dataType?: string;
+	dataType?: DataType;
 
 	/**
 	 * The unit for the right operand value.

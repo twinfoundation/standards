@@ -18,9 +18,9 @@ Optional unique identifier for the rule.
 
 ***
 
-### action
+### action?
 
-> **action**: [`ActionType`](../type-aliases/ActionType.md) \| [`IOdrlAction`](IOdrlAction.md) \| ActionType \| IOdrlAction[]
+> `optional` **action**: [`ActionType`](../type-aliases/ActionType.md) \| [`IOdrlAction`](IOdrlAction.md) \| ActionType \| IOdrlAction[]
 
 The action associated with the rule.
 
@@ -28,7 +28,7 @@ The action associated with the rule.
 
 ### target?
 
-> `optional` **target**: `string` \| [`IOdrlAsset`](IOdrlAsset.md)
+> `optional` **target**: `string` \| [`IOdrlAsset`](IOdrlAsset.md) \| (`string` \| [`IOdrlAsset`](IOdrlAsset.md))[]
 
 The target asset for the rule.
 
@@ -55,3 +55,13 @@ The assignee of the rule.
 > `optional` **constraint**: [`IOdrlConstraint`](IOdrlConstraint.md)[]
 
 Constraints applied to the rule.
+
+***
+
+### summary?
+
+> `optional` **summary**: `string`
+
+Additional relation sub-properties as defined in ODRL profiles.
+For example, 'summary' in profile "http://example.com/odrl:profile:03"
+indicates where the output should be stored.

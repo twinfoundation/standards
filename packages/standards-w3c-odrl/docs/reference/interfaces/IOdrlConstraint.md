@@ -30,9 +30,10 @@ The operator of the constraint.
 
 ### rightOperand?
 
-> `optional` **rightOperand**: `string` \| \{ `@value`: `string`; `@type`: `string`; \}
+> `optional` **rightOperand**: `string` \| \{ `@value`: `string`; `@type`: [`DataType`](../type-aliases/DataType.md); \} \| \{ `@id`: `string`; \}
 
 The right operand of the constraint.
+value with optional
 
 ***
 
@@ -46,7 +47,7 @@ Reference to the right operand.
 
 ### dataType?
 
-> `optional` **dataType**: `string`
+> `optional` **dataType**: [`DataType`](../type-aliases/DataType.md)
 
 The data type of the right operand.
 

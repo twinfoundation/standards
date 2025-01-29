@@ -6,7 +6,14 @@
 			"description": "Optional unique identifier for the constraint."
 		},
 		"leftOperand": {
-			"type": "string",
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/LeftOperandType"
+				}
+			],
 			"description": "The left operand of the constraint."
 		},
 		"operator": {
@@ -25,21 +32,31 @@
 							"type": "string"
 						},
 						"@type": {
-							"type": "string"
+							"$ref": "https://schema.twindev.org/odrl/DataType"
 						}
 					},
 					"required": ["@value"],
 					"additionalProperties": false
+				},
+				{
+					"type": "object",
+					"properties": {
+						"@id": {
+							"type": "string"
+						}
+					},
+					"required": ["@id"],
+					"additionalProperties": false
 				}
 			],
-			"description": "The right operand of the constraint."
+			"description": "The right operand of the constraint. value with optional"
 		},
 		"rightOperandReference": {
 			"type": "string",
 			"description": "Reference to the right operand."
 		},
 		"dataType": {
-			"type": "string",
+			"$ref": "https://schema.twindev.org/odrl/DataType",
 			"description": "The data type of the right operand."
 		},
 		"unit": {

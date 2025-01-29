@@ -23,4 +23,10 @@ export interface IOdrlAsset {
 	 * Used to identify an AssetCollection that this Asset is a member of.
 	 */
 	partOf?: string | IOdrlAssetCollection;
+
+	/**
+	 * Reference to the policy that governs this asset.
+	 * Used to identify the Policy that governs this Asset.
+	 */
+	hasPolicy?: string;
 }

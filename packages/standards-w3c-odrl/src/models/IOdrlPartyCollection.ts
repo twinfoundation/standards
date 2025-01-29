@@ -12,7 +12,7 @@ export interface IOdrlPartyCollection extends IOdrlParty {
 	 * Reference to the source of the party collection.
 	 * Used to identify the origin or location of the collection.
 	 */
-	source?: string;
+	source: string;
 
 	/**
 	 * Refinements applied to the party collection.

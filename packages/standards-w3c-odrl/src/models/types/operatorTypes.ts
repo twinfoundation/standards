@@ -24,17 +24,17 @@ export const OperatorType = {
 	/**
 	 * Less than type.
 	 */
-	lt: "lt",
+	Lt: "lt",
 
 	/**
 	 * Less than or equal to type.
 	 */
-	lteq: "lteq",
+	Lteq: "lteq",
 
 	/**
 	 * Not equal to type.
 	 */
-	neq: "neq",
+	Neq: "neq",
 
 	/**
 	 * Is a type.

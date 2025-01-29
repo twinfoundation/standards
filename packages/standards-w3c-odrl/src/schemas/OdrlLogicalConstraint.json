@@ -6,31 +6,87 @@
 			"description": "Optional unique identifier for the logical constraint. Must be an IRI."
 		},
 		"and": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"@id": {
+								"type": "string"
+							}
+						},
+						"required": ["@id"],
+						"additionalProperties": false
+					}
+				}
 			},
+			"required": ["@list"],
+			"additionalProperties": false,
 			"description": "AND operator - all constraints must be satisfied."
 		},
 		"or": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"@id": {
+								"type": "string"
+							}
+						},
+						"required": ["@id"],
+						"additionalProperties": false
+					}
+				}
 			},
+			"required": ["@list"],
+			"additionalProperties": false,
 			"description": "OR operator - at least one constraint must be satisfied."
 		},
 		"xone": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"@id": {
+								"type": "string"
+							}
+						},
+						"required": ["@id"],
+						"additionalProperties": false
+					}
+				}
 			},
+			"required": ["@list"],
+			"additionalProperties": false,
 			"description": "XOR operator - exactly one constraint must be satisfied."
 		},
 		"andSequence": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+			"type": "object",
+			"properties": {
+				"@list": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"@id": {
+								"type": "string"
+							}
+						},
+						"required": ["@id"],
+						"additionalProperties": false
+					}
+				}
 			},
+			"required": ["@list"],
+			"additionalProperties": false,
 			"description": "AND Sequence operator - all constraints must be satisfied in order."
 		}
 	},

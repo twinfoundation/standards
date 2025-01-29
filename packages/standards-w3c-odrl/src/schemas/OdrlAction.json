@@ -10,13 +10,34 @@
 			},
 			"required": ["@id"],
 			"additionalProperties": false,
-			"description": "The value/identifier of the action."
+			"description": "The value/identifier of the action. Used in complex action definitions."
+		},
+		"@id": {
+			"type": "string",
+			"description": "Direct action identifier. Used in simple action references."
 		},
 		"refinement": {
-			"type": "array",
-			"items": {
-				"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
-			},
+			"anyOf": [
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlConstraint"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlLogicalConstraint"
+							}
+						]
+					}
+				}
+			],
 			"description": "Refinements applied to the action."
 		},
 		"includedIn": {

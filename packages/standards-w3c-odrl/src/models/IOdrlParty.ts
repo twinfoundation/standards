@@ -2,11 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IOdrlPartyCollection } from "./IOdrlPartyCollection";
+import type { IVCardProperties } from "./IVCardProperties";
 
 /**
  * Interface for ODRL Parties.
  */
-export interface IOdrlParty {
+export interface IOdrlParty extends IVCardProperties {
 	/**
 	 * The unique identifier for the party.
 	 * Must be an IRI.
@@ -25,4 +26,18 @@ export interface IOdrlParty {
 	 * Used to identify a PartyCollection that a Party entity is a member of.
 	 */
 	partOf?: string | IOdrlPartyCollection;
+
+	/**
+	 * Reference to a policy where this party is an assignee.
+	 * When assigneeOf is asserted, the Party MUST be inferred to undertake
+	 * the assignee functional role of all the Rules of that Policy.
+	 */
+	assigneeOf?: string;
+
+	/**
+	 * Reference to a policy where this party is an assigner.
+	 * When assignerOf is asserted, the Party MUST be inferred to undertake
+	 * the assigner functional role of all the Rules of that Policy.
+	 */
+	assignerOf?: string;
 }

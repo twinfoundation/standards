@@ -32,3 +32,12 @@ Can be used to specify additional type information.
 
 Reference to the asset collection this asset is part of.
 Used to identify an AssetCollection that this Asset is a member of.
+
+***
+
+### hasPolicy?
+
+> `optional` **hasPolicy**: `string`
+
+Reference to the policy that governs this asset.
+Used to identify the Policy that governs this Asset.

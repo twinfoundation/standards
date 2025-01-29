@@ -1,8 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 
-import type { IOdrlConstraint } from "./IOdrlConstraint";
-
 /**
  * Interface for ODRL Logical Constraints.
  * A Logical Constraint compares two or more existing Constraints by one logical operator.
@@ -18,20 +16,28 @@ export interface IOdrlLogicalConstraint {
 	/**
 	 * AND operator - all constraints must be satisfied.
 	 */
-	and?: IOdrlConstraint[];
+	and?: {
+		"@list": { "@id": string }[];
+	};
 
 	/**
 	 * OR operator - at least one constraint must be satisfied.
 	 */
-	or?: IOdrlConstraint[];
+	or?: {
+		"@list": { "@id": string }[];
+	};
 
 	/**
 	 * XOR operator - exactly one constraint must be satisfied.
 	 */
-	xone?: IOdrlConstraint[];
+	xone?: {
+		"@list": { "@id": string }[];
+	};
 
 	/**
 	 * AND Sequence operator - all constraints must be satisfied in order.
 	 */
-	andSequence?: IOdrlConstraint[];
+	andSequence?: {
+		"@list": { "@id": string }[];
+	};
 }

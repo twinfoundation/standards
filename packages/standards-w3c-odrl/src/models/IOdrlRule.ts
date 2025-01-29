@@ -18,12 +18,12 @@ export interface IOdrlRule {
 	/**
 	 * The action associated with the rule.
 	 */
-	action: ActionType | IOdrlAction | (ActionType | IOdrlAction)[];
+	action?: ActionType | IOdrlAction | (ActionType | IOdrlAction)[];
 
 	/**
 	 * The target asset for the rule.
 	 */
-	target?: string | IOdrlAsset;
+	target?: string | IOdrlAsset | (string | IOdrlAsset)[];
 
 	/**
 	 * The assigner of the rule.
@@ -39,4 +39,11 @@ export interface IOdrlRule {
 	 * Constraints applied to the rule.
 	 */
 	constraint?: IOdrlConstraint[];
+
+	/**
+	 * Additional relation sub-properties as defined in ODRL profiles.
+	 * For example, 'summary' in profile "http://example.com/odrl:profile:03"
+	 * indicates where the output should be stored.
+	 */
+	summary?: string;
 }

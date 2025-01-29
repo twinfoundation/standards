@@ -36,6 +36,19 @@
 				},
 				{
 					"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+				},
+				{
+					"type": "array",
+					"items": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"$ref": "https://schema.twindev.org/odrl/OdrlAsset"
+							}
+						]
+					}
 				}
 			],
 			"description": "The target asset for the rule."
@@ -69,6 +82,10 @@
 			},
 			"description": "Constraints applied to the rule."
 		},
+		"summary": {
+			"type": "string",
+			"description": "Additional relation sub-properties as defined in ODRL profiles. For example, 'summary' in profile \"http://example.com/odrl:profile:03\" indicates where the output should be stored."
+		},
 		"duty": {
 			"type": "array",
 			"items": {
@@ -78,6 +95,5 @@
 		}
 	},
 	"additionalProperties": false,
-	"required": ["action"],
 	"description": "Interface for Permission Rules. A Permission allows an action to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled."
 }

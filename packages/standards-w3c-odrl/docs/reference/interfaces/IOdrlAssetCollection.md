@@ -49,9 +49,22 @@ Used to identify an AssetCollection that this Asset is a member of.
 
 ***
 
-### source?
+### hasPolicy?
 
-> `optional` **source**: `string`
+> `optional` **hasPolicy**: `string`
+
+Reference to the policy that governs this asset.
+Used to identify the Policy that governs this Asset.
+
+#### Inherited from
+
+[`IOdrlAsset`](IOdrlAsset.md).[`hasPolicy`](IOdrlAsset.md#haspolicy)
+
+***
+
+### source
+
+> **source**: `string`
 
 Reference to the source of the asset collection.
 Must be an IRI that references the AssetCollection.
