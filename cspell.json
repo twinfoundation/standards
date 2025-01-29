@@ -28,7 +28,7 @@
 		"lteq",
 		"gteq",
 		"xone",
-		"vcard"
+		"vcard",
 		"epcis",
 		"unece",
 		"cefact",

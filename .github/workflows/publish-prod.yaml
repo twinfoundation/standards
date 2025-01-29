@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - 'packages/standards-w3c-did'
+          - 'packages/standards-w3c-odrl'
           - 'packages/standards-gs1'
           - 'packages/standards-schema-org'
           - 'packages/standards-unece'
