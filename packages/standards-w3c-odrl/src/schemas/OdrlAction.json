@@ -8,9 +8,7 @@
 					"type": "string"
 				}
 			},
-			"required": [
-				"@id"
-			],
+			"required": ["@id"],
 			"additionalProperties": false,
 			"description": "The value/identifier of the action."
 		},
