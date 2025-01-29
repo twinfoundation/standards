@@ -70,7 +70,9 @@
 			"description": "Constraints applied to the rule."
 		}
 	},
-	"required": ["action"],
+	"required": [
+		"action"
+	],
 	"additionalProperties": false,
 	"description": "Base interface for ODRL Rules."
 }

@@ -78,6 +78,8 @@
 		}
 	},
 	"additionalProperties": false,
-	"required": ["action"],
+	"required": [
+		"action"
+	],
 	"description": "Interface for Permission Rules. A Permission allows an action to be exercised on an Asset if all constraints are satisfied and if all duties are fulfilled."
 }
