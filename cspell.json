@@ -29,6 +29,16 @@
 		"gteq",
 		"xone",
 		"vcard"
+		"epcis",
+		"unece",
+		"cefact",
+		"lgtin",
+		"epc",
+		"jaif",
+		"masterdata",
+		"iepc",
+		"sgln",
+		"sgtin"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",

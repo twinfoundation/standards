@@ -9,6 +9,10 @@ on:
         type: choice
         options:
           - 'packages/standards-w3c-did'
+          - 'packages/standards-gs1'
+          - 'packages/standards-schema-org'
+          - 'packages/standards-unece'
+          - 'packages/standards-vda'
 
 jobs:
   publish:

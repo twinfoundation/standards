@@ -13,7 +13,14 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        package: ['packages/standards-w3c-did']
+        package:
+          [
+            'packages/standards-w3c-did',
+            'packages/standards-gs1',
+            'packages/standards-schema-org',
+            'packages/standards-unece',
+            'packages/standards-vda'
+          ]
 
     steps:
       - name: Checkout
