@@ -67,11 +67,7 @@
 			"description": "Proofs that the verifiable presentation is valid. Optional if a different proof method is used, such as JWT."
 		}
 	},
-	"required": [
-		"@context",
-		"type",
-		"verifiableCredential"
-	],
+	"required": ["@context", "type", "verifiableCredential"],
 	"additionalProperties": false,
 	"description": "Interface describing a verifiable presentation."
 }

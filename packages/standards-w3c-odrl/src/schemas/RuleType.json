@@ -1,9 +1,5 @@
 {
 	"type": "string",
-	"enum": [
-		"Permission",
-		"Prohibition",
-		"Duty"
-	],
+	"enum": ["Permission", "Prohibition", "Duty"],
 	"description": "The types for ODRL Rules."
 }

@@ -34,11 +34,7 @@
 			"description": "The endpoint for the service."
 		}
 	},
-	"required": [
-		"id",
-		"type",
-		"serviceEndpoint"
-	],
+	"required": ["id", "type", "serviceEndpoint"],
 	"additionalProperties": false,
 	"description": "Interface describing a did document service."
 }

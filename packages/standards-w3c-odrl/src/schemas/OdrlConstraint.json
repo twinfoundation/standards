@@ -28,9 +28,7 @@
 							"type": "string"
 						}
 					},
-					"required": [
-						"@value"
-					],
+					"required": ["@value"],
 					"additionalProperties": false
 				}
 			],
@@ -53,10 +51,7 @@
 			"description": "The status value for comparison."
 		}
 	},
-	"required": [
-		"leftOperand",
-		"operator"
-	],
+	"required": ["leftOperand", "operator"],
 	"additionalProperties": false,
 	"description": "Interface for ODRL Constraints."
 }
