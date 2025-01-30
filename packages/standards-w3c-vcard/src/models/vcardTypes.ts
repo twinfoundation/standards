@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 /**
- * Common vCard property types used in ODRL.
+ * Common VCard property types.
  * Based on http://www.w3.org/2006/vcard/ns#
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -30,10 +30,40 @@ export const VCardPropertyType = {
 	/**
 	 * Individual type
 	 */
-	Individual: "vcard:Individual"
+	Individual: "vcard:Individual",
+
+	/**
+	 * Address
+	 */
+	Address: "vcard:Address",
+
+	/**
+	 * Phone number
+	 */
+	Phone: "vcard:hasTelephone",
+
+	/**
+	 * URL
+	 */
+	Url: "vcard:hasUrl",
+
+	/**
+	 * Nickname
+	 */
+	Nickname: "vcard:nickname",
+
+	/**
+	 * Birthday
+	 */
+	Birthday: "vcard:bday",
+
+	/**
+	 * Photo
+	 */
+	Photo: "vcard:hasPhoto"
 } as const;
 
 /**
- * Common vCard property types used in ODRL.
+ * Common VCard property types.
  */
 export type VCardPropertyType = (typeof VCardPropertyType)[keyof typeof VCardPropertyType];

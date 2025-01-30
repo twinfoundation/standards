@@ -38,7 +38,8 @@
 		"masterdata",
 		"iepc",
 		"sgln",
-		"sgtin"
+		"sgtin",
+		"bday"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",

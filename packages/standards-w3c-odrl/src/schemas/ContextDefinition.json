@@ -1,7 +1,0 @@
-{
-	"type": "object",
-	"additionalProperties": {
-		"type": "string"
-	},
-	"description": "Context object type for additional vocabularies"
-}

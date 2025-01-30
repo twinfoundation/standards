@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-
+import { VCardContexts, VCardPropertyType } from "@twin.org/standards-w3c-vcard";
 import type { IOdrlAction } from "../src/models/IOdrlAction";
 import type { IOdrlAsset } from "../src/models/IOdrlAsset";
 import type { IOdrlAssetCollection } from "../src/models/IOdrlAssetCollection";
@@ -20,7 +20,6 @@ import { OperatorType } from "../src/models/types/operatorTypes";
 import { PolicyType } from "../src/models/types/policyTypes";
 import { RightOperandTypes } from "../src/models/types/rightOperandTypes";
 import { UriActionTypes } from "../src/models/types/uriActionTypes";
-import { VCardPropertyType } from "../src/models/types/vcardTypes";
 
 describe("ODRL Examples from Specification", () => {
 	it("Example 1: Set Policy with use permission", () => {
@@ -198,7 +197,7 @@ describe("ODRL Examples from Specification", () => {
 
 	it("Example 9: Agreement Policy with complex Party objects", () => {
 		const policy: IOdrlPolicy = {
-			"@context": [OdrlContexts.Context, { vcard: "http://www.w3.org/2006/vcard/ns#" }],
+			"@context": [OdrlContexts.Context, { vcard: VCardContexts.Context }],
 			"@type": PolicyType.Agreement,
 			uid: "http://example.com/policy:777",
 			profile: "http://example.com/odrl:profile:05",
@@ -222,10 +221,7 @@ describe("ODRL Examples from Specification", () => {
 			]
 		};
 
-		expect(policy["@context"]).toEqual([
-			OdrlContexts.Context,
-			{ vcard: "http://www.w3.org/2006/vcard/ns#" }
-		]);
+		expect(policy["@context"]).toEqual([OdrlContexts.Context, { vcard: VCardContexts.Context }]);
 		expect(policy["@type"]).toBe(PolicyType.Agreement);
 		expect(policy.profile).toBe("http://example.com/odrl:profile:05");
 

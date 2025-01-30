@@ -7,57 +7,11 @@ A PartyCollection identifies a collection of entities and is a subclass of Party
 
 - [`IOdrlParty`](IOdrlParty.md)
 
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
+
 ## Properties
-
-### vcard:fn?
-
-> `optional` **vcard:fn**: `string`
-
-#### Inherited from
-
-[`IOdrlParty`](IOdrlParty.md).[`vcard:fn`](IOdrlParty.md#vcard:fn)
-
-***
-
-### vcard:hasEmail?
-
-> `optional` **vcard:hasEmail**: `string`
-
-#### Inherited from
-
-[`IOdrlParty`](IOdrlParty.md).[`vcard:hasEmail`](IOdrlParty.md#vcard:hasemail)
-
-***
-
-### vcard:Organization?
-
-> `optional` **vcard:Organization**: `string`
-
-#### Inherited from
-
-[`IOdrlParty`](IOdrlParty.md).[`vcard:Organization`](IOdrlParty.md#vcard:organization)
-
-***
-
-### vcard:Group?
-
-> `optional` **vcard:Group**: `string`
-
-#### Inherited from
-
-[`IOdrlParty`](IOdrlParty.md).[`vcard:Group`](IOdrlParty.md#vcard:group)
-
-***
-
-### vcard:Individual?
-
-> `optional` **vcard:Individual**: `string`
-
-#### Inherited from
-
-[`IOdrlParty`](IOdrlParty.md).[`vcard:Individual`](IOdrlParty.md#vcard:individual)
-
-***
 
 ### uid?
 

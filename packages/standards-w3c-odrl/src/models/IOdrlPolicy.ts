@@ -1,7 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 
-import type { IContextDefinition } from "./IContextDefinition";
+import type { IJsonLdContextDefinition } from "@twin.org/data-json-ld";
 import type { IOdrlAction } from "./IOdrlAction";
 import type { IOdrlAsset } from "./IOdrlAsset";
 import type { IOdrlDuty } from "./IOdrlDuty";
@@ -24,7 +24,8 @@ export interface IOdrlPolicy extends IOdrlPolicyMetadata {
 	 */
 	"@context":
 		| typeof OdrlContexts.Context
-		| [typeof OdrlContexts.Context, ...(string | IContextDefinition)[]];
+		| [typeof OdrlContexts.Context, IJsonLdContextDefinition]
+		| IJsonLdContextDefinition;
 	/**
 	 * The type of policy.
 	 * Must be one of: "Set", "Offer", "Agreement"

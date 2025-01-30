@@ -4,63 +4,17 @@ Interface for ODRL Parties.
 
 ## Extends
 
-- [`IVCardProperties`](../type-aliases/IVCardProperties.md)
+- `IJsonLdNodeObject`
 
 ## Extended by
 
 - [`IOdrlPartyCollection`](IOdrlPartyCollection.md)
 
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
+
 ## Properties
-
-### vcard:fn?
-
-> `optional` **vcard:fn**: `string`
-
-#### Inherited from
-
-`IVCardProperties.vcard:fn`
-
-***
-
-### vcard:hasEmail?
-
-> `optional` **vcard:hasEmail**: `string`
-
-#### Inherited from
-
-`IVCardProperties.vcard:hasEmail`
-
-***
-
-### vcard:Organization?
-
-> `optional` **vcard:Organization**: `string`
-
-#### Inherited from
-
-`IVCardProperties.vcard:Organization`
-
-***
-
-### vcard:Group?
-
-> `optional` **vcard:Group**: `string`
-
-#### Inherited from
-
-`IVCardProperties.vcard:Group`
-
-***
-
-### vcard:Individual?
-
-> `optional` **vcard:Individual**: `string`
-
-#### Inherited from
-
-`IVCardProperties.vcard:Individual`
-
-***
 
 ### uid?
 
@@ -78,6 +32,10 @@ Must be an IRI.
 The type of the party.
 Can be used to specify additional type information (e.g., "Party",
 "vcard:Organization", "vcard:Individual").
+
+#### Overrides
+
+`IJsonLdNodeObject.@type`
 
 ***
 

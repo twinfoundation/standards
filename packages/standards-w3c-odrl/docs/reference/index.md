@@ -2,7 +2,6 @@
 
 ## Interfaces
 
-- [IContextDefinition](interfaces/IContextDefinition.md)
 - [IOdrlAction](interfaces/IOdrlAction.md)
 - [IOdrlAsset](interfaces/IOdrlAsset.md)
 - [IOdrlAssetCollection](interfaces/IOdrlAssetCollection.md)
@@ -19,7 +18,6 @@
 
 ## Type Aliases
 
-- [IVCardProperties](type-aliases/IVCardProperties.md)
 - [OdrlContexts](type-aliases/OdrlContexts.md)
 - [ActionType](type-aliases/ActionType.md)
 - [ConflictStrategyType](type-aliases/ConflictStrategyType.md)
@@ -33,7 +31,6 @@
 - [RuleType](type-aliases/RuleType.md)
 - [StatusType](type-aliases/StatusType.md)
 - [UriActionType](type-aliases/UriActionType.md)
-- [VCardPropertyType](type-aliases/VCardPropertyType.md)
 
 ## Variables
 
@@ -50,4 +47,3 @@
 - [RuleType](variables/RuleType.md)
 - [StatusType](variables/StatusType.md)
 - [UriActionTypes](variables/UriActionTypes.md)
-- [VCardPropertyType](variables/VCardPropertyType.md)

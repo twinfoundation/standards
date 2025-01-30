@@ -1,0 +1,17 @@
+{
+	"type": "string",
+	"enum": [
+		"vcard:fn",
+		"vcard:hasEmail",
+		"vcard:Organization",
+		"vcard:Group",
+		"vcard:Individual",
+		"vcard:Address",
+		"vcard:hasTelephone",
+		"vcard:hasUrl",
+		"vcard:nickname",
+		"vcard:bday",
+		"vcard:hasPhoto"
+	],
+	"description": "Common VCard property types. Based on http://www.w3.org/2006/vcard/ns#   Common VCard property types."
+}

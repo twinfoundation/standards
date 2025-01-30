@@ -15,8 +15,6 @@
 		"IOdrlPolicyMetadata",
 		"IOdrlProhibition",
 		"IOdrlRule",
-		"IContextDefinition",
-		"IVCardProperties",
 		"LogicalConstraintType",
 		"OdrlContexts",
 		"OdrlTypes",
@@ -26,7 +24,6 @@
 		"StatusType",
 		"ActionType",
 		"LeftOperandType",
-		"VCardPropertyType",
 		"UriActionType",
 		"RightOperandType"
 	],

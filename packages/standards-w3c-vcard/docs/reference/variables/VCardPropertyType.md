@@ -2,7 +2,7 @@
 
 > `const` **VCardPropertyType**: `object`
 
-Common vCard property types used in ODRL.
+Common VCard property types.
 Based on http://www.w3.org/2006/vcard/ns#
 
 ## Type declaration
@@ -36,3 +36,39 @@ Group type
 > `readonly` **Individual**: `"vcard:Individual"` = `"vcard:Individual"`
 
 Individual type
+
+### Address
+
+> `readonly` **Address**: `"vcard:Address"` = `"vcard:Address"`
+
+Address
+
+### Phone
+
+> `readonly` **Phone**: `"vcard:hasTelephone"` = `"vcard:hasTelephone"`
+
+Phone number
+
+### Url
+
+> `readonly` **Url**: `"vcard:hasUrl"` = `"vcard:hasUrl"`
+
+URL
+
+### Nickname
+
+> `readonly` **Nickname**: `"vcard:nickname"` = `"vcard:nickname"`
+
+Nickname
+
+### Birthday
+
+> `readonly` **Birthday**: `"vcard:bday"` = `"vcard:bday"`
+
+Birthday
+
+### Photo
+
+> `readonly` **Photo**: `"vcard:hasPhoto"` = `"vcard:hasPhoto"`
+
+Photo
