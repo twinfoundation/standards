@@ -32,7 +32,8 @@
 	},
 	"dependencies": {
 		"@twin.org/data-json-ld": "next",
-		"@twin.org/web": "next"
+		"@twin.org/web": "next",
+		"@twin.org/standards-w3c-vcard": "0.0.1-next.20"
 	},
 	"devDependencies": {
 		"@twin.org/nameof-transformer": "next",
