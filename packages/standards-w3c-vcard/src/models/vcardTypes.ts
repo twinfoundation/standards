@@ -10,57 +10,57 @@ export const VCardPropertyType = {
 	/**
 	 * Formatted name
 	 */
-	FormattedName: "vcard:fn",
+	FormattedName: "fn",
 
 	/**
 	 * Email address
 	 */
-	Email: "vcard:hasEmail",
+	Email: "hasEmail",
 
 	/**
 	 * Organization type
 	 */
-	Organization: "vcard:Organization",
+	Organization: "Organization",
 
 	/**
 	 * Group type
 	 */
-	Group: "vcard:Group",
+	Group: "Group",
 
 	/**
 	 * Individual type
 	 */
-	Individual: "vcard:Individual",
+	Individual: "Individual",
 
 	/**
 	 * Address
 	 */
-	Address: "vcard:Address",
+	Address: "Address",
 
 	/**
 	 * Phone number
 	 */
-	Phone: "vcard:hasTelephone",
+	Phone: "hasTelephone",
 
 	/**
 	 * URL
 	 */
-	Url: "vcard:hasUrl",
+	Url: "hasUrl",
 
 	/**
 	 * Nickname
 	 */
-	Nickname: "vcard:nickname",
+	Nickname: "nickname",
 
 	/**
 	 * Birthday
 	 */
-	Birthday: "vcard:bday",
+	Birthday: "bday",
 
 	/**
 	 * Photo
 	 */
-	Photo: "vcard:hasPhoto"
+	Photo: "hasPhoto"
 } as const;
 
 /**

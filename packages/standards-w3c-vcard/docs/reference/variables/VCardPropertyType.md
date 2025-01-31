@@ -9,66 +9,66 @@ Based on http://www.w3.org/2006/vcard/ns#
 
 ### FormattedName
 
-> `readonly` **FormattedName**: `"vcard:fn"` = `"vcard:fn"`
+> `readonly` **FormattedName**: `"fn"` = `"fn"`
 
 Formatted name
 
 ### Email
 
-> `readonly` **Email**: `"vcard:hasEmail"` = `"vcard:hasEmail"`
+> `readonly` **Email**: `"hasEmail"` = `"hasEmail"`
 
 Email address
 
 ### Organization
 
-> `readonly` **Organization**: `"vcard:Organization"` = `"vcard:Organization"`
+> `readonly` **Organization**: `"Organization"` = `"Organization"`
 
 Organization type
 
 ### Group
 
-> `readonly` **Group**: `"vcard:Group"` = `"vcard:Group"`
+> `readonly` **Group**: `"Group"` = `"Group"`
 
 Group type
 
 ### Individual
 
-> `readonly` **Individual**: `"vcard:Individual"` = `"vcard:Individual"`
+> `readonly` **Individual**: `"Individual"` = `"Individual"`
 
 Individual type
 
 ### Address
 
-> `readonly` **Address**: `"vcard:Address"` = `"vcard:Address"`
+> `readonly` **Address**: `"Address"` = `"Address"`
 
 Address
 
 ### Phone
 
-> `readonly` **Phone**: `"vcard:hasTelephone"` = `"vcard:hasTelephone"`
+> `readonly` **Phone**: `"hasTelephone"` = `"hasTelephone"`
 
 Phone number
 
 ### Url
 
-> `readonly` **Url**: `"vcard:hasUrl"` = `"vcard:hasUrl"`
+> `readonly` **Url**: `"hasUrl"` = `"hasUrl"`
 
 URL
 
 ### Nickname
 
-> `readonly` **Nickname**: `"vcard:nickname"` = `"vcard:nickname"`
+> `readonly` **Nickname**: `"nickname"` = `"nickname"`
 
 Nickname
 
 ### Birthday
 
-> `readonly` **Birthday**: `"vcard:bday"` = `"vcard:bday"`
+> `readonly` **Birthday**: `"bday"` = `"bday"`
 
 Birthday
 
 ### Photo
 
-> `readonly` **Photo**: `"vcard:hasPhoto"` = `"vcard:hasPhoto"`
+> `readonly` **Photo**: `"hasPhoto"` = `"hasPhoto"`
 
 Photo

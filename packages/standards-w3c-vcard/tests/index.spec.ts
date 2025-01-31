@@ -9,16 +9,16 @@ describe("VCard", () => {
 	});
 
 	it("should have correct property types", () => {
-		expect(VCardPropertyType.FormattedName).toBe("vcard:fn");
-		expect(VCardPropertyType.Email).toBe("vcard:hasEmail");
-		expect(VCardPropertyType.Organization).toBe("vcard:Organization");
-		expect(VCardPropertyType.Group).toBe("vcard:Group");
-		expect(VCardPropertyType.Individual).toBe("vcard:Individual");
-		expect(VCardPropertyType.Address).toBe("vcard:Address");
-		expect(VCardPropertyType.Phone).toBe("vcard:hasTelephone");
-		expect(VCardPropertyType.Url).toBe("vcard:hasUrl");
-		expect(VCardPropertyType.Nickname).toBe("vcard:nickname");
-		expect(VCardPropertyType.Birthday).toBe("vcard:bday");
-		expect(VCardPropertyType.Photo).toBe("vcard:hasPhoto");
+		expect(`vcard:${VCardPropertyType.FormattedName}`).toBe("vcard:fn");
+		expect(`vcard:${VCardPropertyType.Email}`).toBe("vcard:hasEmail");
+		expect(`vcard:${VCardPropertyType.Organization}`).toBe("vcard:Organization");
+		expect(`vcard:${VCardPropertyType.Group}`).toBe("vcard:Group");
+		expect(`vcard:${VCardPropertyType.Individual}`).toBe("vcard:Individual");
+		expect(`vcard:${VCardPropertyType.Address}`).toBe("vcard:Address");
+		expect(`vcard:${VCardPropertyType.Phone}`).toBe("vcard:hasTelephone");
+		expect(`vcard:${VCardPropertyType.Url}`).toBe("vcard:hasUrl");
+		expect(`vcard:${VCardPropertyType.Nickname}`).toBe("vcard:nickname");
+		expect(`vcard:${VCardPropertyType.Birthday}`).toBe("vcard:bday");
+		expect(`vcard:${VCardPropertyType.Photo}`).toBe("vcard:hasPhoto");
 	});
 });

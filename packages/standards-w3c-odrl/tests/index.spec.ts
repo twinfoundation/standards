@@ -205,16 +205,16 @@ describe("ODRL Examples from Specification", () => {
 				{
 					target: "http://example.com/looking-glass.ebook",
 					assigner: {
-						"@type": [OdrlTypes.Party, VCardPropertyType.Organization],
+						"@type": [OdrlTypes.Party, `vcard:${VCardPropertyType.Organization}`],
 						uid: "http://example.com/org/sony-books",
-						[VCardPropertyType.FormattedName]: "Sony Books LCC",
-						[VCardPropertyType.Email]: "sony-contact@example.com"
+						[`vcard:${VCardPropertyType.FormattedName}`]: "Sony Books LCC",
+						[`vcard:${VCardPropertyType.Email}`]: "sony-contact@example.com"
 					},
 					assignee: {
-						"@type": [OdrlTypes.PartyCollection, VCardPropertyType.Group],
+						"@type": [OdrlTypes.PartyCollection, `vcard:${VCardPropertyType.Group}`],
 						uid: "http://example.com/team/A",
-						[VCardPropertyType.FormattedName]: "Team A",
-						[VCardPropertyType.Email]: "teamA@example.com"
+						[`vcard:${VCardPropertyType.FormattedName}`]: "Team A",
+						[`vcard:${VCardPropertyType.Email}`]: "teamA@example.com"
 					},
 					action: ActionTypes.Use
 				}
@@ -232,32 +232,35 @@ describe("ODRL Examples from Specification", () => {
 
 		// Test assigner Party
 		const assigner = permission?.assigner as IOdrlParty;
-		expect(assigner["@type"]).toEqual([OdrlTypes.Party, VCardPropertyType.Organization]);
+		expect(assigner["@type"]).toEqual([OdrlTypes.Party, `vcard:${VCardPropertyType.Organization}`]);
 		expect(assigner.uid).toBe("http://example.com/org/sony-books");
-		expect(assigner[VCardPropertyType.FormattedName]).toBe("Sony Books LCC");
-		expect(assigner[VCardPropertyType.Email]).toBe("sony-contact@example.com");
+		expect(assigner[`vcard:${VCardPropertyType.FormattedName}`]).toBe("Sony Books LCC");
+		expect(assigner[`vcard:${VCardPropertyType.Email}`]).toBe("sony-contact@example.com");
 
 		// Test assignee PartyCollection
 		const assignee = permission?.assignee as IOdrlParty;
-		expect(assignee["@type"]).toEqual([OdrlTypes.PartyCollection, VCardPropertyType.Group]);
+		expect(assignee["@type"]).toEqual([
+			OdrlTypes.PartyCollection,
+			`vcard:${VCardPropertyType.Group}`
+		]);
 		expect(assignee.uid).toBe("http://example.com/team/A");
-		expect(assignee[VCardPropertyType.FormattedName]).toBe("Team A");
-		expect(assignee[VCardPropertyType.Email]).toBe("teamA@example.com");
+		expect(assignee[`vcard:${VCardPropertyType.FormattedName}`]).toBe("Team A");
+		expect(assignee[`vcard:${VCardPropertyType.Email}`]).toBe("teamA@example.com");
 	});
 
 	it("Example 10: Party with partOf reference to PartyCollection", () => {
 		const party: IOdrlParty = {
-			"@type": VCardPropertyType.Individual,
+			"@type": `vcard:${VCardPropertyType.Individual}`,
 			uid: "http://example.com/person/murphy",
-			[VCardPropertyType.FormattedName]: "Murphy",
-			[VCardPropertyType.Email]: "murphy@example.com",
+			[`vcard:${VCardPropertyType.FormattedName}`]: "Murphy",
+			[`vcard:${VCardPropertyType.Email}`]: "murphy@example.com",
 			partOf: "http://example.com/team/A"
 		};
 
-		expect(party["@type"]).toBe(VCardPropertyType.Individual);
+		expect(party["@type"]).toBe(`vcard:${VCardPropertyType.Individual}`);
 		expect(party.uid).toBe("http://example.com/person/murphy");
-		expect(party[VCardPropertyType.FormattedName]).toBe("Murphy");
-		expect(party[VCardPropertyType.Email]).toBe("murphy@example.com");
+		expect(party[`vcard:${VCardPropertyType.FormattedName}`]).toBe("Murphy");
+		expect(party[`vcard:${VCardPropertyType.Email}`]).toBe("murphy@example.com");
 		expect(party.partOf).toBe("http://example.com/team/A");
 
 		// Verify this party is part of the team from Example 9
@@ -267,17 +270,17 @@ describe("ODRL Examples from Specification", () => {
 
 	it("Example 11: Party with assigneeOf reference to Policy", () => {
 		const party: IOdrlParty = {
-			"@type": VCardPropertyType.Individual,
+			"@type": `vcard:${VCardPropertyType.Individual}`,
 			uid: "http://example.com/person/billie",
-			[VCardPropertyType.FormattedName]: "Billie",
-			[VCardPropertyType.Email]: "billie@example.com",
+			[`vcard:${VCardPropertyType.FormattedName}`]: "Billie",
+			[`vcard:${VCardPropertyType.Email}`]: "billie@example.com",
 			assigneeOf: "http://example.com/policy:1011"
 		};
 
-		expect(party["@type"]).toBe(VCardPropertyType.Individual);
+		expect(party["@type"]).toBe(`vcard:${VCardPropertyType.Individual}`);
 		expect(party.uid).toBe("http://example.com/person/billie");
-		expect(party[VCardPropertyType.FormattedName]).toBe("Billie");
-		expect(party[VCardPropertyType.Email]).toBe("billie@example.com");
+		expect(party[`vcard:${VCardPropertyType.FormattedName}`]).toBe("Billie");
+		expect(party[`vcard:${VCardPropertyType.Email}`]).toBe("billie@example.com");
 		expect(party.assigneeOf).toBe("http://example.com/policy:1011");
 	});
 
