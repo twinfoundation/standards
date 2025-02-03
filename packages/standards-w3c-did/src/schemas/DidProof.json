@@ -100,7 +100,13 @@
 			"description": "Use of this field is to increase privacy by decreasing linkability that is the result of deterministically generated signatures."
 		}
 	},
-	"required": ["@context", "type", "cryptosuite", "proofPurpose", "proofValue"],
+	"required": [
+		"@context",
+		"type",
+		"cryptosuite",
+		"proofPurpose",
+		"proofValue"
+	],
 	"additionalProperties": false,
 	"description": "Interface describing a did proof. https://www.w3.org/TR/vc-data-integrity/"
 }

@@ -90,7 +90,9 @@
 			"description": "Refinements applied to the asset collection. Used to specify the refinement context under which to identify individual Asset(s) of the complete collection. The refinement applies to the characteristics of each member of the collection (not the resource as a whole)."
 		}
 	},
-	"required": ["source"],
+	"required": [
+		"source"
+	],
 	"additionalProperties": {
 		"anyOf": [
 			{

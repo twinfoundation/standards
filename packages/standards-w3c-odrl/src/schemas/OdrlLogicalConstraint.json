@@ -84,12 +84,16 @@
 								"type": "string"
 							}
 						},
-						"required": ["@id"],
+						"required": [
+							"@id"
+						],
 						"additionalProperties": false
 					}
 				}
 			},
-			"required": ["@list"],
+			"required": [
+				"@list"
+			],
 			"additionalProperties": false,
 			"description": "AND operator - all constraints must be satisfied."
 		},
@@ -105,12 +109,16 @@
 								"type": "string"
 							}
 						},
-						"required": ["@id"],
+						"required": [
+							"@id"
+						],
 						"additionalProperties": false
 					}
 				}
 			},
-			"required": ["@list"],
+			"required": [
+				"@list"
+			],
 			"additionalProperties": false,
 			"description": "OR operator - at least one constraint must be satisfied."
 		},
@@ -126,12 +134,16 @@
 								"type": "string"
 							}
 						},
-						"required": ["@id"],
+						"required": [
+							"@id"
+						],
 						"additionalProperties": false
 					}
 				}
 			},
-			"required": ["@list"],
+			"required": [
+				"@list"
+			],
 			"additionalProperties": false,
 			"description": "XOR operator - exactly one constraint must be satisfied."
 		},
@@ -147,12 +159,16 @@
 								"type": "string"
 							}
 						},
-						"required": ["@id"],
+						"required": [
+							"@id"
+						],
 						"additionalProperties": false
 					}
 				}
 			},
-			"required": ["@list"],
+			"required": [
+				"@list"
+			],
 			"additionalProperties": false,
 			"description": "AND Sequence operator - all constraints must be satisfied in order."
 		}

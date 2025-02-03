@@ -102,7 +102,9 @@
 							"$ref": "https://schema.twindev.org/odrl/DataType"
 						}
 					},
-					"required": ["@value"],
+					"required": [
+						"@value"
+					],
 					"additionalProperties": false
 				},
 				{
@@ -112,7 +114,9 @@
 							"type": "string"
 						}
 					},
-					"required": ["@id"],
+					"required": [
+						"@id"
+					],
 					"additionalProperties": false
 				}
 			],
@@ -135,7 +139,10 @@
 			"description": "The status value for comparison."
 		}
 	},
-	"required": ["leftOperand", "operator"],
+	"required": [
+		"leftOperand",
+		"operator"
+	],
 	"additionalProperties": {
 		"anyOf": [
 			{

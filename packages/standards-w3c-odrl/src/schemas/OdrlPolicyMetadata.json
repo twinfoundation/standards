@@ -67,7 +67,9 @@
 							"type": "string"
 						}
 					},
-					"required": ["@id"],
+					"required": [
+						"@id"
+					],
 					"additionalProperties": false
 				}
 			],
@@ -85,7 +87,9 @@
 							"type": "string"
 						}
 					},
-					"required": ["@id"],
+					"required": [
+						"@id"
+					],
 					"additionalProperties": false
 				}
 			],
@@ -103,7 +107,9 @@
 							"type": "string"
 						}
 					},
-					"required": ["@id"],
+					"required": [
+						"@id"
+					],
 					"additionalProperties": false
 				}
 			],

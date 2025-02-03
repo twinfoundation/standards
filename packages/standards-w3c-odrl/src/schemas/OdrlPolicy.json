@@ -210,7 +210,11 @@
 			"description": "The obligations in the policy. At least one of permission, prohibition, or obligation must be present."
 		}
 	},
-	"required": ["@context", "@type", "uid"],
+	"required": [
+		"@context",
+		"@type",
+		"uid"
+	],
 	"additionalProperties": {
 		"anyOf": [
 			{

@@ -104,7 +104,9 @@
 			"description": "Refinements applied to the party collection. Used to specify constraints that apply to all members of the collection."
 		}
 	},
-	"required": ["source"],
+	"required": [
+		"source"
+	],
 	"additionalProperties": {
 		"anyOf": [
 			{
