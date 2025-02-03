@@ -1,5 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
+import { DublinCoreContexts, DublinCorePropertyType } from "@twin.org/standards-dublin-core";
 import { VCardContexts, VCardPropertyType } from "@twin.org/standards-w3c-vcard";
 import type { IOdrlAction } from "../src/models/IOdrlAction";
 import type { IOdrlAsset } from "../src/models/IOdrlAsset";
@@ -1271,32 +1272,34 @@ describe("ODRL Examples from Specification", () => {
 
 	it("Example 30: Policy with Dublin Core metadata", () => {
 		const policy: IOdrlPolicy = {
-			"@context": [OdrlContexts.Context, { dc: "http://purl.org/dc/terms/" }],
+			"@context": [OdrlContexts.Context, { dc: DublinCoreContexts.Context }],
 			"@type": PolicyType.Policy,
 			uid: "http://example.com/policy:8888",
 			profile: "http://example.com/odrl:profile:22",
-			"dc:creator": "Billie Enterprises LLC",
-			"dc:description": "This policy covers...",
-			"dc:issued": "2017-01-01T12:00",
-			"dc:coverage": { "@id": "https://www.iso.org/obp/ui/#iso:code:3166:AU-QLD" },
-			"dc:replaces": { "@id": "http://example.com/policy:8887" },
+			[`dc:${DublinCorePropertyType.Creator}`]: "Billie Enterprises LLC",
+			[`dc:${DublinCorePropertyType.Description}`]: "This policy covers...",
+			[`dc:${DublinCorePropertyType.Issued}`]: "2017-01-01T12:00",
+			[`dc:${DublinCorePropertyType.Coverage}`]: {
+				"@id": "https://www.iso.org/obp/ui/#iso:code:3166:AU-QLD"
+			},
+			[`dc:${DublinCorePropertyType.Replaces}`]: { "@id": "http://example.com/policy:8887" },
 			permission: [{}]
 		};
 
 		// Test basic policy structure
-		expect(policy["@context"]).toEqual([OdrlContexts.Context, { dc: "http://purl.org/dc/terms/" }]);
+		expect(policy["@context"]).toEqual([OdrlContexts.Context, { dc: DublinCoreContexts.Context }]);
 		expect(policy["@type"]).toBe(PolicyType.Policy);
 		expect(policy.uid).toBe("http://example.com/policy:8888");
 		expect(policy.profile).toBe("http://example.com/odrl:profile:22");
 
 		// Test Dublin Core metadata
-		expect(policy["dc:creator"]).toBe("Billie Enterprises LLC");
-		expect(policy["dc:description"]).toBe("This policy covers...");
-		expect(policy["dc:issued"]).toBe("2017-01-01T12:00");
-		expect(policy["dc:coverage"]).toEqual({
+		expect(policy[`dc:${DublinCorePropertyType.Creator}`]).toBe("Billie Enterprises LLC");
+		expect(policy[`dc:${DublinCorePropertyType.Description}`]).toBe("This policy covers...");
+		expect(policy[`dc:${DublinCorePropertyType.Issued}`]).toBe("2017-01-01T12:00");
+		expect(policy[`dc:${DublinCorePropertyType.Coverage}`]).toEqual({
 			"@id": "https://www.iso.org/obp/ui/#iso:code:3166:AU-QLD"
 		});
-		expect(policy["dc:replaces"]).toEqual({
+		expect(policy[`dc:${DublinCorePropertyType.Replaces}`]).toEqual({
 			"@id": "http://example.com/policy:8887"
 		});
 

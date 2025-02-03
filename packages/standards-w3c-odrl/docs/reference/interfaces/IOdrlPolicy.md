@@ -4,13 +4,103 @@ Interface representing an ODRL Policy.
 
 ## Extends
 
-- [`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md)
+- `DublinCoreMetadataType`
 
 ## Properties
 
+### dc:description?
+
+> `optional` **dc:description**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:description`
+
+***
+
+### dc:creator?
+
+> `optional` **dc:creator**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:creator`
+
+***
+
+### dc:issued?
+
+> `optional` **dc:issued**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:issued`
+
+***
+
+### dc:modified?
+
+> `optional` **dc:modified**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:modified`
+
+***
+
+### dc:publisher?
+
+> `optional` **dc:publisher**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:publisher`
+
+***
+
+### dc:subject?
+
+> `optional` **dc:subject**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:subject`
+
+***
+
+### dc:coverage?
+
+> `optional` **dc:coverage**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:coverage`
+
+***
+
+### dc:replaces?
+
+> `optional` **dc:replaces**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:replaces`
+
+***
+
+### dc:isReplacedBy?
+
+> `optional` **dc:isReplacedBy**: `string` \| `string`[] \| \{ `@id`: `string`; \}
+
+#### Inherited from
+
+`DublinCoreMetadataType.dc:isReplacedBy`
+
+***
+
 ### @context
 
-> **@context**: `"https://www.w3.org/ns/odrl.jsonld"` \| `IJsonLdContextDefinition` \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `IJsonLdContextDefinition`\]
+> **@context**: `"https://www.w3.org/ns/odrl.jsonld"` \| `IJsonLdContextDefinition` \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `"http://purl.org/dc/terms/"`\] \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `IJsonLdContextDefinition`\]
 
 The context for the policy.
 Must include "https://www.w3.org/ns/odrl.jsonld"
@@ -122,121 +212,3 @@ At least one of permission, prohibition, or obligation must be present.
 
 The obligations in the policy.
 At least one of permission, prohibition, or obligation must be present.
-
-***
-
-### dc:creator?
-
-> `optional` **dc:creator**: `string` \| `string`[]
-
-The individual, agent, or organisation that authored the Policy.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:creator`](IOdrlPolicyMetadata.md#dc:creator)
-
-***
-
-### dc:description?
-
-> `optional` **dc:description**: `string` \| `string`[]
-
-A human-readable representation or summary of the Policy.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:description`](IOdrlPolicyMetadata.md#dc:description)
-
-***
-
-### dc:issued?
-
-> `optional` **dc:issued**: `string`
-
-The date (and time) the Policy was first issued.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:issued`](IOdrlPolicyMetadata.md#dc:issued)
-
-***
-
-### dc:modified?
-
-> `optional` **dc:modified**: `string`
-
-The date (and time) the Policy was updated.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:modified`](IOdrlPolicyMetadata.md#dc:modified)
-
-***
-
-### dc:publisher?
-
-> `optional` **dc:publisher**: `string`
-
-The publisher of the Policy.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:publisher`](IOdrlPolicyMetadata.md#dc:publisher)
-
-***
-
-### dc:subject?
-
-> `optional` **dc:subject**: `string` \| `string`[]
-
-The subject of the Policy.
-Note: String values may not be normalized and should not be used for direct comparison.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:subject`](IOdrlPolicyMetadata.md#dc:subject)
-
-***
-
-### dc:coverage?
-
-> `optional` **dc:coverage**: `string` \| \{ `@id`: `string`; \}
-
-The jurisdiction under which the Policy is relevant.
-Note: When using string values, they may not be normalized and should not be used for direct comparison.
-Using "@id" references is preferred for comparison purposes.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:coverage`](IOdrlPolicyMetadata.md#dc:coverage)
-
-***
-
-### dc:replaces?
-
-> `optional` **dc:replaces**: `string` \| \{ `@id`: `string`; \}
-
-The identifier of a Policy that this Policy supersedes.
-Using "@id" references is preferred for comparison purposes.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:replaces`](IOdrlPolicyMetadata.md#dc:replaces)
-
-***
-
-### dc:isReplacedBy?
-
-> `optional` **dc:isReplacedBy**: `string` \| \{ `@id`: `string`; \}
-
-The identifier of a Policy that supersedes this Policy.
-Using "@id" references is preferred for comparison purposes.
-
-#### Inherited from
-
-[`IOdrlPolicyMetadata`](IOdrlPolicyMetadata.md).[`dc:isReplacedBy`](IOdrlPolicyMetadata.md#dc:isreplacedby)

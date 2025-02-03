@@ -1,86 +1,72 @@
-# Interface: IOdrlPolicyMetadata
+# Variable: DublinCorePropertyType
 
-Interface for ODRL Policy Metadata using Dublin Core terms.
-While these aren't explicitly defined in the ODRL spec, they are valid and useful metadata properties that follow Dublin Core standards.
+> `const` **DublinCorePropertyType**: `object`
 
-## Properties
+Common Dublin Core property types for ODRL Policy Metadata.
+Based on http://purl.org/dc/terms/
 
-### dc:creator?
+## Type declaration
 
-> `optional` **dc:creator**: `string` \| `string`[]
+### Creator
+
+> `readonly` **Creator**: `"creator"` = `"creator"`
 
 The individual, agent, or organisation that authored the Policy.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Description
 
-### dc:description?
-
-> `optional` **dc:description**: `string` \| `string`[]
+> `readonly` **Description**: `"description"` = `"description"`
 
 A human-readable representation or summary of the Policy.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Issued
 
-### dc:issued?
-
-> `optional` **dc:issued**: `string`
+> `readonly` **Issued**: `"issued"` = `"issued"`
 
 The date (and time) the Policy was first issued.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Modified
 
-### dc:modified?
-
-> `optional` **dc:modified**: `string`
+> `readonly` **Modified**: `"modified"` = `"modified"`
 
 The date (and time) the Policy was updated.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Publisher
 
-### dc:publisher?
-
-> `optional` **dc:publisher**: `string`
+> `readonly` **Publisher**: `"publisher"` = `"publisher"`
 
 The publisher of the Policy.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Subject
 
-### dc:subject?
-
-> `optional` **dc:subject**: `string` \| `string`[]
+> `readonly` **Subject**: `"subject"` = `"subject"`
 
 The subject of the Policy.
 Note: String values may not be normalized and should not be used for direct comparison.
 
-***
+### Coverage
 
-### dc:coverage?
-
-> `optional` **dc:coverage**: `string` \| \{ `@id`: `string`; \}
+> `readonly` **Coverage**: `"coverage"` = `"coverage"`
 
 The jurisdiction under which the Policy is relevant.
 Note: When using string values, they may not be normalized and should not be used for direct comparison.
 Using "@id" references is preferred for comparison purposes.
 
-***
+### Replaces
 
-### dc:replaces?
-
-> `optional` **dc:replaces**: `string` \| \{ `@id`: `string`; \}
+> `readonly` **Replaces**: `"replaces"` = `"replaces"`
 
 The identifier of a Policy that this Policy supersedes.
 Using "@id" references is preferred for comparison purposes.
 
-***
+### IsReplacedBy
 
-### dc:isReplacedBy?
-
-> `optional` **dc:isReplacedBy**: `string` \| \{ `@id`: `string`; \}
+> `readonly` **IsReplacedBy**: `"isReplacedBy"` = `"isReplacedBy"`
 
 The identifier of a Policy that supersedes this Policy.
 Using "@id" references is preferred for comparison purposes.

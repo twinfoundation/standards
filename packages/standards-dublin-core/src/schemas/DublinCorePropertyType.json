@@ -1,0 +1,15 @@
+{
+	"type": "string",
+	"enum": [
+		"creator",
+		"description",
+		"issued",
+		"modified",
+		"publisher",
+		"subject",
+		"coverage",
+		"replaces",
+		"isReplacedBy"
+	],
+	"description": "Common Dublin Core property types for ODRL Policy Metadata. Based on http://purl.org/dc/terms/   Common Dublin Core property types."
+}

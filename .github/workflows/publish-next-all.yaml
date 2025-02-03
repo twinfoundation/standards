@@ -17,6 +17,7 @@ jobs:
           [
             'packages/standards-w3c-did',
             'packages/standards-w3c-vcard',
+            'packages/standards-dublin-core',
             'packages/standards-w3c-odrl',
             'packages/standards-gs1',
             'packages/standards-schema-org',

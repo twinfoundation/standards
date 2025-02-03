@@ -2,12 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IJsonLdContextDefinition } from "@twin.org/data-json-ld";
+import type { DublinCoreContexts, DublinCoreMetadataType } from "@twin.org/standards-dublin-core";
 import type { IOdrlAction } from "./IOdrlAction";
 import type { IOdrlAsset } from "./IOdrlAsset";
 import type { IOdrlDuty } from "./IOdrlDuty";
 import type { IOdrlParty } from "./IOdrlParty";
 import type { IOdrlPermission } from "./IOdrlPermission";
-import type { IOdrlPolicyMetadata } from "./IOdrlPolicyMetadata";
 import type { IOdrlProhibition } from "./IOdrlProhibition";
 import type { OdrlContexts } from "./odrlContexts";
 import type { ActionType } from "./types/actionTypes";
@@ -17,13 +17,14 @@ import type { PolicyType } from "./types/policyTypes";
 /**
  * Interface representing an ODRL Policy.
  */
-export interface IOdrlPolicy extends IOdrlPolicyMetadata {
+export interface IOdrlPolicy extends DublinCoreMetadataType {
 	/**
 	 * The context for the policy.
 	 * Must include "https://www.w3.org/ns/odrl.jsonld"
 	 */
 	"@context":
 		| typeof OdrlContexts.Context
+		| [typeof OdrlContexts.Context, typeof DublinCoreContexts.Context]
 		| [typeof OdrlContexts.Context, IJsonLdContextDefinition]
 		| IJsonLdContextDefinition;
 	/**
