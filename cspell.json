@@ -24,6 +24,11 @@
 		"nameof",
 		"rdfc",
 		"Stiftung",
+		"Odrl",
+		"lteq",
+		"gteq",
+		"xone",
+		"vcard",
 		"epcis",
 		"unece",
 		"cefact",
@@ -33,7 +38,8 @@
 		"masterdata",
 		"iepc",
 		"sgln",
-		"sgtin"
+		"sgtin",
+		"bday"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",

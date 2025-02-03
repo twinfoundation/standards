@@ -1,0 +1,5 @@
+{
+	"type": "string",
+	"const": "http://purl.org/dc/terms/",
+	"description": "The contexts for Dublin Core."
+}

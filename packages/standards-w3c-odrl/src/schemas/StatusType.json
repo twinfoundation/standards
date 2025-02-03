@@ -1,0 +1,10 @@
+{
+	"type": "string",
+	"enum": [
+		"active",
+		"inactive",
+		"pending",
+		"revoked"
+	],
+	"description": "The types for ODRL Status."
+}

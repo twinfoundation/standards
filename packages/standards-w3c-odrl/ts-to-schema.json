@@ -1,0 +1,31 @@
+{
+	"baseUrl": "https://schema.twindev.org/odrl/",
+	"sources": ["./src/models/**/*.ts"],
+	"types": [
+		"IOdrlAction",
+		"IOdrlAsset",
+		"IOdrlAssetCollection",
+		"IOdrlConstraint",
+		"IOdrlDuty",
+		"IOdrlLogicalConstraint",
+		"IOdrlParty",
+		"IOdrlPartyCollection",
+		"IOdrlPermission",
+		"IOdrlPolicy",
+		"IOdrlPolicyMetadata",
+		"IOdrlProhibition",
+		"IOdrlRule",
+		"LogicalConstraintType",
+		"OdrlContexts",
+		"OdrlTypes",
+		"OperatorType",
+		"PolicyType",
+		"RuleType",
+		"StatusType",
+		"ActionType",
+		"LeftOperandType",
+		"UriActionType",
+		"RightOperandType"
+	],
+	"externalReferences": {}
+}
