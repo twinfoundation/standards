@@ -1,8 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 
-import type { IJsonLdContextDefinition } from "@twin.org/data-json-ld";
-import type { DublinCoreContexts, DublinCoreMetadataType } from "@twin.org/standards-dublin-core";
+import type { IJsonLdContextDefinition, IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { IOdrlAction } from "./IOdrlAction";
 import type { IOdrlAsset } from "./IOdrlAsset";
 import type { IOdrlDuty } from "./IOdrlDuty";
@@ -17,14 +16,13 @@ import type { PolicyType } from "./types/policyTypes";
 /**
  * Interface representing an ODRL Policy.
  */
-export interface IOdrlPolicy extends DublinCoreMetadataType {
+export interface IOdrlPolicy extends IJsonLdNodeObject {
 	/**
 	 * The context for the policy.
 	 * Must include "https://www.w3.org/ns/odrl.jsonld"
 	 */
 	"@context":
 		| typeof OdrlContexts.Context
-		| [typeof OdrlContexts.Context, typeof DublinCoreContexts.Context]
 		| [typeof OdrlContexts.Context, IJsonLdContextDefinition]
 		| IJsonLdContextDefinition;
 	/**

@@ -2,6 +2,14 @@
 
 Interface for ODRL Actions.
 
+## Extends
+
+- `IJsonLdNodeObject`
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
+
 ## Properties
 
 ### rdf:value?
@@ -23,6 +31,10 @@ Used in complex action definitions.
 
 Direct action identifier.
 Used in simple action references.
+
+#### Overrides
+
+`IJsonLdNodeObject.@id`
 
 ***
 

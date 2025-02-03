@@ -4,6 +4,14 @@ Interface for ODRL Logical Constraints.
 A Logical Constraint compares two or more existing Constraints by one logical operator.
 If the comparison returns a logical match, then the Logical Constraint is satisfied.
 
+## Extends
+
+- `IJsonLdNodeObject`
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
+
 ## Properties
 
 ### uid?

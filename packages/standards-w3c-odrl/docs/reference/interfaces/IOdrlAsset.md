@@ -2,9 +2,17 @@
 
 Interface for ODRL Assets.
 
+## Extends
+
+- `IJsonLdNodeObject`
+
 ## Extended by
 
 - [`IOdrlAssetCollection`](IOdrlAssetCollection.md)
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
 
 ## Properties
 
@@ -23,6 +31,10 @@ Should be an IRI.
 
 The type of the asset.
 Can be used to specify additional type information.
+
+#### Overrides
+
+`IJsonLdNodeObject.@type`
 
 ***
 

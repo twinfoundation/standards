@@ -4,106 +4,24 @@ Interface representing an ODRL Policy.
 
 ## Extends
 
-- `DublinCoreMetadataType`
+- `IJsonLdNodeObject`
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
 
 ## Properties
 
-### dc:description?
-
-> `optional` **dc:description**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:description`
-
-***
-
-### dc:creator?
-
-> `optional` **dc:creator**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:creator`
-
-***
-
-### dc:issued?
-
-> `optional` **dc:issued**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:issued`
-
-***
-
-### dc:modified?
-
-> `optional` **dc:modified**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:modified`
-
-***
-
-### dc:publisher?
-
-> `optional` **dc:publisher**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:publisher`
-
-***
-
-### dc:subject?
-
-> `optional` **dc:subject**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:subject`
-
-***
-
-### dc:coverage?
-
-> `optional` **dc:coverage**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:coverage`
-
-***
-
-### dc:replaces?
-
-> `optional` **dc:replaces**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:replaces`
-
-***
-
-### dc:isReplacedBy?
-
-> `optional` **dc:isReplacedBy**: `string` \| `string`[] \| \{ `@id`: `string`; \}
-
-#### Inherited from
-
-`DublinCoreMetadataType.dc:isReplacedBy`
-
-***
-
 ### @context
 
-> **@context**: `"https://www.w3.org/ns/odrl.jsonld"` \| `IJsonLdContextDefinition` \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `"http://purl.org/dc/terms/"`\] \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `IJsonLdContextDefinition`\]
+> **@context**: `"https://www.w3.org/ns/odrl.jsonld"` \| `IJsonLdContextDefinition` \| \[`"https://www.w3.org/ns/odrl.jsonld"`, `IJsonLdContextDefinition`\]
 
 The context for the policy.
 Must include "https://www.w3.org/ns/odrl.jsonld"
+
+#### Overrides
+
+`IJsonLdNodeObject.@context`
 
 ***
 
@@ -113,6 +31,10 @@ Must include "https://www.w3.org/ns/odrl.jsonld"
 
 The type of policy.
 Must be one of: "Set", "Offer", "Agreement"
+
+#### Overrides
+
+`IJsonLdNodeObject.@type`
 
 ***
 

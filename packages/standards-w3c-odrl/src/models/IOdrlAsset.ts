@@ -1,11 +1,12 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
+import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { IOdrlAssetCollection } from "./IOdrlAssetCollection";
 
 /**
  * Interface for ODRL Assets.
  */
-export interface IOdrlAsset {
+export interface IOdrlAsset extends IJsonLdNodeObject {
 	/**
 	 * The unique identifier for the asset.
 	 * Should be an IRI.

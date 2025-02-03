@@ -2,11 +2,19 @@
 
 Base interface for ODRL Rules.
 
+## Extends
+
+- `IJsonLdNodeObject`
+
 ## Extended by
 
 - [`IOdrlPermission`](IOdrlPermission.md)
 - [`IOdrlProhibition`](IOdrlProhibition.md)
 - [`IOdrlDuty`](IOdrlDuty.md)
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdNodeObject` \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdNodeObject`[] \| `IJsonLdGraphObject` \| `IJsonLdListObject` \| `IJsonLdSetObject` \| `IJsonLdNodePrimitive`[] \| `IJsonLdLanguageMap` \| `IJsonLdIndexMap` \| `IJsonLdIdMap` \| `IJsonLdTypeMap` \| `IJsonLdJsonObject` \| `IJsonLdJsonObject`[] \| \{\}
 
 ## Properties
 
