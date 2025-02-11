@@ -1,16 +1,16 @@
 {
 	"data-type-names": {
-		"http://schema.org/Text": "Text",
-		"http://schema.org/URL": "Url",
-		"http://schema.org/Integer": "Integer",
-		"http://schema.org/Float": "Float",
-		"http://schema.org/Boolean": "Boolean",
-		"http://schema.org/Date": "ISO Date",
-		"http://schema.org/DateTime": "ISO Date Time",
-		"http://schema.org/Time": "ISO Time",
-		"http://schema.org/image": "Image",
-		"http://schema.org/GeoCoordinates": "Geo Coordinates",
-		"http://schema.org/StructuredValue": "Structured Value"
+		"https://schema.org/Text": "Text",
+		"https://schema.org/URL": "Url",
+		"https://schema.org/Integer": "Integer",
+		"https://schema.org/Float": "Float",
+		"https://schema.org/Boolean": "Boolean",
+		"https://schema.org/Date": "ISO Date",
+		"https://schema.org/DateTime": "ISO Date Time",
+		"https://schema.org/Time": "ISO Time",
+		"https://schema.org/image": "Image",
+		"https://schema.org/GeoCoordinates": "Geo Coordinates",
+		"https://schema.org/StructuredValue": "Structured Value"
 	},
 	"error": {
 		"validation": {
