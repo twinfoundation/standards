@@ -12,7 +12,8 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The context for the verifiable credential.
 	 */
-	"@context": typeof DidContexts.ContextVCv2 | [typeof DidContexts.ContextVCv2, ...string[]];
+	"@context": typeof DidContexts.ContextVCv2 | [typeof DidContexts.ContextVCv2, ...(string[] |
+		{ [id: string]: string }[])];
 
 	/**
 	 * The identifier for the verifiable credential.
@@ -22,7 +23,7 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The types of the data stored in the verifiable credential.
 	 */
-	type: string[];
+	type: string | string[];
 
 	/**
 	 * The data for the verifiable credential.
@@ -44,6 +45,21 @@ export interface IDidVerifiableCredential {
 	 * The date the verifiable credential was issued.
 	 */
 	issuanceDate?: string;
+
+	/**
+	 * The date the verifiable credential is valid from.
+	 */
+	validFrom?: string;
+
+	/**
+	 * The date the verifiable credential is valid until.
+	 */
+	validUntil?: string;
+
+	/**
+	 * Evidence associated with the Credential.
+	 */
+	evidence?: IJsonLdNodeObject | IJsonLdNodeObject[];
 
 	/**
 	 * Proofs that the verifiable credential is valid.
