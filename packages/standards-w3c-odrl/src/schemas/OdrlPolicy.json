@@ -20,9 +20,6 @@
 						}
 					],
 					"maxItems": 2
-				},
-				{
-					"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinition"
 				}
 			],
 			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""

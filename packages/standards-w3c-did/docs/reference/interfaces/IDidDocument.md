@@ -7,7 +7,7 @@ Spec https://www.w3.org/TR/did-core/#did-document-properties.
 
 ### @context?
 
-> `optional` **@context**: `IJsonLdContextDefinitionRoot`
+> `optional` **@context**: `"https://www.w3.org/ns/did/v1"` \| \[`"https://www.w3.org/ns/did/v1"`, `IJsonLdContextDefinitionElement`\]
 
 The context for the document.
 

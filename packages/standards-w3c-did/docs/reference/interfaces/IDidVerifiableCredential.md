@@ -1,12 +1,13 @@
 # Interface: IDidVerifiableCredential
 
 Interface describing a verifiable credential.
+https://www.w3.org/TR/vc-data-model-2.0
 
 ## Properties
 
 ### @context
 
-> **@context**: `"https://www.w3.org/ns/credentials/v2"` \| \[`"https://www.w3.org/ns/credentials/v2"`, `...string[]`\]
+> **@context**: `"https://www.w3.org/ns/credentials/v2"` \| \[`"https://www.w3.org/ns/credentials/v2"`, `IJsonLdContextDefinitionElement`\]
 
 The context for the verifiable credential.
 
@@ -22,7 +23,7 @@ The identifier for the verifiable credential.
 
 ### type
 
-> **type**: `string`[]
+> **type**: `string` \| `string`[]
 
 The types of the data stored in the verifiable credential.
 
@@ -58,6 +59,30 @@ The issuing identity.
 > `optional` **issuanceDate**: `string`
 
 The date the verifiable credential was issued.
+
+***
+
+### validFrom?
+
+> `optional` **validFrom**: `string`
+
+The date the verifiable credential is valid from.
+
+***
+
+### validUntil?
+
+> `optional` **validUntil**: `string`
+
+The date the verifiable credential is valid until.
+
+***
+
+### evidence?
+
+> `optional` **evidence**: `IJsonLdNodeObject` \| `IJsonLdNodeObject`[]
+
+Evidence associated with the Credential.
 
 ***
 

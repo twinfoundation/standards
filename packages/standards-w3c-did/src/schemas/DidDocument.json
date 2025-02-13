@@ -2,7 +2,26 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionRoot",
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://www.w3.org/ns/did/v1"
+				},
+				{
+					"type": "array",
+					"minItems": 2,
+					"items": [
+						{
+							"type": "string",
+							"const": "https://www.w3.org/ns/did/v1"
+						},
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+						}
+					],
+					"maxItems": 2
+				}
+			],
 			"description": "The context for the document."
 		},
 		"id": {
