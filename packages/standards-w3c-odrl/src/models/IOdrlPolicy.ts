@@ -21,10 +21,8 @@ export interface IOdrlPolicy extends IJsonLdNodeObject {
 	 * The context for the policy.
 	 * Must include "https://www.w3.org/ns/odrl.jsonld"
 	 */
-	"@context":
-		| typeof OdrlContexts.Context
-		| [typeof OdrlContexts.Context, IJsonLdContextDefinition]
-		| IJsonLdContextDefinition;
+	"@context": typeof OdrlContexts.Context | [typeof OdrlContexts.Context, IJsonLdContextDefinition];
+
 	/**
 	 * The type of policy.
 	 * Must be one of: "Set", "Offer", "Agreement"

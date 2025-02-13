@@ -1,6 +1,7 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IJsonLdContextDefinitionRoot } from "@twin.org/data-json-ld";
+import type { IJsonLdContextDefinitionElement } from "@twin.org/data-json-ld";
+import type { DidContexts } from "./didContexts";
 import type { IDidDocumentVerificationMethod } from "./IDidDocumentVerificationMethod";
 import type { IDidService } from "./IDidService";
 
@@ -12,7 +13,9 @@ export interface IDidDocument {
 	/**
 	 * The context for the document.
 	 */
-	"@context"?: IJsonLdContextDefinitionRoot;
+	"@context"?:
+		| typeof DidContexts.Context
+		| [typeof DidContexts.Context, IJsonLdContextDefinitionElement];
 
 	/**
 	 * The id for the document.
