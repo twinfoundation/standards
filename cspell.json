@@ -15,7 +15,8 @@
 		"tsconfig.json",
 		"typedoc.json",
 		".eslintrc.cjs",
-		"**/wordlists/**"
+		"**/wordlists/**",
+		"**/src-json/**"
 	],
 	"words": [
 		"cryptosuite",
