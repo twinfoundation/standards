@@ -4,6 +4,7 @@ export * from "./models/didContexts";
 export * from "./models/didCryptoSuites";
 export * from "./models/didTypes";
 export * from "./models/didVerificationMethodType";
+export * from "./models/IDidCredentialSchema";
 export * from "./models/IDidCredentialStatus";
 export * from "./models/IDidDocument";
 export * from "./models/IDidDocumentVerificationMethod";

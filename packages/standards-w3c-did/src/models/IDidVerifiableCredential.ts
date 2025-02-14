@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import type { IJsonLdContextDefinitionElement, IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { DidContexts } from "./didContexts";
+import type { IDidCredentialSchema } from "./IDidCredentialSchema";
 import type { IDidCredentialStatus } from "./IDidCredentialStatus";
 import type { IDidProof } from "./IDidProof";
 
@@ -15,7 +16,7 @@ export interface IDidVerifiableCredential {
 	 */
 	"@context":
 		| typeof DidContexts.ContextVCv2
-		| [typeof DidContexts.ContextVCv2, IJsonLdContextDefinitionElement];
+		| [typeof DidContexts.ContextVCv2, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * The identifier for the verifiable credential.
@@ -30,23 +31,38 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The data for the verifiable credential.
 	 */
-	credentialSubject: IJsonLdNodeObject | IJsonLdNodeObject[];
+	credentialSubject?: IJsonLdNodeObject | IJsonLdNodeObject[];
 
 	/**
 	 * Used to discover information about the current status of the
 	 * verifiable credential, such as whether it is suspended or revoked.
 	 */
-	credentialStatus?: IDidCredentialStatus;
+	credentialStatus?: IDidCredentialStatus | IDidCredentialStatus[];
+
+	/**
+	 * Annotate type definitions or lock them to specific versions of the vocabulary.
+	 */
+	credentialSchema?: IDidCredentialSchema | IDidCredentialSchema[];
 
 	/**
 	 * The issuing identity.
 	 */
-	issuer?: string;
+	issuer?: string | { [key: string]: unknown; id: string };
 
 	/**
 	 * The date the verifiable credential was issued.
 	 */
 	issuanceDate?: string;
+
+	/**
+	 * The name of the credential.
+	 */
+	name?: string | { "@value": string; "@language": string; "@direction"?: string }[];
+
+	/**
+	 * The description of the credential.
+	 */
+	description?: string | { "@value": string; "@language": string; "@direction"?: string }[];
 
 	/**
 	 * The date the verifiable credential is valid from.

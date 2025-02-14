@@ -13,14 +13,14 @@ export interface IDidProof {
 	/**
 	 * JSON-LD Context.
 	 */
-	"@context":
+	"@context"?:
 		| typeof DidContexts.ContextVCDataIntegrity
-		| [typeof DidContexts.ContextVCDataIntegrity, IJsonLdContextDefinitionElement];
+		| [typeof DidContexts.ContextVCDataIntegrity, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * JSON-LD Type.
 	 */
-	type: typeof DidTypes.DataIntegrityProof;
+	type: typeof DidTypes.DataIntegrityProof | string;
 
 	/**
 	 * An identifier for the cryptographic suite that can be used to verify the proof.

@@ -9,24 +9,22 @@
 				},
 				{
 					"type": "array",
-					"minItems": 2,
+					"minItems": 1,
 					"items": [
 						{
 							"type": "string",
 							"const": "https://w3id.org/security/data-integrity/v2"
-						},
-						{
-							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 						}
 					],
-					"maxItems": 2
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					}
 				}
 			],
 			"description": "JSON-LD Context."
 		},
 		"type": {
 			"type": "string",
-			"const": "DataIntegrityProof",
 			"description": "JSON-LD Type."
 		},
 		"cryptosuite": {
@@ -102,7 +100,6 @@
 		}
 	},
 	"required": [
-		"@context",
 		"type",
 		"cryptosuite",
 		"proofPurpose",

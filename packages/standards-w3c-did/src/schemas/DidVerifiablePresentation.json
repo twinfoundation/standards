@@ -9,17 +9,16 @@
 				},
 				{
 					"type": "array",
-					"minItems": 2,
+					"minItems": 1,
 					"items": [
 						{
 							"type": "string",
 							"const": "https://www.w3.org/ns/credentials/v2"
-						},
-						{
-							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
 						}
 					],
-					"maxItems": 2
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+					}
 				}
 			],
 			"description": "The context for the verifiable presentation."
@@ -29,10 +28,17 @@
 			"description": "Provide a unique identifier for the presentation."
 		},
 		"type": {
-			"type": "array",
-			"items": {
-				"type": "string"
-			},
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			],
 			"description": "The types of the data stored in the verifiable credential."
 		},
 		"verifiableCredential": {
@@ -70,8 +76,7 @@
 	},
 	"required": [
 		"@context",
-		"type",
-		"verifiableCredential"
+		"type"
 	],
 	"additionalProperties": false,
 	"description": "Interface describing a verifiable presentation."

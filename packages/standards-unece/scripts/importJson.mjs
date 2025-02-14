@@ -55,11 +55,11 @@ async function generateCodes(filename, name, json) {
 
 	const values = [];
 	for (const code of json.values) {
-		values.push(`  {`);
-		values.push(`    uri: "${code.uri}",`);
-		values.push(`    comment: "${code.comment}",`);
-		values.push(`    value: "${code.value}"`);
-		values.push(`  },`);
+		values.push(`\t{`);
+		values.push(`\t\turi: "${code.uri}",`);
+		values.push(`\t\tcomment: "${code.comment}",`);
+		values.push(`\t\tvalue: "${code.value}"`);
+		values.push(`\t},`);
 	}
 
 	codesContent.push(values.join('\n').slice(0, -1), '];', '');
@@ -90,10 +90,10 @@ async function generateCodeTypes(filename, name, json) {
 
 	const values = [];
 	for (const code of json.values) {
-		values.push(`	/**`);
-		values.push(`	 * ${code.value} ${code.comment}.`);
-		values.push(`	 */`);
-		values.push(`	${code.value}: "${code.uri}",`);
+		values.push(`\t/**`);
+		values.push(`\t * ${code.value} ${code.comment}.`);
+		values.push(`\t */`);
+		values.push(`\t${code.value}: "${code.uri}",`);
 		values.push(``);
 	}
 

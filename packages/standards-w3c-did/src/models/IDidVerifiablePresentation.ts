@@ -14,7 +14,7 @@ export interface IDidVerifiablePresentation {
 	 */
 	"@context":
 		| typeof DidContexts.ContextVCv2
-		| [typeof DidContexts.ContextVCv2, IJsonLdContextDefinitionElement];
+		| [typeof DidContexts.ContextVCv2, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * Provide a unique identifier for the presentation.
@@ -24,12 +24,12 @@ export interface IDidVerifiablePresentation {
 	/**
 	 * The types of the data stored in the verifiable credential.
 	 */
-	type: string[];
+	type: string | string[];
 
 	/**
 	 * The data for the verifiable credentials.
 	 */
-	verifiableCredential: (string | IDidVerifiableCredential)[];
+	verifiableCredential?: (string | IDidVerifiableCredential)[];
 
 	/**
 	 * The entity generating the presentation.

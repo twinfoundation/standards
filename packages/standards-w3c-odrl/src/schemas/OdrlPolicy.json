@@ -9,17 +9,16 @@
 				},
 				{
 					"type": "array",
-					"minItems": 2,
+					"minItems": 1,
 					"items": [
 						{
 							"type": "string",
 							"const": "https://www.w3.org/ns/odrl.jsonld"
-						},
-						{
-							"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinition"
 						}
 					],
-					"maxItems": 2
+					"additionalItems": {
+						"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
+					}
 				}
 			],
 			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""

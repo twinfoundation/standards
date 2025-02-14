@@ -13,9 +13,9 @@ export interface IDidDocument {
 	/**
 	 * The context for the document.
 	 */
-	"@context"?:
+	"@context":
 		| typeof DidContexts.Context
-		| [typeof DidContexts.Context, IJsonLdContextDefinitionElement];
+		| [typeof DidContexts.Context, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * The id for the document.
