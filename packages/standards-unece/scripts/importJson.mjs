@@ -16,7 +16,7 @@ const files = await fs.readdir(SOURCE_DIR);
 for (const file of files) {
 	const json = JSON.parse(await fs.readFile(`${SOURCE_DIR}/${file}`, 'utf8'));
 
-	let name = json.label;
+	let name = `Unece${json.label}`;
 	if (name.endsWith('List')) {
 		name = name.slice(0, -4);
 	}
@@ -43,7 +43,10 @@ async function generateCodes(filename, name, json) {
 		'// Copyright 2024 IOTA Stiftung.',
 		'// SPDX-License-Identifier: Apache-2.0.',
 		'/* cSpell:disable */',
+		'/* eslint-disable max-len */',
 		'import type { IUneceCode } from "../models/IUneceCode";',
+		'',
+		'/* This file is auto-generated with the importJson script, do not edit manually. */',
 		'',
 		'/**',
 		` * ${json.comment}`,
@@ -78,6 +81,9 @@ async function generateCodeTypes(filename, name, json) {
 		'// Copyright 2024 IOTA Stiftung.',
 		'// SPDX-License-Identifier: Apache-2.0.',
 		'/* cSpell:disable */',
+		'/* eslint-disable max-len */',
+		'',
+		'/* This file is auto-generated with the importJson script, do not edit manually. */',
 		'',
 		'/**',
 		` * ${json.comment}`,
@@ -89,11 +95,27 @@ async function generateCodeTypes(filename, name, json) {
 	];
 
 	const values = [];
+	const keyNames = [];
 	for (const code of json.values) {
 		values.push(`\t/**`);
-		values.push(`\t * ${code.value} ${code.comment}.`);
+		values.push(`\t * ${code.comment}: ${code.value}.`);
 		values.push(`\t */`);
-		values.push(`\t${code.value}: "${code.uri}",`);
+		const num = Number.parseInt(code.value, 10);
+		if (!Number.isNaN(num)) {
+			let keyName = pascalCase(code.comment).replace(/[^\dA-Za-z]/g, '');
+			if (keyNames.includes(keyName)) {
+				keyName = `${keyName}${num}`;
+			}
+			keyNames.push(keyName);
+
+			if (/^\d/.test(keyName)) {
+				values.push(`\t"${keyName}": "${code.uri}",`);
+			} else {
+				values.push(`\t${keyName}: "${code.uri}",`);
+			}
+		} else {
+			values.push(`\t${code.value}: "${code.uri}",`);
+		}
 		values.push(``);
 	}
 
@@ -129,6 +151,19 @@ function camelCase(input) {
 				.slice(1)
 				.map(w => `${w[0].toUpperCase()}${w.slice(1).toLowerCase()}`)
 				.join('')}`;
+}
+
+/**
+ * Pascal case all the words.
+ * @param input The input to convert.
+ * @returns The pascal case version of the input.
+ */
+function pascalCase(input) {
+	const output = input;
+	const words = wordsSplit(output);
+	return words.length === 0
+		? ''
+		: words.map(w => `${w[0].toUpperCase()}${w.slice(1).toLowerCase()}`).join('');
 }
 
 /**
