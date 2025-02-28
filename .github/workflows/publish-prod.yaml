@@ -16,6 +16,7 @@ on:
           - 'packages/standards-schema-org'
           - 'packages/standards-unece'
           - 'packages/standards-vda'
+          - 'packages/standards-gaia-x'
 
 jobs:
   publish:

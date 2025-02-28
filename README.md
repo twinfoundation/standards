@@ -12,6 +12,7 @@ This mono-repository contains packages defining standards.
 - [standards-gs1](packages/standards-gs1/README.md) - Models which define the structure of [GS1 Standard](https://www.gs1.org/).
 - [standards-unece](packages/standards-unece/README.md) - Models which define the structure of [UN/CEFACT Standard](https://vocabulary.uncefact.org/).
 - [standards-vda](packages/standards-vda/README.md) - Models which define the structure of [VDA JAIF Standard](https://www.vda.de/).
+- [standards-gaia-x](packages/standards-gaia-x/README.md) - Models which define the structure of [Gaia-x](https://docs.gaia-x.eu/ontology/development/).
 
 ## Contributing
 

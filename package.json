@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/standards",
-	"version": "0.0.1-next.24",
+	"version": "0.0.1-next.25",
 	"description": "Standards",
 	"repository": {
 		"type": "git",
@@ -46,7 +46,8 @@
 		"packages/standards-schema-org",
 		"packages/standards-gs1",
 		"packages/standards-unece",
-		"packages/standards-vda"
+		"packages/standards-vda",
+		"packages/standards-gaia-x"
 	],
 	"type": "module"
 }
