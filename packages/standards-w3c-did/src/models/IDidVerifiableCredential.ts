@@ -2,9 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0.
 import type { IJsonLdContextDefinitionElement, IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { DidContexts } from "./didContexts";
+import type { IDataIntegrityProof } from "./IDataIntegrityProof";
 import type { IDidCredentialSchema } from "./IDidCredentialSchema";
 import type { IDidCredentialStatus } from "./IDidCredentialStatus";
-import type { IDidProof } from "./IDidProof";
+import type { IJsonWebSignature2020Proof } from "./IJsonWebSignature2020Proof";
 
 /**
  * Interface describing a verifiable credential.
@@ -15,7 +16,9 @@ export interface IDidVerifiableCredential {
 	 * The context for the verifiable credential.
 	 */
 	"@context":
+		| typeof DidContexts.ContextVCv1
 		| typeof DidContexts.ContextVCv2
+		| [typeof DidContexts.ContextVCv1, ...IJsonLdContextDefinitionElement[]]
 		| [typeof DidContexts.ContextVCv2, ...IJsonLdContextDefinitionElement[]];
 
 	/**
@@ -83,5 +86,8 @@ export interface IDidVerifiableCredential {
 	 * Proofs that the verifiable credential is valid.
 	 * Optional if a different proof method is used, such as JWT.
 	 */
-	proof?: IDidProof | IDidProof[];
+	proof?:
+		| IDataIntegrityProof
+		| IJsonWebSignature2020Proof
+		| (IDataIntegrityProof | IJsonWebSignature2020Proof)[];
 }

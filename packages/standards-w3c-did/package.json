@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/standards-w3c-did",
-	"version": "0.0.1-next.25",
+	"version": "0.0.1-next.26",
 	"description": "Models which define the structure of W3C DID Standard",
 	"repository": {
 		"type": "git",
@@ -32,7 +32,10 @@
 		"prepare": "ts-patch install -s"
 	},
 	"dependencies": {
+		"@twin.org/core": "next",
+		"@twin.org/crypto": "next",
 		"@twin.org/data-json-ld": "next",
+		"@twin.org/nameof": "next",
 		"@twin.org/web": "next"
 	},
 	"devDependencies": {

@@ -62,12 +62,22 @@
 		"proof": {
 			"anyOf": [
 				{
-					"$ref": "https://schema.twindev.org/did/DidProof"
+					"$ref": "https://schema.twindev.org/did/DataIntegrityProof"
+				},
+				{
+					"$ref": "https://schema.twindev.org/did/JsonWebSignature2020Proof"
 				},
 				{
 					"type": "array",
 					"items": {
-						"$ref": "https://schema.twindev.org/did/DidProof"
+						"anyOf": [
+							{
+								"$ref": "https://schema.twindev.org/did/DataIntegrityProof"
+							},
+							{
+								"$ref": "https://schema.twindev.org/did/JsonWebSignature2020Proof"
+							}
+						]
 					}
 				}
 			],

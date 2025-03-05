@@ -1,26 +1,26 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IJsonLdContextDefinitionElement } from "@twin.org/data-json-ld";
+import type { IJsonLdContextDefinitionElement, IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { DidContexts } from "./didContexts";
 import type { DidCryptoSuites } from "./didCryptoSuites";
-import type { DidTypes } from "./didTypes";
+import type { ProofTypes } from "./proofTypes";
 
 /**
  * Interface describing a did proof.
  * https://www.w3.org/TR/vc-data-integrity/
  */
-export interface IDidProof {
+export interface IDataIntegrityProof extends IJsonLdNodeObject {
 	/**
 	 * JSON-LD Context.
 	 */
 	"@context"?:
-		| typeof DidContexts.ContextVCDataIntegrity
-		| [typeof DidContexts.ContextVCDataIntegrity, ...IJsonLdContextDefinitionElement[]];
+		| typeof DidContexts.ContextDataIntegrity
+		| [typeof DidContexts.ContextDataIntegrity, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * JSON-LD Type.
 	 */
-	type: typeof DidTypes.DataIntegrityProof | string;
+	type: typeof ProofTypes.DataIntegrityProof;
 
 	/**
 	 * An identifier for the cryptographic suite that can be used to verify the proof.
@@ -41,7 +41,7 @@ export interface IDidProof {
 	 * Contains the base-encoded binary data necessary to verify the
 	 * digital proof using the verificationMethod specified.
 	 */
-	proofValue: string;
+	proofValue?: string;
 
 	/**
 	 * The verification method of the proof.

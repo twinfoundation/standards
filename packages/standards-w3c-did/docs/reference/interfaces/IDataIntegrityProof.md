@@ -1,21 +1,33 @@
-# Interface: IDidProof
+# Interface: IDataIntegrityProof
 
 Interface describing a did proof.
 https://www.w3.org/TR/vc-data-integrity/
+
+## Extends
+
+- `IJsonLdNodeObject`
+
+## Indexable
+
+\[`key`: `string`\]: `undefined` \| `null` \| `string` \| `number` \| `boolean` \| `string`[] \| `IJsonLdContextDefinition` \| `IJsonLdContextDefinitionElement`[] \| `IJsonLdIdMap` \| `IJsonLdNodeObject` \| `IJsonLdListObject` \| `object` & `object` \| `object` & `object` \| `object` & `object` \| `IJsonLdSetObject` \| `IJsonLdJsonObject` \| `IJsonLdIndexMap` \| `IJsonLdLanguageMap` \| `IJsonLdGraphObject` \| `IJsonLdNodeObject`[] \| `IJsonLdJsonObject`[] \| \{\} \| `IJsonLdTypeMap` \| `IJsonLdNodePrimitive`[]
 
 ## Properties
 
 ### @context?
 
-> `optional` **@context**: `"https://w3id.org/security/data-integrity/v2"` \| \[`"https://w3id.org/security/data-integrity/v2"`, `...IJsonLdContextDefinitionElement[]`\]
+> `optional` **@context**: `"https://www.w3.org/ns/credentials/v2"` \| \[`"https://www.w3.org/ns/credentials/v2"`, `...IJsonLdContextDefinitionElement[]`\]
 
 JSON-LD Context.
+
+#### Overrides
+
+`IJsonLdNodeObject.@context`
 
 ***
 
 ### type
 
-> **type**: `string`
+> **type**: `"DataIntegrityProof"`
 
 JSON-LD Type.
 
@@ -45,9 +57,9 @@ The reason the proof was created.
 
 ***
 
-### proofValue
+### proofValue?
 
-> **proofValue**: `string`
+> `optional` **proofValue**: `string`
 
 Contains the base-encoded binary data necessary to verify the
 digital proof using the verificationMethod specified.

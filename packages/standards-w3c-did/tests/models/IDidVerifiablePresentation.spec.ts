@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import type { IDidVerifiablePresentation } from "../src/models/IDidVerifiablePresentation";
+import type { IDidVerifiablePresentation } from "../../src/models/IDidVerifiablePresentation";
 
 describe("IDidVerifiablePresentation", () => {
 	test("Example 18", () => {

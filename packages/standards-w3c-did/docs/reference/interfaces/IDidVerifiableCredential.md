@@ -7,7 +7,7 @@ https://www.w3.org/TR/vc-data-model-2.0
 
 ### @context
 
-> **@context**: `"https://www.w3.org/ns/credentials/v2"` \| \[`"https://www.w3.org/ns/credentials/v2"`, `...IJsonLdContextDefinitionElement[]`\]
+> **@context**: `"https://www.w3.org/2018/credentials/v1"` \| `"https://www.w3.org/ns/credentials/v2"` \| \[`"https://www.w3.org/ns/credentials/v2"`, `...IJsonLdContextDefinitionElement[]`\] \| \[`"https://www.w3.org/2018/credentials/v1"`, `...IJsonLdContextDefinitionElement[]`\]
 
 The context for the verifiable credential.
 
@@ -112,7 +112,7 @@ Evidence associated with the Credential.
 
 ### proof?
 
-> `optional` **proof**: [`IDidProof`](IDidProof.md) \| [`IDidProof`](IDidProof.md)[]
+> `optional` **proof**: [`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md) \| ([`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md))[]
 
 Proofs that the verifiable credential is valid.
 Optional if a different proof method is used, such as JWT.

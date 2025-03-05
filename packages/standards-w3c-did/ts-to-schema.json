@@ -2,18 +2,21 @@
 	"baseUrl": "https://schema.twindev.org/did/",
 	"sources": ["./src/models/**/*.ts"],
 	"types": [
+		"DidContexts",
+		"DidCryptoSuites",
+		"DidTypes",
+		"DidVerificationMethodType",
+		"IDataIntegrityProof",
+		"IDidCredentialSchema",
 		"IDidCredentialStatus",
 		"IDidDocument",
 		"IDidDocumentVerificationMethod",
 		"IDidPresentationVerification",
-		"IDidProof",
 		"IDidService",
 		"IDidVerifiableCredential",
 		"IDidVerifiablePresentation",
-		"DidVerificationMethodType",
-		"DidTypes",
-		"DidCryptoSuites",
-		"DidContexts"
+		"IJsonWebSignature2020Proof",
+		"IMultikey"
 	],
 	"externalReferences": {
 		"IJsonLd(.*)": "https://schema.twindev.org/json-ld/JsonLd$1",

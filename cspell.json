@@ -36,6 +36,7 @@
 		"lteq",
 		"masterdata",
 		"Multibase",
+		"Multikey",
 		"nameof",
 		"Odrl",
 		"rdfc",

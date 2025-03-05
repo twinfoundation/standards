@@ -2,8 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0.
 import type { IJsonLdContextDefinitionElement } from "@twin.org/data-json-ld";
 import type { DidContexts } from "./didContexts";
-import type { IDidProof } from "./IDidProof";
+import type { IDataIntegrityProof } from "./IDataIntegrityProof";
 import type { IDidVerifiableCredential } from "./IDidVerifiableCredential";
+import type { IJsonWebSignature2020Proof } from "./IJsonWebSignature2020Proof";
 
 /**
  * Interface describing a verifiable presentation.
@@ -40,5 +41,8 @@ export interface IDidVerifiablePresentation {
 	 * Proofs that the verifiable presentation is valid.
 	 * Optional if a different proof method is used, such as JWT.
 	 */
-	proof?: IDidProof | IDidProof[];
+	proof?:
+		| IDataIntegrityProof
+		| IJsonWebSignature2020Proof
+		| (IDataIntegrityProof | IJsonWebSignature2020Proof)[];
 }

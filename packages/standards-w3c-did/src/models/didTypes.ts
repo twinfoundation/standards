@@ -17,11 +17,6 @@ export const DidTypes = {
 	VerifiablePresentation: "VerifiablePresentation",
 
 	/**
-	 * The type for Data Integrity Proof.
-	 */
-	DataIntegrityProof: "DataIntegrityProof",
-
-	/**
 	 * The type for Ed25519VerificationKey2020.
 	 */
 	Ed25519VerificationKey2020: "Ed25519VerificationKey2020",
@@ -34,7 +29,12 @@ export const DidTypes = {
 	/**
 	 * The type for LinkedDomains.
 	 */
-	LinkedDomains: "LinkedDomains"
+	LinkedDomains: "LinkedDomains",
+
+	/**
+	 * The type for Multikey.
+	 */
+	Multikey: "Multikey"
 } as const;
 
 /**

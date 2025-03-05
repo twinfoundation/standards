@@ -34,7 +34,17 @@ export const DidContexts = {
 	/**
 	 * The context root for VC Data Integrity.
 	 */
-	ContextVCDataIntegrity: "https://w3id.org/security/data-integrity/v2"
+	ContextDataIntegrity: "https://www.w3.org/ns/credentials/v2",
+
+	/**
+	 * The context root for VC Data Integrity.
+	 */
+	ContextControllerIdentifiers: "https://www.w3.org/ns/cid/v1",
+
+	/**
+	 * The context root for security multikey suites.
+	 */
+	ContextSecurityMultikey: "https://w3id.org/security/multikey/v1"
 } as const;
 
 /**

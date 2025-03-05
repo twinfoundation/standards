@@ -46,7 +46,7 @@ The entity generating the presentation.
 
 ### proof?
 
-> `optional` **proof**: [`IDidProof`](IDidProof.md) \| [`IDidProof`](IDidProof.md)[]
+> `optional` **proof**: [`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md) \| ([`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md))[]
 
 Proofs that the verifiable presentation is valid.
 Optional if a different proof method is used, such as JWT.
