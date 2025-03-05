@@ -7,8 +7,10 @@ import { DidTypes } from "../../src/models/didTypes";
 import type { IDataIntegrityProof } from "../../src/models/IDataIntegrityProof";
 import type { IDidVerifiableCredential } from "../../src/models/IDidVerifiableCredential";
 import type { IMultikey } from "../../src/models/IMultikey";
+import { ProofTypes } from "../../src/models/proofTypes";
 import { DataIntegrityProofSignerVerifier } from "../../src/signerVerifiers/dataIntegrityProofSignerVerifier";
 import { MultikeyHelper } from "../../src/utils/multikeyHelper";
+import { ProofHelper } from "../../src/utils/proofHelper";
 
 //  Based on https://www.w3.org/TR/vc-di-eddsa/#representation-eddsa-jcs-2022
 describe("DataIntegrityProofSignerVerifier", () => {
@@ -80,18 +82,11 @@ describe("DataIntegrityProofSignerVerifier", () => {
 			}
 		};
 
-		const unsignedProof: IDataIntegrityProof = {
-			"@context": [
-				"https://www.w3.org/ns/credentials/v2",
-				"https://www.w3.org/ns/credentials/examples/v2"
-			],
-			type: "DataIntegrityProof",
-			cryptosuite: "eddsa-jcs-2022",
-			created: "2023-02-24T23:36:38Z",
-			verificationMethod:
-				"did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2#z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2",
-			proofPurpose: "assertionMethod"
-		};
+		const unsignedProof = ProofHelper.createUnsignedProof(
+			ProofTypes.DataIntegrityProof,
+			"did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2#z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2",
+			{ created: "2023-02-24T23:36:38Z" }
+		);
 
 		const multikey: IMultikey = {
 			"@context": DidContexts.ContextControllerIdentifiers,
@@ -104,7 +99,7 @@ describe("DataIntegrityProofSignerVerifier", () => {
 
 		const signedProof = await new DataIntegrityProofSignerVerifier().createProof(
 			unsecuredDocument,
-			unsignedProof,
+			unsignedProof as IDataIntegrityProof,
 			jwk
 		);
 
@@ -125,7 +120,7 @@ describe("DataIntegrityProofSignerVerifier", () => {
 
 		const verified = await new DataIntegrityProofSignerVerifier().verifyProof(
 			unsecuredDocument,
-			signedProof,
+			signedProof as IDataIntegrityProof,
 			jwk
 		);
 

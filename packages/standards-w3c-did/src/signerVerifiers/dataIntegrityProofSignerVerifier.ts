@@ -10,9 +10,10 @@ import {
 	Uint8ArrayHelper
 } from "@twin.org/core";
 import { Ed25519, Sha256 } from "@twin.org/crypto";
-import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
+import { JsonLdProcessor, type IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { nameof } from "@twin.org/nameof";
 import { Jwk, type IJwk } from "@twin.org/web";
+import { DidContexts } from "../models/didContexts";
 import { DidCryptoSuites } from "../models/didCryptoSuites";
 import type { IDataIntegrityProof } from "../models/IDataIntegrityProof";
 import type { IProof } from "../models/IProof";
@@ -49,11 +50,20 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 			throw new GeneralError(this.CLASS_NAME, "missingPrivateKey");
 		}
 
+		const unsecuredDocumentClone = ObjectHelper.clone(unsecuredDocument);
+
+		const signedProof = ObjectHelper.clone(unsignedProof);
+
+		unsecuredDocumentClone["@context"] = JsonLdProcessor.combineContexts(
+			unsecuredDocumentClone["@context"],
+			DidContexts.ContextDataIntegrity
+		);
+
+		signedProof["@context"] = unsecuredDocumentClone["@context"] as IDataIntegrityProof["@context"];
+
 		const combinedHash = await this.createHash(unsecuredDocument, unsignedProof);
 
 		const signature = Ed25519.sign(rawKeys.privateKey, combinedHash);
-
-		const signedProof = ObjectHelper.clone(unsignedProof);
 
 		signedProof.proofValue = `z${Converter.bytesToBase58(signature)}`;
 
@@ -126,11 +136,14 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 			});
 		}
 
-		if (!Is.empty(unsecuredDocumentClone["@context"])) {
-			proofOptionsClone["@context"] = unsecuredDocumentClone[
-				"@context"
-			] as IDataIntegrityProof["@context"];
-		}
+		unsecuredDocumentClone["@context"] = JsonLdProcessor.combineContexts(
+			unsecuredDocumentClone["@context"],
+			DidContexts.ContextDataIntegrity
+		);
+
+		proofOptionsClone["@context"] = unsecuredDocumentClone[
+			"@context"
+		] as IDataIntegrityProof["@context"];
 
 		const transformedDocument = JsonHelper.canonicalize(unsecuredDocumentClone);
 

@@ -4,6 +4,8 @@ import { GeneralError, Guards, Is } from "@twin.org/core";
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { nameof } from "@twin.org/nameof";
 import type { IJwk } from "@twin.org/web";
+import { DidContexts } from "../models/didContexts";
+import { DidCryptoSuites } from "../models/didCryptoSuites";
 import type { IProof } from "../models/IProof";
 import type { IProofSignerVerifier } from "../models/IProofSignerVerifier";
 import { ProofTypes } from "../models/proofTypes";
@@ -86,5 +88,46 @@ export class ProofHelper {
 		const signerVerifier = ProofHelper.createSignerVerifier(signedProof.type as ProofTypes);
 
 		return signerVerifier.verifyProof(securedDocument, signedProof, verifyKey);
+	}
+
+	/**
+	 * Create an unsigned proof.
+	 * @param proofType The type of proof to create.
+	 * @param verificationMethodId The verification method id.
+	 * @param otherParams Other parameters for the proof.
+	 * @returns The created proof.
+	 * @throws GeneralError if the proof type is not supported.
+	 */
+	public static createUnsignedProof(
+		proofType: ProofTypes,
+		verificationMethodId: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		otherParams?: any
+	): IProof {
+		let proof: IProof | undefined;
+		if (proofType === ProofTypes.DataIntegrityProof) {
+			proof = {
+				"@context": DidContexts.ContextDataIntegrity,
+				type: ProofTypes.DataIntegrityProof,
+				cryptosuite: DidCryptoSuites.EdDSAJcs2022,
+				created: new Date(Date.now()).toISOString(),
+				verificationMethod: verificationMethodId,
+				proofPurpose: "assertionMethod",
+				...otherParams
+			};
+		} else if (proofType === ProofTypes.JsonWebSignature2020) {
+			proof = {
+				"@context": DidContexts.ContextSecurityJws2020,
+				type: ProofTypes.JsonWebSignature2020,
+				created: new Date(Date.now()).toISOString(),
+				verificationMethod: verificationMethodId,
+				proofPurpose: "assertionMethod",
+				...otherParams
+			};
+		}
+		if (Is.empty(proof)) {
+			throw new GeneralError(ProofHelper.CLASS_NAME, "unsupportedProofType", { proofType });
+		}
+		return proof;
 	}
 }

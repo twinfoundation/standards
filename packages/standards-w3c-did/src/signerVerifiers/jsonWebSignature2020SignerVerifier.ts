@@ -45,6 +45,13 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 		);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(signKey), signKey);
 
+		const unsecuredDocumentClone = ObjectHelper.clone(unsecuredDocument);
+
+		unsecuredDocumentClone["@context"] = JsonLdProcessor.combineContexts(
+			unsecuredDocumentClone["@context"],
+			DidContexts.ContextSecurityJws2020
+		);
+
 		const hash = await this.createHash(unsecuredDocument, unsignedProof);
 
 		const cryptoKey = await Jwk.toCryptoKey(signKey);
@@ -52,6 +59,10 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 		const signature = await Jws.create(cryptoKey, hash);
 
 		const signedProof = ObjectHelper.clone(unsignedProof);
+
+		signedProof["@context"] = unsecuredDocumentClone[
+			"@context"
+		] as IJsonWebSignature2020Proof["@context"];
 
 		signedProof.jws = signature;
 

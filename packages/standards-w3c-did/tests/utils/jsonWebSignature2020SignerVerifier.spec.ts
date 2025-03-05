@@ -6,7 +6,9 @@ import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { Jwk } from "@twin.org/web";
 import type { IDidVerifiableCredential } from "../../src/models/IDidVerifiableCredential";
 import type { IJsonWebSignature2020Proof } from "../../src/models/IJsonWebSignature2020Proof";
+import { ProofTypes } from "../../src/models/proofTypes";
 import { JsonWebSignature2020SignerVerifier } from "../../src/signerVerifiers/jsonWebSignature2020SignerVerifier";
+import { ProofHelper } from "../../src/utils/proofHelper";
 
 describe("JsonWebSignature2020SignerVerifier", () => {
 	beforeAll(() => {
@@ -32,16 +34,16 @@ describe("JsonWebSignature2020SignerVerifier", () => {
 			}
 		};
 
-		const unsignedProof = {
-			type: "JsonWebSignature2020",
-			created: "2024-01-31T16:00:45.490Z",
-			proofPurpose: "assertionMethod",
-			verificationMethod:
-				"did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DLGYw32T5A1uaxbEy5W28Tv5BDbSrdfGtCUpjC8RHpZAMFTDET3g3QkFTRuY8rVrR7zjeSWa54WeRLKutKhyR5EbdyNYPWHxm8TEWWuMchWEBnXQNjrntGUEP8csESeaTBCupBqxSJ8WM4fBRwFvJKmCLwJzkpo2LkbWEzpGRy3GvedQ1AFLEe3JCdcgs5b2u5ubgT3pgte71JebuiAPP8jJN3tUAhk9CAPXpu2EHvCuy4C1CuYK5pnMKwRHtRsA2w7i1Gn7EzMrRjiU5AeFS3KLMbbHNLVvuqCeW9Gx93tUfJdQx2Z88obsrH9sWYSCDFExmJE9w31uricJmQcb9815znjuupWrGb3jy32qX7Vvt9uya7keewZuAQ1TjyctKDcqWA44JuKVURtdtykEUuKoUZHBasJ4vaBaBfmy7MBkhFsqPRVp9MdkTwVGv5mHxV6SayZRaN7WoJCWu7Jphb3uB4oEXQXsP4EShYzyqUM8yTrrFtHADiGWDw8CZ86jEvfA7n#JWK2020",
-			jws: "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..K_H43yH3fCCzUN69uPnxmiNxeyf1xvqrJG2_xxf1r3v31VeQXHaVM38TORTA2zqZoNL4bRzHQUnGbnW9g0MPSXvRLONvmeXdCUwWJcS7xaqFgX4EZjugfPQmfwYZpuqbPICubwUAc4bXVph3GBbVDQyWMBoRw8lJIpXG_frIEhIoEq56ItAA5PtwfgdIuWKoz9Z43msjtbZpBZXVWwXoztceHVPPioLfd-fa4AlhcemF_O621QDsmmkDF2WOW5whpaC1cBEu58wN2Cw35zjNTuLsJ8eiTEiE1hfMqig_75-1i6cw8T9EOJPhVqgRQ-Ept_ZzdPpd52m3dvspyv-S9w"
-		};
+		const unsignedProof = ProofHelper.createUnsignedProof(
+			ProofTypes.JsonWebSignature2020,
+			"did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DLGYw32T5A1uaxbEy5W28Tv5BDbSrdfGtCUpjC8RHpZAMFTDET3g3QkFTRuY8rVrR7zjeSWa54WeRLKutKhyR5EbdyNYPWHxm8TEWWuMchWEBnXQNjrntGUEP8csESeaTBCupBqxSJ8WM4fBRwFvJKmCLwJzkpo2LkbWEzpGRy3GvedQ1AFLEe3JCdcgs5b2u5ubgT3pgte71JebuiAPP8jJN3tUAhk9CAPXpu2EHvCuy4C1CuYK5pnMKwRHtRsA2w7i1Gn7EzMrRjiU5AeFS3KLMbbHNLVvuqCeW9Gx93tUfJdQx2Z88obsrH9sWYSCDFExmJE9w31uricJmQcb9815znjuupWrGb3jy32qX7Vvt9uya7keewZuAQ1TjyctKDcqWA44JuKVURtdtykEUuKoUZHBasJ4vaBaBfmy7MBkhFsqPRVp9MdkTwVGv5mHxV6SayZRaN7WoJCWu7Jphb3uB4oEXQXsP4EShYzyqUM8yTrrFtHADiGWDw8CZ86jEvfA7n#JWK2020",
+			{ created: "2024-01-31T16:00:45.490Z" }
+		);
 
-		const proof = await new JsonWebSignature2020SignerVerifier().createHash(vc, unsignedProof);
+		const proof = await new JsonWebSignature2020SignerVerifier().createHash(
+			vc,
+			unsignedProof as IJsonWebSignature2020Proof
+		);
 
 		expect(proof).toEqual(
 			new Uint8Array([
@@ -80,23 +82,24 @@ describe("JsonWebSignature2020SignerVerifier", () => {
 
 		const privateCryptoKey = await Jwk.fromEd25519Private(privateKey);
 
-		const unsignedProof: IJsonWebSignature2020Proof = {
-			"@context": ["https://w3id.org/security/suites/jws-2020/v1"],
-			type: "JsonWebSignature2020",
-			created: "2023-02-24T23:36:38Z",
-			verificationMethod:
-				"did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2#z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2",
-			proofPurpose: "assertionMethod"
-		};
+		const unsignedProof = ProofHelper.createUnsignedProof(
+			ProofTypes.JsonWebSignature2020,
+			"did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2#z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2",
+			{ created: "2023-02-24T23:36:38Z" }
+		);
 
 		const proof = await new JsonWebSignature2020SignerVerifier().createProof(
 			vc,
-			unsignedProof,
+			unsignedProof as IJsonWebSignature2020Proof,
 			privateCryptoKey
 		);
 
 		expect(proof).toEqual({
-			"@context": ["https://w3id.org/security/suites/jws-2020/v1"],
+			"@context": [
+				"https://www.w3.org/2018/credentials/v1",
+				"https://www.w3.org/2018/credentials/examples/v1",
+				"https://w3id.org/security/suites/jws-2020/v1"
+			],
 			type: "JsonWebSignature2020",
 			created: "2023-02-24T23:36:38Z",
 			jws: "eyJhbGciOiJFZDI1NTE5IiwiYjY0IjpmYWxzZSwiY3JpdCI6WyJiNjQiXX0..x-9agOvZeq3IU74Dm6RKtC4tjpaKjl2xms5lsluzpbNOD7knwc24tiyc5CH64SucTPnRTr1JGWNu9rgQHQeFAA",

@@ -119,3 +119,41 @@ The public key to verify the proof with.
 `Promise`\<`boolean`\>
 
 True if the credential was verified.
+
+***
+
+### createUnsignedProof()
+
+> `static` **createUnsignedProof**(`proofType`, `verificationMethodId`, `otherParams`?): [`IProof`](../type-aliases/IProof.md)
+
+Create an unsigned proof.
+
+#### Parameters
+
+##### proofType
+
+[`ProofTypes`](../type-aliases/ProofTypes.md)
+
+The type of proof to create.
+
+##### verificationMethodId
+
+`string`
+
+The verification method id.
+
+##### otherParams?
+
+`any`
+
+Other parameters for the proof.
+
+#### Returns
+
+[`IProof`](../type-aliases/IProof.md)
+
+The created proof.
+
+#### Throws
+
+GeneralError if the proof type is not supported.
