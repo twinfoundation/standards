@@ -98,7 +98,7 @@ Verify a proof for the given data.
 
 ##### securedDocument
 
-`IJsonLdNodeObject` & `object`
+`IJsonLdNodeObject`
 
 The credential to verify.
 

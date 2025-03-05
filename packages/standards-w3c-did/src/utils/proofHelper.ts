@@ -4,8 +4,6 @@ import { GeneralError, Guards, Is } from "@twin.org/core";
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { nameof } from "@twin.org/nameof";
 import type { IJwk } from "@twin.org/web";
-import type { IDataIntegrityProof } from "../models/IDataIntegrityProof";
-import type { IJsonWebSignature2020Proof } from "../models/IJsonWebSignature2020Proof";
 import type { IProofSignerVerifier } from "../models/IProofSignerVerifier";
 import { ProofTypes } from "../models/proofTypes";
 import { DataIntegrityProofSignerVerifier } from "../signerVerifiers/dataIntegrityProofSignerVerifier";
@@ -75,43 +73,17 @@ export class ProofHelper {
 	 * @returns True if the credential was verified.
 	 */
 	public static async verifyProof(
-		securedDocument: IJsonLdNodeObject & {
-			proof:
-				| IDataIntegrityProof
-				| IJsonWebSignature2020Proof
-				| (IDataIntegrityProof | IJsonWebSignature2020Proof)[];
-		},
+		securedDocument: IJsonLdNodeObject,
 		signedProof: IJsonLdNodeObject,
 		verifyKey: IJwk
 	): Promise<boolean> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(securedDocument), securedDocument);
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(signedProof), signedProof);
+		Guards.stringValue(this.CLASS_NAME, nameof(signedProof.type), signedProof.type);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(verifyKey), verifyKey);
 
-		if (Is.empty(securedDocument.proof)) {
-			throw new GeneralError(ProofHelper.CLASS_NAME, "proofMissing");
-		}
+		const signerVerifier = ProofHelper.createSignerVerifier(signedProof.type as ProofTypes);
 
-		const proofs = Is.array(securedDocument.proof)
-			? securedDocument.proof
-			: [securedDocument.proof];
-
-		let verified = false;
-
-		for (const proof of proofs) {
-			const signerVerifier = ProofHelper.createSignerVerifier(proof.type);
-
-			verified = await signerVerifier.verifyProof(
-				securedDocument,
-				proof as unknown as IJsonLdNodeObject,
-				verifyKey
-			);
-
-			if (!verified) {
-				return false;
-			}
-		}
-
-		return verified;
+		return signerVerifier.verifyProof(securedDocument, signedProof, verifyKey);
 	}
 }
