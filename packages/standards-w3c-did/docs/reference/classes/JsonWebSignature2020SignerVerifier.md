@@ -28,7 +28,7 @@ Runtime name for the class.
 
 ### createProof()
 
-> **createProof**(`unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<`IJsonLdNodeObject`\>
+> **createProof**(`unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<[`IJsonWebSignature2020Proof`](../interfaces/IJsonWebSignature2020Proof.md)\>
 
 Create a proof for the given data.
 
@@ -42,7 +42,7 @@ The data to create the proof for.
 
 ##### unsignedProof
 
-`IJsonLdNodeObject`
+[`IJsonWebSignature2020Proof`](../interfaces/IJsonWebSignature2020Proof.md)
 
 The proof options.
 
@@ -54,7 +54,7 @@ The key to sign the proof with.
 
 #### Returns
 
-`Promise`\<`IJsonLdNodeObject`\>
+`Promise`\<[`IJsonWebSignature2020Proof`](../interfaces/IJsonWebSignature2020Proof.md)\>
 
 The created proof.
 
@@ -80,7 +80,7 @@ The credential to verify.
 
 ##### signedProof
 
-`IJsonLdNodeObject`
+[`IJsonWebSignature2020Proof`](../interfaces/IJsonWebSignature2020Proof.md)
 
 The proof to verify.
 
@@ -118,7 +118,7 @@ The data to create the proof for.
 
 ##### unsignedProof
 
-`IJsonLdNodeObject`
+[`IJsonWebSignature2020Proof`](../interfaces/IJsonWebSignature2020Proof.md)
 
 The unsigned proof.
 

@@ -13,6 +13,7 @@ import { JsonLdProcessor, type IJsonLdNodeObject } from "@twin.org/data-json-ld"
 import { nameof } from "@twin.org/nameof";
 import { Jwk, Jws, type IJwk } from "@twin.org/web";
 import { DidContexts } from "../models/didContexts";
+import type { IJsonWebSignature2020Proof } from "../models/IJsonWebSignature2020Proof";
 import type { IProofSignerVerifier } from "../models/IProofSignerVerifier";
 
 /**
@@ -33,11 +34,15 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 	 */
 	public async createProof(
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject,
+		unsignedProof: IJsonWebSignature2020Proof,
 		signKey: IJwk
-	): Promise<IJsonLdNodeObject> {
+	): Promise<IJsonWebSignature2020Proof> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsecuredDocument), unsecuredDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
+		Guards.object<IJsonWebSignature2020Proof>(
+			this.CLASS_NAME,
+			nameof(unsignedProof),
+			unsignedProof
+		);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(signKey), signKey);
 
 		const hash = await this.createHash(unsecuredDocument, unsignedProof);
@@ -62,11 +67,11 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 	 */
 	public async verifyProof(
 		securedDocument: IJsonLdNodeObject,
-		signedProof: IJsonLdNodeObject,
+		signedProof: IJsonWebSignature2020Proof,
 		verifyKey: IJwk
 	): Promise<boolean> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(securedDocument), securedDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(signedProof), signedProof);
+		Guards.object<IJsonWebSignature2020Proof>(this.CLASS_NAME, nameof(signedProof), signedProof);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(verifyKey), verifyKey);
 		const jws = signedProof.jws;
 		if (!Is.stringValue(jws)) {
@@ -88,10 +93,14 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 	 */
 	public async createHash(
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject
+		unsignedProof: IJsonWebSignature2020Proof
 	): Promise<Uint8Array> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsecuredDocument), unsecuredDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
+		Guards.object<IJsonWebSignature2020Proof>(
+			this.CLASS_NAME,
+			nameof(unsignedProof),
+			unsignedProof
+		);
 		Guards.stringValue(
 			this.CLASS_NAME,
 			nameof(unsignedProof.verificationMethod),
@@ -105,13 +114,17 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 			DidContexts.ContextSecurityJws2020
 		);
 
-		proofOptionsClone["@context"] = unsecuredDocumentClone["@context"];
+		proofOptionsClone["@context"] = unsecuredDocumentClone[
+			"@context"
+		] as IJsonWebSignature2020Proof["@context"];
 
 		delete unsecuredDocumentClone.proof;
 		delete proofOptionsClone.jws;
 
 		const canonizedData: string = await JsonLdProcessor.canonize(unsecuredDocumentClone);
-		const canonizedProof: string = await JsonLdProcessor.canonize(proofOptionsClone);
+		const canonizedProof: string = await JsonLdProcessor.canonize(
+			proofOptionsClone as unknown as IJsonLdNodeObject
+		);
 
 		const hashedProof = Sha256.sum256(Converter.utf8ToBytes(canonizedProof));
 		const hashedData = Sha256.sum256(Converter.utf8ToBytes(canonizedData));

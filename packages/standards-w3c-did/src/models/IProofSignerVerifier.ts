@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { IJwk } from "@twin.org/web";
+import type { IProof } from "./IProof";
 
 /**
  * Interface describing a proof signer and verifier.
@@ -16,9 +17,9 @@ export interface IProofSignerVerifier {
 	 */
 	createProof(
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject,
+		unsignedProof: IProof,
 		signKey: IJwk
-	): Promise<IJsonLdNodeObject>;
+	): Promise<IProof>;
 
 	/**
 	 * Verify a proof for the given data.
@@ -29,7 +30,7 @@ export interface IProofSignerVerifier {
 	 */
 	verifyProof(
 		securedDocument: IJsonLdNodeObject,
-		signedProof: IJsonLdNodeObject,
+		signedProof: IProof,
 		verifyKey: IJwk
 	): Promise<boolean>;
 
@@ -39,8 +40,5 @@ export interface IProofSignerVerifier {
 	 * @param unsignedProof The unsigned proof.
 	 * @returns The created hash.
 	 */
-	createHash(
-		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject
-	): Promise<Uint8Array>;
+	createHash(unsecuredDocument: IJsonLdNodeObject, unsignedProof: IProof): Promise<Uint8Array>;
 }

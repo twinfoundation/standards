@@ -23,60 +23,6 @@
 			],
 			"description": "JSON-LD Context."
 		},
-		"@id": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-		},
-		"@included": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-		},
-		"@graph": {
-			"anyOf": [
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-				},
-				{
-					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdNodeObject"
-					}
-				}
-			]
-		},
-		"@nest": {
-			"anyOf": [
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-				},
-				{
-					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdJsonObject"
-					}
-				}
-			]
-		},
-		"@type": {
-			"anyOf": [
-				{
-					"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-				},
-				{
-					"type": "array",
-					"items": {
-						"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-					}
-				}
-			]
-		},
-		"@reverse": {
-			"type": "object",
-			"additionalProperties": {
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-			}
-		},
-		"@index": {
-			"$ref": "https://schema.twindev.org/json-ld/JsonLdKeyword"
-		},
 		"type": {
 			"type": "string",
 			"const": "DataIntegrityProof",
@@ -159,30 +105,6 @@
 		"cryptosuite",
 		"proofPurpose"
 	],
-	"additionalProperties": {
-		"anyOf": [
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdNodePrimitive"
-			},
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdLanguageMap"
-			},
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdIndexMap"
-			},
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdIncludedBlock"
-			},
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdIdMap"
-			},
-			{
-				"$ref": "https://schema.twindev.org/json-ld/JsonLdTypeMap"
-			},
-			{
-				"type": "array"
-			}
-		]
-	},
+	"additionalProperties": false,
 	"description": "Interface describing a did proof. https://www.w3.org/TR/vc-data-integrity/"
 }

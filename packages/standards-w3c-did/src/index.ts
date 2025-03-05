@@ -16,6 +16,7 @@ export * from "./models/IDidVerifiableCredential";
 export * from "./models/IDidVerifiablePresentation";
 export * from "./models/IJsonWebSignature2020Proof";
 export * from "./models/IMultikey";
+export * from "./models/IProof";
 export * from "./models/IProofSignerVerifier";
 export * from "./models/proofTypes";
 export * from "./signerVerifiers/dataIntegrityProofSignerVerifier";

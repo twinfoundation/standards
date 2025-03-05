@@ -25,6 +25,7 @@
 
 ## Type Aliases
 
+- [IProof](type-aliases/IProof.md)
 - [DidContexts](type-aliases/DidContexts.md)
 - [DidCryptoSuites](type-aliases/DidCryptoSuites.md)
 - [DidTypes](type-aliases/DidTypes.md)

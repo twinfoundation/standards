@@ -4,6 +4,7 @@ import { GeneralError, Guards, Is } from "@twin.org/core";
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { nameof } from "@twin.org/nameof";
 import type { IJwk } from "@twin.org/web";
+import type { IProof } from "../models/IProof";
 import type { IProofSignerVerifier } from "../models/IProofSignerVerifier";
 import { ProofTypes } from "../models/proofTypes";
 import { DataIntegrityProofSignerVerifier } from "../signerVerifiers/dataIntegrityProofSignerVerifier";
@@ -51,9 +52,9 @@ export class ProofHelper {
 	public static async createProof(
 		proofType: ProofTypes,
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject,
+		unsignedProof: IProof,
 		signKey: IJwk
-	): Promise<IJsonLdNodeObject> {
+	): Promise<IProof> {
 		Guards.arrayOneOf(this.CLASS_NAME, nameof(proofType), proofType, Object.values(ProofTypes));
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsecuredDocument), unsecuredDocument);
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
@@ -74,7 +75,7 @@ export class ProofHelper {
 	 */
 	public static async verifyProof(
 		securedDocument: IJsonLdNodeObject,
-		signedProof: IJsonLdNodeObject,
+		signedProof: IProof,
 		verifyKey: IJwk
 	): Promise<boolean> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(securedDocument), securedDocument);

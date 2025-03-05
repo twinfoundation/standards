@@ -50,7 +50,7 @@ GeneralError if the proof type is not supported.
 
 ### createProof()
 
-> `static` **createProof**(`proofType`, `unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<`IJsonLdNodeObject`\>
+> `static` **createProof**(`proofType`, `unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<[`IProof`](../type-aliases/IProof.md)\>
 
 Create a proof for the given data.
 
@@ -70,7 +70,7 @@ The data to create the proof for.
 
 ##### unsignedProof
 
-`IJsonLdNodeObject`
+[`IProof`](../type-aliases/IProof.md)
 
 The proof options.
 
@@ -82,7 +82,7 @@ The key to sign the proof with.
 
 #### Returns
 
-`Promise`\<`IJsonLdNodeObject`\>
+`Promise`\<[`IProof`](../type-aliases/IProof.md)\>
 
 The created proof.
 
@@ -104,7 +104,7 @@ The credential to verify.
 
 ##### signedProof
 
-`IJsonLdNodeObject`
+[`IProof`](../type-aliases/IProof.md)
 
 The proof to verify.
 

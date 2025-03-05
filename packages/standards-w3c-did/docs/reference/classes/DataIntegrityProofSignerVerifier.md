@@ -29,7 +29,7 @@ Runtime name for the class.
 
 ### createProof()
 
-> **createProof**(`unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<`IJsonLdNodeObject`\>
+> **createProof**(`unsecuredDocument`, `unsignedProof`, `signKey`): `Promise`\<[`IProof`](../type-aliases/IProof.md)\>
 
 Create a proof for the given data.
 
@@ -43,7 +43,7 @@ The data to create the proof for.
 
 ##### unsignedProof
 
-`IJsonLdNodeObject`
+[`IDataIntegrityProof`](../interfaces/IDataIntegrityProof.md)
 
 The proof options.
 
@@ -55,7 +55,7 @@ The key to sign the proof with.
 
 #### Returns
 
-`Promise`\<`IJsonLdNodeObject`\>
+`Promise`\<[`IProof`](../type-aliases/IProof.md)\>
 
 The created proof.
 
@@ -81,7 +81,7 @@ The credential to verify.
 
 ##### signedProof
 
-`IJsonLdNodeObject`
+[`IDataIntegrityProof`](../interfaces/IDataIntegrityProof.md)
 
 The proof to verify.
 
@@ -119,7 +119,7 @@ The data to create the proof for.
 
 ##### unsignedProof
 
-`IJsonLdNodeObject`
+[`IDataIntegrityProof`](../interfaces/IDataIntegrityProof.md)
 
 The unsigned proof.
 

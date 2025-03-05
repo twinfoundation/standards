@@ -14,6 +14,8 @@ import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import { nameof } from "@twin.org/nameof";
 import { Jwk, type IJwk } from "@twin.org/web";
 import { DidCryptoSuites } from "../models/didCryptoSuites";
+import type { IDataIntegrityProof } from "../models/IDataIntegrityProof";
+import type { IProof } from "../models/IProof";
 import type { IProofSignerVerifier } from "../models/IProofSignerVerifier";
 
 /**
@@ -35,11 +37,11 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 	 */
 	public async createProof(
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject,
+		unsignedProof: IDataIntegrityProof,
 		signKey: IJwk
-	): Promise<IJsonLdNodeObject> {
+	): Promise<IProof> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsecuredDocument), unsecuredDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
+		Guards.object<IProof>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(signKey), signKey);
 
 		const rawKeys = await Jwk.toRaw(signKey);
@@ -67,20 +69,17 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 	 */
 	public async verifyProof(
 		securedDocument: IJsonLdNodeObject,
-		signedProof: IJsonLdNodeObject,
+		signedProof: IDataIntegrityProof,
 		verifyKey: IJwk
 	): Promise<boolean> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(securedDocument), securedDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(signedProof), signedProof);
+		Guards.object<IDataIntegrityProof>(this.CLASS_NAME, nameof(signedProof), signedProof);
+		Guards.stringValue(this.CLASS_NAME, nameof(signedProof.proofValue), signedProof.proofValue);
 		Guards.object<IJwk>(this.CLASS_NAME, nameof(verifyKey), verifyKey);
 
 		const rawKeys = await Jwk.toRaw(verifyKey);
-
 		if (!Is.uint8Array(rawKeys.publicKey)) {
 			throw new GeneralError(this.CLASS_NAME, "missingPublicKey");
-		}
-		if (!Is.stringValue(signedProof.proofValue) || !signedProof.proofValue.startsWith("z")) {
-			throw new GeneralError(this.CLASS_NAME, "missingProofValue");
 		}
 
 		const combinedHash = await this.createHash(securedDocument, signedProof);
@@ -100,10 +99,10 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 	 */
 	public async createHash(
 		unsecuredDocument: IJsonLdNodeObject,
-		unsignedProof: IJsonLdNodeObject
+		unsignedProof: IDataIntegrityProof
 	): Promise<Uint8Array> {
 		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsecuredDocument), unsecuredDocument);
-		Guards.object<IJsonLdNodeObject>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
+		Guards.object<IDataIntegrityProof>(this.CLASS_NAME, nameof(unsignedProof), unsignedProof);
 		Guards.stringValue(
 			this.CLASS_NAME,
 			nameof(unsignedProof.cryptosuite),
@@ -128,7 +127,9 @@ export class DataIntegrityProofSignerVerifier implements IProofSignerVerifier {
 		}
 
 		if (!Is.empty(unsecuredDocumentClone["@context"])) {
-			proofOptionsClone["@context"] = unsecuredDocumentClone["@context"];
+			proofOptionsClone["@context"] = unsecuredDocumentClone[
+				"@context"
+			] as IDataIntegrityProof["@context"];
 		}
 
 		const transformedDocument = JsonHelper.canonicalize(unsecuredDocumentClone);

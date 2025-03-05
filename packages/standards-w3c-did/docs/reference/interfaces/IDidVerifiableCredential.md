@@ -112,7 +112,7 @@ Evidence associated with the Credential.
 
 ### proof?
 
-> `optional` **proof**: [`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md) \| ([`IDataIntegrityProof`](IDataIntegrityProof.md) \| [`IJsonWebSignature2020Proof`](IJsonWebSignature2020Proof.md))[]
+> `optional` **proof**: [`IProof`](../type-aliases/IProof.md) \| [`IProof`](../type-aliases/IProof.md)[]
 
 Proofs that the verifiable credential is valid.
 Optional if a different proof method is used, such as JWT.
