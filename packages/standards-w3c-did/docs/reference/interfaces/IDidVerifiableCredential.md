@@ -56,7 +56,7 @@ Annotate type definitions or lock them to specific versions of the vocabulary.
 
 ### issuer?
 
-> `optional` **issuer**: `string` \| \{ `[key: string]`: `unknown`;  `id`: `string`; \}
+> `optional` **issuer**: `string` \| \{ `id`: `string`; `name`: `string` \| [`IDidLabel`](IDidLabel.md)[]; `description`: `string` \| [`IDidLabel`](IDidLabel.md)[]; \}
 
 The issuing identity.
 
@@ -72,7 +72,7 @@ The date the verifiable credential was issued.
 
 ### name?
 
-> `optional` **name**: `string` \| `object`[]
+> `optional` **name**: `string` \| [`IDidLabel`](IDidLabel.md)[]
 
 The name of the credential.
 
@@ -80,7 +80,7 @@ The name of the credential.
 
 ### description?
 
-> `optional` **description**: `string` \| `object`[]
+> `optional` **description**: `string` \| [`IDidLabel`](IDidLabel.md)[]
 
 The description of the credential.
 

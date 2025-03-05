@@ -5,6 +5,7 @@ import type { DidContexts } from "./didContexts";
 import type { IDataIntegrityProof } from "./IDataIntegrityProof";
 import type { IDidCredentialSchema } from "./IDidCredentialSchema";
 import type { IDidCredentialStatus } from "./IDidCredentialStatus";
+import type { IDidLabel } from "./IDidLabel";
 import type { IJsonWebSignature2020Proof } from "./IJsonWebSignature2020Proof";
 
 /**
@@ -50,7 +51,7 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The issuing identity.
 	 */
-	issuer?: string | { [key: string]: unknown; id: string };
+	issuer?: string | { id: string; name?: string | IDidLabel[]; description?: string | IDidLabel[] };
 
 	/**
 	 * The date the verifiable credential was issued.
@@ -60,12 +61,12 @@ export interface IDidVerifiableCredential {
 	/**
 	 * The name of the credential.
 	 */
-	name?: string | { "@value": string; "@language": string; "@direction"?: string }[];
+	name?: string | IDidLabel[];
 
 	/**
 	 * The description of the credential.
 	 */
-	description?: string | { "@value": string; "@language": string; "@direction"?: string }[];
+	description?: string | IDidLabel[];
 
 	/**
 	 * The date the verifiable credential is valid from.

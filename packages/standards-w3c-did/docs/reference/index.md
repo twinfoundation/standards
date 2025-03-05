@@ -14,6 +14,7 @@
 - [IDidCredentialStatus](interfaces/IDidCredentialStatus.md)
 - [IDidDocument](interfaces/IDidDocument.md)
 - [IDidDocumentVerificationMethod](interfaces/IDidDocumentVerificationMethod.md)
+- [IDidLabel](interfaces/IDidLabel.md)
 - [IDidPresentationVerification](interfaces/IDidPresentationVerification.md)
 - [IDidService](interfaces/IDidService.md)
 - [IDidVerifiableCredential](interfaces/IDidVerifiableCredential.md)

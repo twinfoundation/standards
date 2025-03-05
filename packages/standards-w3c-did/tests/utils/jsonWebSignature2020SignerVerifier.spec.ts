@@ -80,7 +80,7 @@ describe("JsonWebSignature2020SignerVerifier", () => {
 
 		const privateCryptoKey = await Jwk.fromEd25519Private(privateKey);
 
-		const unsignedProof: IJsonWebSignature2020Proof & IJsonLdNodeObject = {
+		const unsignedProof: IJsonWebSignature2020Proof = {
 			"@context": ["https://w3id.org/security/suites/jws-2020/v1"],
 			type: "JsonWebSignature2020",
 			created: "2023-02-24T23:36:38Z",

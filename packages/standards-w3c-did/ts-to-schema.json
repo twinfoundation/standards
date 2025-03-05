@@ -11,6 +11,7 @@
 		"IDidCredentialStatus",
 		"IDidDocument",
 		"IDidDocumentVerificationMethod",
+		"IDidLabel",
 		"IDidPresentationVerification",
 		"IDidService",
 		"IDidVerifiableCredential",
