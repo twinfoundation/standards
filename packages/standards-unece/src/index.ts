@@ -24,4 +24,5 @@ export * from "./codeTypes/uneceTransportModeCodes";
 export * from "./codeTypes/uneceWorkflowStatusCodes";
 export * from "./dataTypes/uneceDataTypes";
 export * from "./models/IUneceCode";
+export * from "./models/uneceContexts";
 export * from "./models/uneceTypes";
