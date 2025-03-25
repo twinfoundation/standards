@@ -4,6 +4,7 @@ import type { IJsonLdContextDefinitionElement, IJsonLdNodeObject } from "@twin.o
 import type { GaiaXContexts } from "./gaiaXContexts";
 import type { GaiaXTypes } from "./gaiaXTypes";
 import type { IDataExchangeComponent } from "./IDataExchangeComponent";
+import type { IParticipant } from "./IParticipant";
 
 /**
  * A Data Resource as defined by Gaia-X.
@@ -14,8 +15,8 @@ export interface IDataResource extends IJsonLdNodeObject {
 	 * The LD Context
 	 */
 	"@context":
-		| typeof GaiaXContexts.GaiaXLdContext
-		| [typeof GaiaXContexts.GaiaXLdContext, ...IJsonLdContextDefinitionElement[]];
+	| typeof GaiaXContexts.GaiaXLdContext
+	| [typeof GaiaXContexts.GaiaXLdContext, ...IJsonLdContextDefinitionElement[]];
 
 	/**
 	 * Subject Id
@@ -43,14 +44,14 @@ export interface IDataResource extends IJsonLdNodeObject {
 	 * the third case covers the idiom where a JSON-LD Node is supplied with id and type.
 	 */
 	exposedThrough:
-		| IDataExchangeComponent
-		| string
-		| (IJsonLdNodeObject & { id: string; type: typeof GaiaXTypes.DataExchangeComponent });
+	| IDataExchangeComponent
+	| string
+	| (IJsonLdNodeObject & { id: string; type: typeof GaiaXTypes.DataExchangeComponent });
 
 	/**
 	 * Who is the data producer
 	 */
-	producedBy: string;
+	producedBy: | IParticipant | string;
 
 	/**
 	 * Pointer (URL) to the license
@@ -60,7 +61,7 @@ export interface IDataResource extends IJsonLdNodeObject {
 	/**
 	 * Copyright owner
 	 */
-	copyrightOwnedBy: string;
+	copyrightOwnedBy: | IParticipant | string;
 
 	/**
 	 * ODRL Policy
