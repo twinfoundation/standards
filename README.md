@@ -13,6 +13,7 @@ This mono-repository contains packages defining standards.
 - [standards-unece](packages/standards-unece/README.md) - Models which define the structure of [UN/CEFACT Standard](https://vocabulary.uncefact.org/).
 - [standards-vda](packages/standards-vda/README.md) - Models which define the structure of [VDA JAIF Standard](https://www.vda.de/).
 - [standards-gaia-x](packages/standards-gaia-x/README.md) - Models which define the structure of [Gaia-x](https://docs.gaia-x.eu/ontology/development/).
+- [standards-ld-contexts](packages/standards-ld-contexts/README.md) - Local copies of standard LD contexts which can be used for offline development.
 
 ## Contributing
 

@@ -17,6 +17,7 @@ on:
           - 'packages/standards-unece'
           - 'packages/standards-vda'
           - 'packages/standards-gaia-x'
+          - 'packages/standards-ld-contexts'
 
 jobs:
   publish:

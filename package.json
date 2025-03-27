@@ -48,7 +48,8 @@
 		"packages/standards-gs1",
 		"packages/standards-unece",
 		"packages/standards-vda",
-		"packages/standards-gaia-x"
+		"packages/standards-gaia-x",
+		"packages/standards-ld-contexts"
 	],
 	"type": "module"
 }
