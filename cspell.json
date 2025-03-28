@@ -16,9 +16,11 @@
 		"typedoc.json",
 		".eslintrc.cjs",
 		"**/wordlists/**",
-		"**/src-json/**"
+		"**/src-json/**",
+		"**/ldContexts/*.json"
 	],
 	"words": [
+		"abbrev",
 		"bday",
 		"cefact",
 		"cryptosuite",
