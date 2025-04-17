@@ -3,3 +3,5 @@ package-lock.json
 **/docs/open-api
 **/schemas/
 changelog.md
+**/codes
+**/codeTypes
