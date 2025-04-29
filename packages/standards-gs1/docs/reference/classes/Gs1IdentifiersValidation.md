@@ -4,13 +4,13 @@ Validation for GS1 identifiers.
 
 ## Constructors
 
-### Constructor
+### new Gs1IdentifiersValidation()
 
-> **new Gs1IdentifiersValidation**(): `Gs1IdentifiersValidation`
+> **new Gs1IdentifiersValidation**(): [`Gs1IdentifiersValidation`](Gs1IdentifiersValidation.md)
 
 #### Returns
 
-`Gs1IdentifiersValidation`
+[`Gs1IdentifiersValidation`](Gs1IdentifiersValidation.md)
 
 ## Methods
 

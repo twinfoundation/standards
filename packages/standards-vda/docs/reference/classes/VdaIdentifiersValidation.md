@@ -4,13 +4,13 @@ Validation for identifier types for VDA.
 
 ## Constructors
 
-### Constructor
+### new VdaIdentifiersValidation()
 
-> **new VdaIdentifiersValidation**(): `VdaIdentifiersValidation`
+> **new VdaIdentifiersValidation**(): [`VdaIdentifiersValidation`](VdaIdentifiersValidation.md)
 
 #### Returns
 
-`VdaIdentifiersValidation`
+[`VdaIdentifiersValidation`](VdaIdentifiersValidation.md)
 
 ## Methods
 

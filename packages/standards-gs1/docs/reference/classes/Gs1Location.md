@@ -6,13 +6,13 @@ Section 10.2 .
 
 ## Constructors
 
-### Constructor
+### new Gs1Location()
 
-> **new Gs1Location**(): `Gs1Location`
+> **new Gs1Location**(): [`Gs1Location`](Gs1Location.md)
 
 #### Returns
 
-`Gs1Location`
+[`Gs1Location`](Gs1Location.md)
 
 ## Properties
 

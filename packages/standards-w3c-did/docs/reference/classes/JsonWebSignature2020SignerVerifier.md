@@ -8,13 +8,13 @@ Helper methods for creating and verifying proofs.
 
 ## Constructors
 
-### Constructor
+### new JsonWebSignature2020SignerVerifier()
 
-> **new JsonWebSignature2020SignerVerifier**(): `JsonWebSignature2020SignerVerifier`
+> **new JsonWebSignature2020SignerVerifier**(): [`JsonWebSignature2020SignerVerifier`](JsonWebSignature2020SignerVerifier.md)
 
 #### Returns
 
-`JsonWebSignature2020SignerVerifier`
+[`JsonWebSignature2020SignerVerifier`](JsonWebSignature2020SignerVerifier.md)
 
 ## Properties
 

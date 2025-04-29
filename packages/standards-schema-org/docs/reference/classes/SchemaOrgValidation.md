@@ -4,13 +4,13 @@ Handle validation for schema.org.
 
 ## Constructors
 
-### Constructor
+### new SchemaOrgValidation()
 
-> **new SchemaOrgValidation**(): `SchemaOrgValidation`
+> **new SchemaOrgValidation**(): [`SchemaOrgValidation`](SchemaOrgValidation.md)
 
 #### Returns
 
-`SchemaOrgValidation`
+[`SchemaOrgValidation`](SchemaOrgValidation.md)
 
 ## Methods
 

@@ -4,13 +4,13 @@ Helper methods for creating and verifying proofs.
 
 ## Constructors
 
-### Constructor
+### new ProofHelper()
 
-> **new ProofHelper**(): `ProofHelper`
+> **new ProofHelper**(): [`ProofHelper`](ProofHelper.md)
 
 #### Returns
 
-`ProofHelper`
+[`ProofHelper`](ProofHelper.md)
 
 ## Properties
 
@@ -124,7 +124,7 @@ True if the credential was verified.
 
 ### createUnsignedProof()
 
-> `static` **createUnsignedProof**(`proofType`, `verificationMethodId`, `otherParams?`): [`IProof`](../type-aliases/IProof.md)
+> `static` **createUnsignedProof**(`proofType`, `verificationMethodId`, `otherParams`?): [`IProof`](../type-aliases/IProof.md)
 
 Create an unsigned proof.
 

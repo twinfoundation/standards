@@ -4,13 +4,13 @@ Is checks for GS1 data.
 
 ## Constructors
 
-### Constructor
+### new Gs1Is()
 
-> **new Gs1Is**(): `Gs1Is`
+> **new Gs1Is**(): [`Gs1Is`](Gs1Is.md)
 
 #### Returns
 
-`Gs1Is`
+[`Gs1Is`](Gs1Is.md)
 
 ## Methods
 

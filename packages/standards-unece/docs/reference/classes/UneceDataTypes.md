@@ -4,13 +4,13 @@ Handle all the data types for UN/CEFACT.
 
 ## Constructors
 
-### Constructor
+### new UneceDataTypes()
 
-> **new UneceDataTypes**(): `UneceDataTypes`
+> **new UneceDataTypes**(): [`UneceDataTypes`](UneceDataTypes.md)
 
 #### Returns
 
-`UneceDataTypes`
+[`UneceDataTypes`](UneceDataTypes.md)
 
 ## Methods
 

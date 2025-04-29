@@ -5,13 +5,13 @@ Vocabulary https://www.gs1.org/voc .
 
 ## Constructors
 
-### Constructor
+### new Gs1DataTypes()
 
-> **new Gs1DataTypes**(): `Gs1DataTypes`
+> **new Gs1DataTypes**(): [`Gs1DataTypes`](Gs1DataTypes.md)
 
 #### Returns
 
-`Gs1DataTypes`
+[`Gs1DataTypes`](Gs1DataTypes.md)
 
 ## Methods
 

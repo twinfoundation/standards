@@ -2,3 +2,4 @@
 // SPDX-License-Identifier: Apache-2.0.
 export * from "./models/dublinCoreContexts";
 export * from "./models/dublinCoreTypes";
+export * from "./models/dublinCoreClasses";

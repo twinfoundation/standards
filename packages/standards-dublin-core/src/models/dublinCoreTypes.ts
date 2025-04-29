@@ -60,7 +60,13 @@ export const DublinCorePropertyType = {
 	 * The identifier of a Policy that supersedes this Policy.
 	 * Using "@id" references is preferred for comparison purposes.
 	 */
-	IsReplacedBy: "isReplacedBy"
+	IsReplacedBy: "isReplacedBy",
+
+	/**
+	 * See Description at
+	 * https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/hasPart
+	 */
+	HasPart: "hasPart"
 } as const;
 
 /**
