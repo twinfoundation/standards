@@ -1,5 +1,12 @@
 # @twin.org/standards-dublin-core - Changelog
 
+## [0.0.1-next.36](https://github.com/twinfoundation/standards/compare/standards-dublin-core-v0.0.1-next.35...standards-dublin-core-v0.0.1-next.36) (2025-04-30)
+
+
+### Features
+
+* add Collection and hasPart to Dublin Core ([#13](https://github.com/twinfoundation/standards/issues/13)) ([867ddbc](https://github.com/twinfoundation/standards/commit/867ddbcad0c4afec3c112b113eb97ab431cf84b1))
+
 ## [0.0.1-next.35](https://github.com/twinfoundation/standards/compare/standards-dublin-core-v0.0.1-next.34...standards-dublin-core-v0.0.1-next.35) (2025-04-17)
 
 
