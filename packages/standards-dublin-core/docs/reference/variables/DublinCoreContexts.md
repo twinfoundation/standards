@@ -8,10 +8,10 @@ The contexts for Dublin Core.
 
 ### Context
 
-> `readonly` **Context**: `"http://purl.org/dc/terms/"` = `"http://purl.org/dc/terms/"`
+> `readonly` **Context**: `"https://schema.twindev.org/dublin-core/types.jsonld"` = `"https://schema.twindev.org/dublin-core/types.jsonld"`
 
 The context root for Dublin Core Terms.
 
 #### See
 
-http://purl.org/dc/terms/
+https://www.dublincore.org/specifications/dublin-core/dcmi-terms/

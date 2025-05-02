@@ -8,9 +8,9 @@
 export const DublinCoreContexts = {
 	/**
 	 * The context root for Dublin Core Terms.
-	 * @see http://purl.org/dc/terms/
+	 * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
 	 */
-	Context: "http://purl.org/dc/terms/"
+	Context: "https://schema.twindev.org/dublin-core/types.jsonld"
 } as const;
 
 /**

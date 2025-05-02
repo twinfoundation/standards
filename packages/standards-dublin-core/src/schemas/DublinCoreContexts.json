@@ -1,5 +1,5 @@
 {
 	"type": "string",
-	"const": "http://purl.org/dc/terms/",
+	"const": "https://schema.twindev.org/dublin-core/types.jsonld",
 	"description": "The contexts for Dublin Core."
 }
