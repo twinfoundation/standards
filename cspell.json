@@ -47,7 +47,8 @@
 		"Stiftung",
 		"unece",
 		"vcard",
-		"xone"
+		"xone",
+		"DCMI"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",
