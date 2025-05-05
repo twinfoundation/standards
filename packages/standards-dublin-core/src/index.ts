@@ -3,3 +3,5 @@
 export * from "./models/dublinCoreContexts";
 export * from "./models/dublinCoreTypes";
 export * from "./models/dublinCoreClasses";
+
+export * from "./dataTypes/dublinCoreDataTypes";
