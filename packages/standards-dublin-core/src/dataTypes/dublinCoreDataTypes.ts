@@ -13,13 +13,9 @@ export class DublinCoreDataTypes {
 	 */
 	public static registerRedirects(): void {
 		JsonLdProcessor.addRedirect(
-			new RegExp(DublinCoreContexts.ContextTerms),
-			DublinCoreContexts.ContextTermsRedirect
-		);
-
-		JsonLdProcessor.addRedirect(
-			new RegExp(DublinCoreContexts.ContextTypes),
-			DublinCoreContexts.ContextTypesRedirect
+			// Matches: https://purl.org/dc, http://purl.org/dc, http://purl.org/dc/terms, http://purl.org/dc/terms/
+			/https?:\/\/purl.org\/dc(\/([a-z]+)?\/?)?/,
+			DublinCoreContexts.ContextRedirect
 		);
 	}
 }

@@ -1,8 +1,7 @@
 {
 	"type": "string",
 	"enum": [
-		"http://purl.org/dc/terms/",
-		"http://purl.org/dc/dcmitype/",
+		"http://purl.org/dc",
 		"https://schema.twindev.org/dublin-core/types.jsonld"
 	],
 	"description": "The contexts for Dublin Core."

@@ -5,7 +5,7 @@ import { DublinCoreContexts, DublinCorePropertyType } from "../src/index";
 
 describe("Dublin Core", () => {
 	it("should have correct context", () => {
-		expect(DublinCoreContexts.ContextTerms).toBe("http://purl.org/dc/terms/");
+		expect(DublinCoreContexts.Context).toBe("http://purl.org/dc");
 	});
 
 	it("should have correct property types", () => {
