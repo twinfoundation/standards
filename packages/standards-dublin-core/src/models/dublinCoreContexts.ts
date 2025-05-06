@@ -10,7 +10,7 @@ export const DublinCoreContexts = {
 	 * The context root for Dublin Core Terms and DCMI types.
 	 * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
 	 */
-	Context: "http://purl.org/dc",
+	Context: "https://dublincore.org",
 
 	/**
 	 * Redirection URLs

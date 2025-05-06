@@ -48,7 +48,8 @@
 		"unece",
 		"vcard",
 		"xone",
-		"DCMI"
+		"DCMI",
+		"dublincore"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",

@@ -8,7 +8,7 @@ The contexts for Dublin Core.
 
 ### Context
 
-> `readonly` **Context**: `"http://purl.org/dc"` = `"http://purl.org/dc"`
+> `readonly` **Context**: `"https://dublincore.org"` = `"https://dublincore.org"`
 
 The context root for Dublin Core Terms and DCMI types.
 
