@@ -1,8 +1,10 @@
 {
 	"type": "string",
 	"enum": [
-		"https://dublincore.org",
-		"https://schema.twindev.org/dublin-core/types.jsonld"
+		"http://purl.org/dc/terms/",
+		"http://purl.org/dc/dcmitype/",
+		"https://schema.twindev.org/dublin-core/terms.jsonld",
+		"https://schema.twindev.org/dublin-core/dcmitype.jsonld"
 	],
 	"description": "The contexts for Dublin Core."
 }
