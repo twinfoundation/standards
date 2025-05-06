@@ -7,15 +7,26 @@
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export const DublinCoreContexts = {
 	/**
-	 * The context root for Dublin Core Terms and DCMI types.
+	 * The context root for Dublin Core Terms vocabulary.
 	 * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
 	 */
-	Context: "https://dublincore.org",
+	ContextTerms: "https://purl.org/dc/terms/",
+
+	/**
+	 * The context root for Dublin Core DCMI Types vocabulary.
+	 * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7
+	 */
+	ContextDcmiType: "https://purl.org/dc/terms/",
+
+	/**
+	 * Redirection URL for terms
+	 */
+	ContextTermsRedirect: "https://schema.twindev.org/dublin-core/terms.jsonld",
 
 	/**
 	 * Redirection URLs
 	 */
-	ContextRedirect: "https://schema.twindev.org/dublin-core/types.jsonld"
+	ContextDcmiTypeRedirect: "https://schema.twindev.org/dublin-core/dcmitype.jsonld"
 } as const;
 
 /**

@@ -49,6 +49,7 @@
 		"vcard",
 		"xone",
 		"DCMI",
+		"dcmitype",
 		"dublincore"
 	],
 	"ignoreRegExpList": [

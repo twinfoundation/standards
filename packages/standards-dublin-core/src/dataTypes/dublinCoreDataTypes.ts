@@ -12,6 +12,13 @@ export class DublinCoreDataTypes {
 	 * Register the JSON-LD Redirects.
 	 */
 	public static registerRedirects(): void {
-		JsonLdProcessor.addRedirect(/https?:\/\/dublincore.org\/?/, DublinCoreContexts.ContextRedirect);
+		JsonLdProcessor.addRedirect(
+			/https?:\/\/purl.org\/dc\/terms\/?/,
+			DublinCoreContexts.ContextTermsRedirect
+		);
+		JsonLdProcessor.addRedirect(
+			/https?:\/\/purl.org\/dc\/dcmitype\/?/,
+			DublinCoreContexts.ContextDcmiTypeRedirect
+		);
 	}
 }
