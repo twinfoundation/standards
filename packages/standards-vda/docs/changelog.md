@@ -1,5 +1,12 @@
 # @twin.org/standards-vda - Changelog
 
+## [0.0.1-next.37](https://github.com/twinfoundation/standards/compare/standards-vda-v0.0.1-next.36...standards-vda-v0.0.1-next.37) (2025-05-06)
+
+
+### Miscellaneous Chores
+
+* **standards-vda:** Synchronize repo versions
+
 ## [0.0.1-next.36](https://github.com/twinfoundation/standards/compare/standards-vda-v0.0.1-next.35...standards-vda-v0.0.1-next.36) (2025-04-30)
 
 
