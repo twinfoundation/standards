@@ -47,7 +47,10 @@
 		"Stiftung",
 		"unece",
 		"vcard",
-		"xone"
+		"xone",
+		"DCMI",
+		"dcmitype",
+		"dublincore"
 	],
 	"ignoreRegExpList": [
 		"/from\\s+(['\"]).*\\1/",

@@ -1,5 +1,9 @@
 # @twin.org/standards-dublin-core
 
+## Classes
+
+- [DublinCoreDataTypes](classes/DublinCoreDataTypes.md)
+
 ## Type Aliases
 
 - [DublinCoreClasses](type-aliases/DublinCoreClasses.md)
