@@ -1,5 +1,12 @@
 # @twin.org/standards-dublin-core - Changelog
 
+## [0.0.1-next.37](https://github.com/twinfoundation/standards/compare/standards-dublin-core-v0.0.1-next.36...standards-dublin-core-v0.0.1-next.37) (2025-05-06)
+
+
+### Features
+
+* dublin core refactor ([548db75](https://github.com/twinfoundation/standards/commit/548db75600d44a0ab8f7bff2f07261552dc2b0b1))
+
 ## [0.0.1-next.36](https://github.com/twinfoundation/standards/compare/standards-dublin-core-v0.0.1-next.35...standards-dublin-core-v0.0.1-next.36) (2025-04-30)
 
 
