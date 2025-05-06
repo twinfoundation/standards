@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0.
 import { GeneralError, Is } from "@twin.org/core";
 import { JsonLdProcessor } from "@twin.org/data-json-ld";
+import dcmitype from "./ldContexts/dublin-core-dcmitype.json";
+import dcTerms from "./ldContexts/dublin-core-terms.json";
+import federatedCatalogueTerms from "./ldContexts/federated-catalogue-terms.json";
 import gaiaXDevelopment from "./ldContexts/gaia-x-development.json";
 import odrl from "./ldContexts/odrl.json";
 import schemaOrg from "./ldContexts/schema.org.json";
@@ -20,7 +23,10 @@ export const LD_CONTEXTS: { [id: string]: unknown } = {
 	"http://www.w3.org/ns/odrl.jsonld": odrl,
 	"https://www.w3.org/ns/credentials/v2": vc,
 	"https://vocabulary.uncefact.org": unCefact,
-	"https://w3id.org/security/suites/jws-2020/v1": jws
+	"https://w3id.org/security/suites/jws-2020/v1": jws,
+	"http://purl.org/dc/terms/": dcTerms,
+	"http://purl.org/dc/dcmitype/": dcmitype,
+	"https://schema.twindev.org/federated-catalogue/types.jsonld": federatedCatalogueTerms
 };
 
 /**
