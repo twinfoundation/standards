@@ -6,9 +6,9 @@ The contexts for Dublin Core.
 
 ## Type declaration
 
-### Context
+### ContextTerms
 
-> `readonly` **Context**: `"http://purl.org/dc/terms/"` = `"http://purl.org/dc/terms/"`
+> `readonly` **ContextTerms**: `"http://purl.org/dc/terms/"` = `"http://purl.org/dc/terms/"`
 
 The LD context for Dublin Core Terms vocabulary.
 

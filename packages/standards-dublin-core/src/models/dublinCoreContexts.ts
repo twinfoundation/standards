@@ -10,7 +10,7 @@ export const DublinCoreContexts = {
 	 * The LD context for Dublin Core Terms vocabulary.
 	 * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
 	 */
-	Context: "http://purl.org/dc/terms/",
+	ContextTerms: "http://purl.org/dc/terms/",
 
 	/**
 	 * The LD context for Dublin Core DCMI Types vocabulary.
