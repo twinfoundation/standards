@@ -1,5 +1,12 @@
 # @twin.org/standards-ld-contexts - Changelog
 
+## [0.0.1-next.38](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.37...standards-ld-contexts-v0.0.1-next.38) (2025-05-07)
+
+
+### Features
+
+* add extra ld contexts needed ([#17](https://github.com/twinfoundation/standards/issues/17)) ([d9f1be2](https://github.com/twinfoundation/standards/commit/d9f1be2a852f776cb3a8f00bb4dd631da0fe848e))
+
 ## [0.0.1-next.37](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.36...standards-ld-contexts-v0.0.1-next.37) (2025-05-06)
 
 
