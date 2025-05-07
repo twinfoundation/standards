@@ -56,7 +56,7 @@ export class JsonWebSignature2020SignerVerifier implements IProofSignerVerifier 
 
 		const cryptoKey = await Jwk.toCryptoKey(signKey);
 
-		const signature = await Jws.create(cryptoKey, hash);
+		const signature = await Jws.create(cryptoKey, hash, signKey.alg);
 
 		const signedProof = ObjectHelper.clone(unsignedProof);
 
