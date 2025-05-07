@@ -1,9 +1,9 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { Converter } from "@twin.org/core";
+import { Converter, ObjectHelper } from "@twin.org/core";
 import { Ed25519 } from "@twin.org/crypto";
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
-import { Jwk } from "@twin.org/web";
+import { type IJwk, Jwk } from "@twin.org/web";
 import type { IDidVerifiableCredential } from "../../src/models/IDidVerifiableCredential";
 import type { IJsonWebSignature2020Proof } from "../../src/models/IJsonWebSignature2020Proof";
 import { ProofTypes } from "../../src/models/proofTypes";
@@ -102,7 +102,7 @@ describe("JsonWebSignature2020SignerVerifier", () => {
 			],
 			type: "JsonWebSignature2020",
 			created: "2023-02-24T23:36:38Z",
-			jws: "eyJhbGciOiJFZDI1NTE5IiwiYjY0IjpmYWxzZSwiY3JpdCI6WyJiNjQiXX0..x-9agOvZeq3IU74Dm6RKtC4tjpaKjl2xms5lsluzpbNOD7knwc24tiyc5CH64SucTPnRTr1JGWNu9rgQHQeFAA",
+			jws: "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..UOMIoa7obv5GadP-YjljCxyaJVSggDi_Vedij2ugPeYczrDGNb4FxNb03v9xeMfmj99tFMVrk4mx0e_wKFR5CA",
 			proofPurpose: "assertionMethod",
 			verificationMethod:
 				"did:key:z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2#z6MkrJVnaZkeFzdQyMZu1cgjg7k1pZZ6pvBQ7XJPt4swbTQ2"
@@ -113,6 +113,81 @@ describe("JsonWebSignature2020SignerVerifier", () => {
 			vc,
 			proof,
 			publicCryptoKey
+		);
+		expect(verified).toEqual(true);
+	});
+
+	// SEE https://www.w3.org/community/reports/credentials/CG-FINAL-lds-jws2020-20220721/#test-vectors
+	test("Can create and verify a JSON Web Signature 2020 - W3C Test Vector", async () => {
+		const privateKey: IJwk = {
+			kty: "OKP",
+			crv: "Ed25519",
+			x: "CV-aGlld3nVdgnhoZK0D36Wk-9aIMlZjZOK2XhPMnkQ",
+			d: "m5N7gTItgWz6udWjuqzJsqX-vksUnxJrNjD5OilScBc",
+			alg: "EdDSA"
+		};
+
+		const vc: IDidVerifiableCredential & IJsonLdNodeObject = {
+			"@context": [
+				"https://www.w3.org/2018/credentials/v1",
+				"https://www.w3.org/2018/credentials/examples/v1",
+				"https://w3id.org/security/suites/jws-2020/v1"
+			],
+			id: "http://example.gov/credentials/3732",
+			type: ["VerifiableCredential", "UniversityDegreeCredential"],
+			issuer: {
+				id: "https://example.com/issuer/123"
+			},
+			issuanceDate: "2020-03-10T04:24:12.164Z",
+			credentialSubject: {
+				id: "did:example:456",
+				degree: {
+					type: "BachelorDegree",
+					name: "Bachelor of Science and Arts"
+				}
+			}
+		};
+
+		const proofDetails = {
+			created: "2019-12-11T03:50:55Z",
+			proofPurpose: "assertionMethod"
+		};
+
+		const verificationMethod =
+			"https://example.com/issuer/123#ovsDKYBjFemIy8DVhc-w2LSi8CvXMw2AYDzHj04yxkc";
+
+		const unsignedProof = ProofHelper.createUnsignedProof(
+			ProofTypes.JsonWebSignature2020,
+			verificationMethod,
+			proofDetails
+		);
+
+		const proof = await new JsonWebSignature2020SignerVerifier().createProof(
+			vc,
+			unsignedProof as IJsonWebSignature2020Proof,
+			privateKey
+		);
+
+		expect(proof).toEqual({
+			"@context": [
+				"https://www.w3.org/2018/credentials/v1",
+				"https://www.w3.org/2018/credentials/examples/v1",
+				"https://w3id.org/security/suites/jws-2020/v1"
+			],
+			type: "JsonWebSignature2020",
+			created: proofDetails.created,
+			jws: "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..MJ5GwWRMsadCyLNXU_flgJtsS32584MydBxBuygps_cM0sbU3abTEOMyUvmLNcKOwOBE1MfDoB1_YY425W3sAg",
+			proofPurpose: "assertionMethod",
+			verificationMethod
+		});
+
+		const publicJwk = ObjectHelper.clone(privateKey);
+		delete publicJwk.d;
+
+		const verified = await new JsonWebSignature2020SignerVerifier().verifyProof(
+			vc,
+			proof,
+			publicJwk
 		);
 		expect(verified).toEqual(true);
 	});
