@@ -1,12 +1,12 @@
 {
-	"packages/standards-w3c-did": "0.0.1-next.38",
-	"packages/standards-w3c-vcard": "0.0.1-next.38",
-	"packages/standards-dublin-core": "0.0.1-next.38",
-	"packages/standards-w3c-odrl": "0.0.1-next.38",
-	"packages/standards-schema-org": "0.0.1-next.38",
-	"packages/standards-gs1": "0.0.1-next.38",
-	"packages/standards-unece": "0.0.1-next.38",
-	"packages/standards-vda": "0.0.1-next.38",
-	"packages/standards-gaia-x": "0.0.1-next.38",
-	"packages/standards-ld-contexts": "0.0.1-next.38"
+	"packages/standards-w3c-did": "0.0.1-next.39",
+	"packages/standards-w3c-vcard": "0.0.1-next.39",
+	"packages/standards-dublin-core": "0.0.1-next.39",
+	"packages/standards-w3c-odrl": "0.0.1-next.39",
+	"packages/standards-schema-org": "0.0.1-next.39",
+	"packages/standards-gs1": "0.0.1-next.39",
+	"packages/standards-unece": "0.0.1-next.39",
+	"packages/standards-vda": "0.0.1-next.39",
+	"packages/standards-gaia-x": "0.0.1-next.39",
+	"packages/standards-ld-contexts": "0.0.1-next.39"
 }

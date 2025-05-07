@@ -1,5 +1,12 @@
 # @twin.org/standards-w3c-did - Changelog
 
+## [0.0.1-next.39](https://github.com/twinfoundation/standards/compare/standards-w3c-did-v0.0.1-next.38...standards-w3c-did-v0.0.1-next.39) (2025-05-07)
+
+
+### Features
+
+* alg usage ([#19](https://github.com/twinfoundation/standards/issues/19)) ([3946fb2](https://github.com/twinfoundation/standards/commit/3946fb2e8bd9a486ad186765d1d09361fa75786b))
+
 ## [0.0.1-next.38](https://github.com/twinfoundation/standards/compare/standards-w3c-did-v0.0.1-next.37...standards-w3c-did-v0.0.1-next.38) (2025-05-07)
 
 
