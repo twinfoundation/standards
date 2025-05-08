@@ -1,5 +1,13 @@
 # @twin.org/standards-schema-org - Changelog
 
+## [0.0.1-next.41](https://github.com/twinfoundation/standards/compare/standards-schema-org-v0.0.1-next.40...standards-schema-org-v0.0.1-next.41) (2025-05-08)
+
+
+### Features
+
+* add ItemList, ItemListElement and NextItem types ([19d7baf](https://github.com/twinfoundation/standards/commit/19d7baf31a3e6385c68051da75835d917d134deb))
+* add ItemList, ItemListElement and NextItem types ([fb40e25](https://github.com/twinfoundation/standards/commit/fb40e25bd3552760452cc31d654d3f0596482ae9))
+
 ## [0.0.1-next.40](https://github.com/twinfoundation/standards/compare/standards-schema-org-v0.0.1-next.39...standards-schema-org-v0.0.1-next.40) (2025-05-08)
 
 
