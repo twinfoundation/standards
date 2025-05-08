@@ -16,16 +16,32 @@ import jws from "./ldContexts/w3id-jws-2020-v1.json";
  * Map of all the ld contexts by their URL.
  */
 export const LD_CONTEXTS: { [id: string]: unknown } = {
+	// schema.org
 	"https://schema.org": schemaOrg,
 	"http://schema.org": schemaOrg,
+	"https://schema.org/docs/jsonldcontext.jsonld": schemaOrg,
+
+	// Gaia-X
 	"https://w3id.org/gaia-x/development": gaiaXDevelopment,
 	"https://w3id.org/gaia-x/development#": gaiaXDevelopment,
+
+	// ODRL
 	"http://www.w3.org/ns/odrl.jsonld": odrl,
+
+	// W3C Credentials
 	"https://www.w3.org/ns/credentials/v2": vc,
-	"https://vocabulary.uncefact.org": unCefact,
 	"https://w3id.org/security/suites/jws-2020/v1": jws,
+
+	// UN/CEFACT
+	"https://vocabulary.uncefact.org": unCefact,
+
+	// Dublin Core
 	"http://purl.org/dc/terms/": dcTerms,
 	"http://purl.org/dc/dcmitype/": dcmitype,
+	"https://schema.twindev.org/dublin-core/terms.jsonld": dcTerms,
+	"https://schema.twindev.org/dublin-core/dcmitype.jsonld": dcmitype,
+
+	// Federated Catalogue
 	"https://schema.twindev.org/federated-catalogue/types.jsonld": federatedCatalogueTerms
 };
 
