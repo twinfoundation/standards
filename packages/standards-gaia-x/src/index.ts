@@ -9,3 +9,4 @@ export * from "./models/IEndpoint";
 export * from "./models/IParticipant";
 export * from "./models/IRegistrationNumber";
 export * from "./models/IServiceOffering";
+export * from "./models/gaiaXContextType";
