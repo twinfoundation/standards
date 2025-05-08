@@ -59,7 +59,22 @@ export const SchemaOrgTypes = {
 	/**
 	 * Represents a structured value.
 	 */
-	StructuredValue: "StructuredValue"
+	StructuredValue: "StructuredValue",
+
+	/**
+	 * Represents an item list.
+	 */
+	ItemList: "ItemList",
+
+	/**
+	 * Represents an item list element.
+	 */
+	ItemListElement: "itemListElement",
+
+	/**
+	 * Represents a the next item.
+	 */
+	NextItem: "nextItem"
 } as const;
 
 /**
