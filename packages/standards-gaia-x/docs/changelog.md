@@ -1,5 +1,12 @@
 # @twin.org/standards-gaia-x - Changelog
 
+## [0.0.1-next.40](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.39...standards-gaia-x-v0.0.1-next.40) (2025-05-08)
+
+
+### Miscellaneous Chores
+
+* **standards-gaia-x:** Synchronize repo versions
+
 ## [0.0.1-next.39](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.38...standards-gaia-x-v0.0.1-next.39) (2025-05-07)
 
 

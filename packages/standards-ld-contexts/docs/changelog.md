@@ -1,5 +1,12 @@
 # @twin.org/standards-ld-contexts - Changelog
 
+## [0.0.1-next.40](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.39...standards-ld-contexts-v0.0.1-next.40) (2025-05-08)
+
+
+### Bug Fixes
+
+* add extra ld contexts associated to URLs. cache ([#21](https://github.com/twinfoundation/standards/issues/21)) ([05f7bba](https://github.com/twinfoundation/standards/commit/05f7bbafd0efbff445b878ccc2709975e50a7773))
+
 ## [0.0.1-next.39](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.38...standards-ld-contexts-v0.0.1-next.39) (2025-05-07)
 
 
