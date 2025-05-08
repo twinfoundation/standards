@@ -72,7 +72,7 @@ export const SchemaOrgTypes = {
 	ItemListElement: "itemListElement",
 
 	/**
-	 * Represents a the next item.
+	 * Represents a next item (can be used as a cursor).
 	 */
 	NextItem: "nextItem"
 } as const;

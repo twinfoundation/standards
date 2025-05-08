@@ -88,4 +88,4 @@ Represents an item list element.
 
 > `readonly` **NextItem**: `"nextItem"` = `"nextItem"`
 
-Represents a the next item.
+Represents a next item (can be used as a cursor).
