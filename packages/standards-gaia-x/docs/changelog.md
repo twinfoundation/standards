@@ -1,5 +1,12 @@
 # @twin.org/standards-gaia-x - Changelog
 
+## [0.0.1-next.42](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.41...standards-gaia-x-v0.0.1-next.42) (2025-05-09)
+
+
+### Bug Fixes
+
+* refine the LD Context of Gaia-X entities ([#24](https://github.com/twinfoundation/standards/issues/24)) ([151c7f9](https://github.com/twinfoundation/standards/commit/151c7f940c900daac6c98a6f89ea5f708b25a1bd))
+
 ## [0.0.1-next.41](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.40...standards-gaia-x-v0.0.1-next.41) (2025-05-08)
 
 
