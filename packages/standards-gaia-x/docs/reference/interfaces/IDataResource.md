@@ -93,6 +93,6 @@ Copyright owner
 
 ### resourcePolicy
 
-> **resourcePolicy**: `IJsonLdNodeObject`
+> **resourcePolicy**: `ObjectOrArray`\<`IJsonLdNodeObject`\>
 
 ODRL Policy

@@ -66,7 +66,7 @@ Participant that provides the offering
 
 ### servicePolicy
 
-> **servicePolicy**: `IJsonLdNodeObject`
+> **servicePolicy**: `ObjectOrArray`\<`IJsonLdNodeObject`\>
 
 ODRL policy associated to the service offering
 
