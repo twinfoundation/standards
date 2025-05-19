@@ -26,3 +26,5 @@ export * from "./models/types/dataTypes";
 export * from "./models/types/leftOperandTypes";
 export * from "./models/types/uriActionTypes";
 export * from "./models/types/rightOperandTypes";
+
+export * from "./models/odrlContextType";

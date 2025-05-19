@@ -2,42 +2,14 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"anyOf": [
-				{
-					"type": "string",
-					"const": "https://www.w3.org/ns/odrl.jsonld"
-				},
-				{
-					"type": "array",
-					"minItems": 1,
-					"items": [
-						{
-							"type": "string",
-							"const": "https://www.w3.org/ns/odrl.jsonld"
-						}
-					],
-					"additionalItems": {
-						"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionElement"
-					}
-				}
-			],
+			"$ref": "https://schema.twindev.org/odrl/OdrlContextType",
 			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""
 		},
 		"@id": {
-			"anyOf": [
-				{
-					"type": "string"
-				},
-				{
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				}
-			]
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"@graph": {
 			"anyOf": [
@@ -72,11 +44,11 @@
 		"@reverse": {
 			"type": "object",
 			"additionalProperties": {
-				"type": "string"
+				"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 			}
 		},
 		"@index": {
-			"type": "string"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"uid": {
 			"type": "string",

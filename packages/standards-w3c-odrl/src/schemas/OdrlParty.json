@@ -2,23 +2,13 @@
 	"type": "object",
 	"properties": {
 		"@context": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdContextDefinitionRoot"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"@id": {
-			"anyOf": [
-				{
-					"type": "string"
-				},
-				{
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				}
-			]
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"@graph": {
 			"anyOf": [
@@ -63,11 +53,11 @@
 		"@reverse": {
 			"type": "object",
 			"additionalProperties": {
-				"type": "string"
+				"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 			}
 		},
 		"@index": {
-			"type": "string"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
 		},
 		"uid": {
 			"type": "string",
