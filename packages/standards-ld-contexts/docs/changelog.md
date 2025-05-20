@@ -1,5 +1,12 @@
 # @twin.org/standards-ld-contexts - Changelog
 
+## [0.0.1-next.43](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.42...standards-ld-contexts-v0.0.1-next.43) (2025-05-20)
+
+
+### Bug Fixes
+
+* federated catalogue terms ld context last version copied ([#26](https://github.com/twinfoundation/standards/issues/26)) ([37f4ff0](https://github.com/twinfoundation/standards/commit/37f4ff00664e8b5efc7d24f1e2417061fd2bda56))
+
 ## [0.0.1-next.42](https://github.com/twinfoundation/standards/compare/standards-ld-contexts-v0.0.1-next.41...standards-ld-contexts-v0.0.1-next.42) (2025-05-09)
 
 

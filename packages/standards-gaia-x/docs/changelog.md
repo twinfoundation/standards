@@ -1,5 +1,12 @@
 # @twin.org/standards-gaia-x - Changelog
 
+## [0.0.1-next.43](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.42...standards-gaia-x-v0.0.1-next.43) (2025-05-20)
+
+
+### Features
+
+* align Data Resource and Service Offering definition (ODRL polic… ([#27](https://github.com/twinfoundation/standards/issues/27)) ([20797be](https://github.com/twinfoundation/standards/commit/20797beff059c6fb253401d49b654cd7a57762d5))
+
 ## [0.0.1-next.42](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.41...standards-gaia-x-v0.0.1-next.42) (2025-05-09)
 
 
