@@ -1,5 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
+import type { ObjectOrArray } from "@twin.org/core";
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { GaiaXContextType } from "./gaiaXContextType";
 import type { GaiaXTypes } from "./gaiaXTypes";
@@ -64,5 +65,5 @@ export interface IDataResource extends IJsonLdNodeObject {
 	/**
 	 * ODRL Policy
 	 */
-	resourcePolicy: IJsonLdNodeObject;
+	resourcePolicy: ObjectOrArray<IJsonLdNodeObject>;
 }

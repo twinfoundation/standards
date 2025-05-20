@@ -31,7 +31,8 @@
 		"prepare": "ts-patch install -s"
 	},
 	"dependencies": {
-		"@twin.org/data-json-ld": "next"
+		"@twin.org/data-json-ld": "next",
+		"@twin.org/core": "next"
 	},
 	"devDependencies": {
 		"@twin.org/nameof-transformer": "next",
