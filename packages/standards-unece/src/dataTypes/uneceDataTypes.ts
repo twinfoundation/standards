@@ -13,6 +13,7 @@ export class UneceDataTypes {
 	 */
 	public static registerTypes(): void {
 		DataTypeHandlerFactory.register(`${UneceContexts.ContextRoot}${UneceTypes.Document}`, () => ({
+			context: UneceContexts.ContextRoot,
 			type: UneceTypes.Document,
 			defaultValue: {}
 		}));
@@ -20,6 +21,7 @@ export class UneceDataTypes {
 		DataTypeHandlerFactory.register(
 			`${UneceContexts.ContextRoot}${UneceTypes.Consignment}`,
 			() => ({
+				context: UneceContexts.ContextRoot,
 				type: UneceTypes.Consignment,
 				defaultValue: {}
 			})

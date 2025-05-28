@@ -17,7 +17,8 @@
 		".eslintrc.cjs",
 		"**/wordlists/**",
 		"**/src-json/**",
-		"**/ldContexts/*.json"
+		"**/ldContexts/*.json",
+		"changelog.md"
 	],
 	"words": [
 		"abbrev",

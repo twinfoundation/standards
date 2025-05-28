@@ -30,6 +30,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Text}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Text,
 				defaultValue: "",
 				jsonSchema: async () => ({
@@ -43,6 +44,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Integer}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Integer,
 				defaultValue: 0,
 				jsonSchema: async () => ({
@@ -56,6 +58,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Float}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Float,
 				defaultValue: 0,
 				jsonSchema: async () => ({
@@ -69,6 +72,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Boolean}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Boolean,
 				defaultValue: true,
 				jsonSchema: async () => ({
@@ -82,6 +86,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.URL}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.URL,
 				defaultValue: "",
 				jsonSchema: async () => ({
@@ -96,6 +101,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Date}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Date,
 				defaultValue: new Date(),
 				jsonSchema: async () => ({
@@ -110,6 +116,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.DateTime}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.DateTime,
 				defaultValue: new Date(),
 				jsonSchema: async () => ({
@@ -124,6 +131,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Time}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Time,
 				defaultValue: new Date(),
 				jsonSchema: async () => ({
@@ -138,6 +146,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.Image}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.Image,
 				defaultValue: "",
 				jsonSchema: async () => ({
@@ -152,6 +161,7 @@ export class SchemaOrgDataTypes {
 		DataTypeHandlerFactory.register(
 			`${SchemaOrgContexts.ContextRoot}${SchemaOrgTypes.GeoCoordinates}`,
 			() => ({
+				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.GeoCoordinates,
 				defaultValue: { longitude: 0, latitude: 0 },
 				jsonSchema: async () => GeoCoordinatesSchema as JSONSchema7,

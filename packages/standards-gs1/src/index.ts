@@ -26,6 +26,7 @@ export * from "./models/epcis20/ISensorMetadata";
 export * from "./models/epcis20/ISensorReport";
 export * from "./models/epcis20/ISimpleLocation";
 export * from "./models/epcis20/ISource";
+export * from "./models/gs1/gs1Contexts";
 export * from "./models/gs1/gs1IdentifierTypes";
 export * from "./models/gs1/gs1IdTypes";
 export * from "./models/gs1/gs1Types";
