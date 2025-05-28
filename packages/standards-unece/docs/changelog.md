@@ -1,5 +1,12 @@
 # @twin.org/standards-unece - Changelog
 
+## [0.0.1-next.44](https://github.com/twinfoundation/standards/compare/standards-unece-v0.0.1-next.43...standards-unece-v0.0.1-next.44) (2025-05-28)
+
+
+### Features
+
+* data types registered with full qualified names ([d64bd08](https://github.com/twinfoundation/standards/commit/d64bd082084172da543e9bfaffb78cdc34e6641d))
+
 ## [0.0.1-next.43](https://github.com/twinfoundation/standards/compare/standards-unece-v0.0.1-next.42...standards-unece-v0.0.1-next.43) (2025-05-20)
 
 
