@@ -95,3 +95,15 @@ Constraint type.
 > `readonly` **LogicalConstraint**: `"LogicalConstraint"` = `"LogicalConstraint"`
 
 LogicalConstraint type.
+
+### Contexts
+
+> `readonly` **Contexts**: `"Contexts"` = `"Contexts"`
+
+Contexts.
+
+### PolicyMetadata
+
+> `readonly` **PolicyMetadata**: `"PolicyMetadata"` = `"PolicyMetadata"`
+
+PolicyMetadata type.

@@ -22,9 +22,8 @@ export * from "./models/types/statusTypes";
 export * from "./models/types/operatorTypes";
 export * from "./models/types/logicalConstraintType";
 export * from "./models/types/actionTypes";
-export * from "./models/types/dataTypes";
 export * from "./models/types/leftOperandTypes";
 export * from "./models/types/uriActionTypes";
 export * from "./models/types/rightOperandTypes";
-
 export * from "./models/odrlContextType";
+export * from "./dataTypes/odrlDataTypes";

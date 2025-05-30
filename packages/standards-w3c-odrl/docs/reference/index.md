@@ -1,5 +1,9 @@
 # @twin.org/standards-w3c-odrl
 
+## Classes
+
+- [OdrlDataTypes](classes/OdrlDataTypes.md)
+
 ## Interfaces
 
 - [IOdrlAction](interfaces/IOdrlAction.md)
@@ -22,7 +26,6 @@
 - [OdrlContexts](type-aliases/OdrlContexts.md)
 - [ActionType](type-aliases/ActionType.md)
 - [ConflictStrategyType](type-aliases/ConflictStrategyType.md)
-- [DataType](type-aliases/DataType.md)
 - [LeftOperandType](type-aliases/LeftOperandType.md)
 - [LogicalConstraintType](type-aliases/LogicalConstraintType.md)
 - [OdrlTypes](type-aliases/OdrlTypes.md)
@@ -38,7 +41,6 @@
 - [OdrlContexts](variables/OdrlContexts.md)
 - [ActionTypes](variables/ActionTypes.md)
 - [ConflictStrategyTypes](variables/ConflictStrategyTypes.md)
-- [DataType](variables/DataType.md)
 - [LeftOperandType](variables/LeftOperandType.md)
 - [LogicalConstraintType](variables/LogicalConstraintType.md)
 - [OdrlTypes](variables/OdrlTypes.md)

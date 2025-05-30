@@ -9,25 +9,16 @@ export const OdrlContexts = {
 	/**
 	 * The context root for ODRL.
 	 */
-	Context: "https://www.w3.org/ns/odrl.jsonld",
+	ContextRedirect: "https://www.w3.org/ns/odrl.jsonld",
 	/**
 	 * The context root for ODRL vocabulary.
 	 */
-	ContextVocabulary: "https://www.w3.org/ns/odrl/2/",
-	/**
-	 * The context root for Dublin Core Terms.
-	 */
-	ContextDcTerms: "https://purl.org/dc/terms/",
+	ContextRoot: "https://www.w3.org/ns/odrl/2/",
 
 	/**
 	 * The context root for RDF.
 	 */
-	ContextRdf: "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
-
-	/**
-	 * The context root for XSD.
-	 */
-	ContextXsd: "https://www.w3.org/2001/XMLSchema#"
+	ContextRdf: "https://www.w3.org/1999/02/22-rdf-syntax-ns#"
 } as const;
 
 /**

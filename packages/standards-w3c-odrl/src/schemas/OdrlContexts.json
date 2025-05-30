@@ -3,9 +3,7 @@
 	"enum": [
 		"https://www.w3.org/ns/odrl.jsonld",
 		"https://www.w3.org/ns/odrl/2/",
-		"https://purl.org/dc/terms/",
-		"https://www.w3.org/1999/02/22-rdf-syntax-ns#",
-		"https://www.w3.org/2001/XMLSchema#"
+		"https://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	],
 	"description": "The contexts for ODRL."
 }

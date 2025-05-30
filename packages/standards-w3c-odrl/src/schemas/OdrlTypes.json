@@ -15,7 +15,9 @@
 		"Prohibition",
 		"Duty",
 		"Constraint",
-		"LogicalConstraint"
+		"LogicalConstraint",
+		"Contexts",
+		"PolicyMetadata"
 	],
 	"description": "The types for ODRL."
 }
