@@ -1,10 +1,24 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { Validation } from "@twin.org/core";
 import { DataTypeHandlerFactory } from "@twin.org/data-core";
 import { JsonLdProcessor } from "@twin.org/data-json-ld";
+import type { JSONSchema7 } from "json-schema";
 import { OdrlContexts } from "../models/odrlContexts";
 import { OdrlTypes } from "../models/types/odrlTypes";
+import OdrlActionSchema from "../schemas/OdrlAction.json";
+import OdrlAssetSchema from "../schemas/OdrlAsset.json";
+import OdrlAssetCollectionSchema from "../schemas/OdrlAssetCollection.json";
+import OdrlConstraintSchema from "../schemas/OdrlConstraint.json";
+import OdrlContextsSchema from "../schemas/OdrlContexts.json";
+import OdrlDutySchema from "../schemas/OdrlDuty.json";
+import OdrlLogicalConstraintSchema from "../schemas/OdrlLogicalConstraint.json";
+import OdrlPartySchema from "../schemas/OdrlParty.json";
+import OdrlPartyCollectionSchema from "../schemas/OdrlPartyCollection.json";
+import OdrlPermissionSchema from "../schemas/OdrlPermission.json";
+import OdrlPolicySchema from "../schemas/OdrlPolicy.json";
+import OdrlPolicyMetadataSchema from "../schemas/OdrlPolicyMetadata.json";
+import OdrlProhibitionSchema from "../schemas/OdrlProhibition.json";
+import OdrlRuleSchema from "../schemas/OdrlRule.json";
 
 /**
  * Handle all the data types for ODRL.
@@ -27,23 +41,13 @@ export class OdrlDataTypes {
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Policy}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Policy,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Asset}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Asset,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlAssetSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(
@@ -51,24 +55,14 @@ export class OdrlDataTypes {
 			() => ({
 				context: OdrlContexts.ContextRoot,
 				type: OdrlTypes.AssetCollection,
-				defaultValue: {},
-				jsonSchema: async () => ({
-					type: "object"
-				}),
-				validate: async (propertyName, value, failures, container) =>
-					Validation.object(propertyName, value, failures)
+				jsonSchema: async () => OdrlAssetCollectionSchema as JSONSchema7
 			})
 		);
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Party}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Party,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPartySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(
@@ -76,68 +70,38 @@ export class OdrlDataTypes {
 			() => ({
 				context: OdrlContexts.ContextRoot,
 				type: OdrlTypes.PartyCollection,
-				defaultValue: {},
-				jsonSchema: async () => ({
-					type: "object"
-				}),
-				validate: async (propertyName, value, failures, container) =>
-					Validation.object(propertyName, value, failures)
+				jsonSchema: async () => OdrlPartyCollectionSchema as JSONSchema7
 			})
 		);
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Action}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Action,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlActionSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Permission}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Permission,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPermissionSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Prohibition}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Prohibition,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlProhibitionSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Duty}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Duty,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlDutySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Constraint}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Constraint,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlConstraintSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(
@@ -145,12 +109,7 @@ export class OdrlDataTypes {
 			() => ({
 				context: OdrlContexts.ContextRoot,
 				type: OdrlTypes.LogicalConstraint,
-				defaultValue: {},
-				jsonSchema: async () => ({
-					type: "object"
-				}),
-				validate: async (propertyName, value, failures, container) =>
-					Validation.object(propertyName, value, failures)
+				jsonSchema: async () => OdrlLogicalConstraintSchema as JSONSchema7
 			})
 		);
 
@@ -159,68 +118,38 @@ export class OdrlDataTypes {
 			() => ({
 				context: OdrlContexts.ContextRoot,
 				type: OdrlTypes.PolicyMetadata,
-				defaultValue: {},
-				jsonSchema: async () => ({
-					type: "object"
-				}),
-				validate: async (propertyName, value, failures, container) =>
-					Validation.object(propertyName, value, failures)
+				jsonSchema: async () => OdrlPolicyMetadataSchema as JSONSchema7
 			})
 		);
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Set}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Set,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Offer}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Offer,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Agreement}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Agreement,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Rule}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Rule,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlRuleSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Contexts}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Contexts,
-			defaultValue: {},
-			jsonSchema: async () => ({
-				type: "object"
-			}),
-			validate: async (propertyName, value, failures, container) =>
-				Validation.object(propertyName, value, failures)
+			jsonSchema: async () => OdrlContextsSchema as JSONSchema7
 		}));
 	}
 }

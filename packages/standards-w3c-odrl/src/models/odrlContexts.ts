@@ -13,12 +13,7 @@ export const OdrlContexts = {
 	/**
 	 * The context root for ODRL vocabulary.
 	 */
-	ContextRoot: "https://www.w3.org/ns/odrl/2/",
-
-	/**
-	 * The context root for RDF.
-	 */
-	ContextRdf: "https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	ContextRoot: "https://www.w3.org/ns/odrl/2/"
 } as const;
 
 /**
