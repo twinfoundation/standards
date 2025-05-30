@@ -1546,7 +1546,7 @@ describe("OdrlDataTypes Validation", () => {
 			OdrlTypes.Duty,
 			OdrlTypes.Prohibition,
 			OdrlTypes.PolicyMetadata,
-			OdrlTypes.Contexts
+			OdrlTypes.ContextType
 		];
 
 		for (const type of testTypes) {

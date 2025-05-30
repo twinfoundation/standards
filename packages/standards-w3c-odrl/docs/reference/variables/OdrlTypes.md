@@ -96,11 +96,11 @@ Constraint type.
 
 LogicalConstraint type.
 
-### Contexts
+### ContextType
 
-> `readonly` **Contexts**: `"Contexts"` = `"Contexts"`
+> `readonly` **ContextType**: `"ContextType"` = `"ContextType"`
 
-Contexts.
+ContextType.
 
 ### PolicyMetadata
 

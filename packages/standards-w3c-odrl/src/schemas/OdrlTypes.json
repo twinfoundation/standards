@@ -16,7 +16,7 @@
 		"Duty",
 		"Constraint",
 		"LogicalConstraint",
-		"Contexts",
+		"ContextType",
 		"PolicyMetadata"
 	],
 	"description": "The types for ODRL."

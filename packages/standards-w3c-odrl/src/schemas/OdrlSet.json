@@ -1,0 +1,21 @@
+{
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "https://schema.twindev.org/odrl/OdrlPolicy"
+		}
+	],
+	"properties": {
+		"@type": {
+			"type": "string",
+			"const": "Set",
+			"description": "The type must be 'Set' for ODRL Set policies."
+		}
+	},
+	"required": [
+		"@context",
+		"@type",
+		"uid"
+	],
+	"description": "Interface representing an ODRL Set Policy. A Set policy expresses permissions/prohibitions without specific party assignments, making it reusable across different contexts."
+}

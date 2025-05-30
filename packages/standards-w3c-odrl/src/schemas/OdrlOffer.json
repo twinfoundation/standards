@@ -1,0 +1,33 @@
+{
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "https://schema.twindev.org/odrl/OdrlPolicy"
+		}
+	],
+	"properties": {
+		"@type": {
+			"type": "string",
+			"const": "Offer",
+			"description": "The type must be 'Offer' for ODRL Offer policies."
+		},
+		"assigner": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assigner of the offer. Required for Offer policies as it represents who is making the offer."
+		}
+	},
+	"required": [
+		"@context",
+		"@type",
+		"uid",
+		"assigner"
+	],
+	"description": "Interface representing an ODRL Offer Policy. An Offer is a policy proposed by an assigner (offerer) to potential assignees. The assigner is required as they are the party making the offer."
+}

@@ -16,7 +16,7 @@
 		"IOdrlProhibition",
 		"IOdrlRule",
 		"LogicalConstraintType",
-		"OdrlContexts",
+		"OdrlContextType",
 		"OdrlTypes",
 		"OperatorType",
 		"PolicyType",

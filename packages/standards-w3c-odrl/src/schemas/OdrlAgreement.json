@@ -1,0 +1,45 @@
+{
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "https://schema.twindev.org/odrl/OdrlPolicy"
+		}
+	],
+	"properties": {
+		"@type": {
+			"type": "string",
+			"const": "Agreement",
+			"description": "The type must be 'Agreement' for ODRL Agreement policies."
+		},
+		"assigner": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assigner of the agreement. Required for Agreement policies as it represents one of the agreeing parties."
+		},
+		"assignee": {
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"$ref": "https://schema.twindev.org/odrl/OdrlParty"
+				}
+			],
+			"description": "The assignee of the agreement. Required for Agreement policies as it represents the other agreeing party."
+		}
+	},
+	"required": [
+		"@context",
+		"@type",
+		"uid",
+		"assigner",
+		"assignee"
+	],
+	"description": "Interface representing an ODRL Agreement Policy. An Agreement is a policy where both assigner and assignee have agreed to the terms. Both parties are required to establish the binding nature of the agreement."
+}

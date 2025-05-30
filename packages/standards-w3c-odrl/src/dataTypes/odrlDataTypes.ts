@@ -6,12 +6,14 @@ import type { JSONSchema7 } from "json-schema";
 import { OdrlContexts } from "../models/odrlContexts";
 import { OdrlTypes } from "../models/types/odrlTypes";
 import OdrlActionSchema from "../schemas/OdrlAction.json";
+import OdrlAgreementSchema from "../schemas/OdrlAgreement.json";
 import OdrlAssetSchema from "../schemas/OdrlAsset.json";
 import OdrlAssetCollectionSchema from "../schemas/OdrlAssetCollection.json";
 import OdrlConstraintSchema from "../schemas/OdrlConstraint.json";
 import OdrlContextsSchema from "../schemas/OdrlContexts.json";
 import OdrlDutySchema from "../schemas/OdrlDuty.json";
 import OdrlLogicalConstraintSchema from "../schemas/OdrlLogicalConstraint.json";
+import OdrlOfferSchema from "../schemas/OdrlOffer.json";
 import OdrlPartySchema from "../schemas/OdrlParty.json";
 import OdrlPartyCollectionSchema from "../schemas/OdrlPartyCollection.json";
 import OdrlPermissionSchema from "../schemas/OdrlPermission.json";
@@ -19,6 +21,7 @@ import OdrlPolicySchema from "../schemas/OdrlPolicy.json";
 import OdrlPolicyMetadataSchema from "../schemas/OdrlPolicyMetadata.json";
 import OdrlProhibitionSchema from "../schemas/OdrlProhibition.json";
 import OdrlRuleSchema from "../schemas/OdrlRule.json";
+import OdrlSetSchema from "../schemas/OdrlSet.json";
 
 /**
  * Handle all the data types for ODRL.
@@ -125,19 +128,19 @@ export class OdrlDataTypes {
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Set}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Set,
-			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
+			jsonSchema: async () => OdrlSetSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Offer}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Offer,
-			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
+			jsonSchema: async () => OdrlOfferSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Agreement}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.Agreement,
-			jsonSchema: async () => OdrlPolicySchema as JSONSchema7
+			jsonSchema: async () => OdrlAgreementSchema as JSONSchema7
 		}));
 
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Rule}`, () => ({
@@ -146,9 +149,9 @@ export class OdrlDataTypes {
 			jsonSchema: async () => OdrlRuleSchema as JSONSchema7
 		}));
 
-		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.Contexts}`, () => ({
+		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.ContextType}`, () => ({
 			context: OdrlContexts.ContextRoot,
-			type: OdrlTypes.Contexts,
+			type: OdrlTypes.ContextType,
 			jsonSchema: async () => OdrlContextsSchema as JSONSchema7
 		}));
 	}
