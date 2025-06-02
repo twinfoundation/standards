@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IOdrlPolicy } from "./IOdrlPolicy";
+import type { OdrlTypes } from "./types/odrlTypes";
 
 /**
  * Interface representing an ODRL Set.
@@ -11,5 +12,5 @@ export interface IOdrlSet extends IOdrlPolicy {
 	/**
 	 * The type must be "Set".
 	 */
-	"@type": "Set";
+	"@type": typeof OdrlTypes.Set;
 }

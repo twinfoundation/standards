@@ -3,6 +3,7 @@
 
 import type { IOdrlParty } from "./IOdrlParty";
 import type { IOdrlPolicy } from "./IOdrlPolicy";
+import type { OdrlTypes } from "./types/odrlTypes";
 
 /**
  * Interface representing an ODRL Agreement.
@@ -12,7 +13,7 @@ export interface IOdrlAgreement extends IOdrlPolicy {
 	/**
 	 * The type must be "Agreement".
 	 */
-	"@type": "Agreement";
+	"@type": typeof OdrlTypes.Agreement;
 
 	/**
 	 * The assigner of the agreement.

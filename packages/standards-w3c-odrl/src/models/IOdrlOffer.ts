@@ -3,6 +3,7 @@
 
 import type { IOdrlParty } from "./IOdrlParty";
 import type { IOdrlPolicy } from "./IOdrlPolicy";
+import type { OdrlTypes } from "./types/odrlTypes";
 
 /**
  * Interface representing an ODRL Offer.
@@ -12,7 +13,7 @@ export interface IOdrlOffer extends IOdrlPolicy {
 	/**
 	 * The type must be "Offer".
 	 */
-	"@type": "Offer";
+	"@type": typeof OdrlTypes.Offer;
 
 	/**
 	 * The assigner of the offer.

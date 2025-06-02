@@ -7,11 +7,13 @@
 ## Interfaces
 
 - [IOdrlAction](interfaces/IOdrlAction.md)
+- [IOdrlAgreement](interfaces/IOdrlAgreement.md)
 - [IOdrlAsset](interfaces/IOdrlAsset.md)
 - [IOdrlAssetCollection](interfaces/IOdrlAssetCollection.md)
 - [IOdrlConstraint](interfaces/IOdrlConstraint.md)
 - [IOdrlDuty](interfaces/IOdrlDuty.md)
 - [IOdrlLogicalConstraint](interfaces/IOdrlLogicalConstraint.md)
+- [IOdrlOffer](interfaces/IOdrlOffer.md)
 - [IOdrlParty](interfaces/IOdrlParty.md)
 - [IOdrlPartyCollection](interfaces/IOdrlPartyCollection.md)
 - [IOdrlPermission](interfaces/IOdrlPermission.md)
@@ -19,6 +21,7 @@
 - [IOdrlPolicyMetadata](interfaces/IOdrlPolicyMetadata.md)
 - [IOdrlProhibition](interfaces/IOdrlProhibition.md)
 - [IOdrlRule](interfaces/IOdrlRule.md)
+- [IOdrlSet](interfaces/IOdrlSet.md)
 
 ## Type Aliases
 
