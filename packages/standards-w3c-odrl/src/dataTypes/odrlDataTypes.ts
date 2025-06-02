@@ -10,7 +10,7 @@ import OdrlAgreementSchema from "../schemas/OdrlAgreement.json";
 import OdrlAssetSchema from "../schemas/OdrlAsset.json";
 import OdrlAssetCollectionSchema from "../schemas/OdrlAssetCollection.json";
 import OdrlConstraintSchema from "../schemas/OdrlConstraint.json";
-import OdrlContextsSchema from "../schemas/OdrlContexts.json";
+import OdrlContextTypeSchema from "../schemas/OdrlContextType.json";
 import OdrlDutySchema from "../schemas/OdrlDuty.json";
 import OdrlLogicalConstraintSchema from "../schemas/OdrlLogicalConstraint.json";
 import OdrlOfferSchema from "../schemas/OdrlOffer.json";
@@ -152,7 +152,7 @@ export class OdrlDataTypes {
 		DataTypeHandlerFactory.register(`${OdrlContexts.ContextRoot}${OdrlTypes.ContextType}`, () => ({
 			context: OdrlContexts.ContextRoot,
 			type: OdrlTypes.ContextType,
-			jsonSchema: async () => OdrlContextsSchema as JSONSchema7
+			jsonSchema: async () => OdrlContextTypeSchema as JSONSchema7
 		}));
 	}
 }

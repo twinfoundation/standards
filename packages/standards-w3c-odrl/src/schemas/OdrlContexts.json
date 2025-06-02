@@ -1,8 +1,0 @@
-{
-	"type": "string",
-	"enum": [
-		"https://www.w3.org/ns/odrl.jsonld",
-		"https://www.w3.org/ns/odrl/2/"
-	],
-	"description": "The contexts for ODRL."
-}
