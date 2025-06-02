@@ -1,5 +1,20 @@
 # @twin.org/standards-w3c-odrl - Changelog
 
+## [0.0.1-next.45](https://github.com/twinfoundation/standards/compare/standards-w3c-odrl-v0.0.1-next.44...standards-w3c-odrl-v0.0.1-next.45) (2025-06-02)
+
+
+### Features
+
+* update ODRL data types and context definitions ([#31](https://github.com/twinfoundation/standards/issues/31)) ([ade0169](https://github.com/twinfoundation/standards/commit/ade0169d1049e7812bfc128ce5c16512548714fa))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/standards-w3c-vcard bumped from 0.0.1-next.44 to 0.0.1-next.45
+    * @twin.org/standards-dublin-core bumped from 0.0.1-next.44 to 0.0.1-next.45
+
 ## [0.0.1-next.44](https://github.com/twinfoundation/standards/compare/standards-w3c-odrl-v0.0.1-next.43...standards-w3c-odrl-v0.0.1-next.44) (2025-05-28)
 
 
