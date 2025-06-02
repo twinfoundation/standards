@@ -8,15 +8,15 @@ import type { OdrlContexts } from "./odrlContexts";
  * The ODRL JSON-LD context type.
  */
 export type OdrlContextType =
-	| typeof OdrlContexts.Context
-	| [typeof OdrlContexts.Context, ...IJsonLdContextDefinitionElement[]]
+	| typeof OdrlContexts.ContextRoot
+	| [typeof OdrlContexts.ContextRoot, ...IJsonLdContextDefinitionElement[]]
 	| [
 			...IJsonLdContextDefinitionElement[],
-			typeof OdrlContexts.Context,
+			typeof OdrlContexts.ContextRoot,
 			IJsonLdContextDefinitionElement
 	  ]
 	| [
 			IJsonLdContextDefinitionElement,
-			typeof OdrlContexts.Context,
+			typeof OdrlContexts.ContextRoot,
 			...IJsonLdContextDefinitionElement[]
 	  ];

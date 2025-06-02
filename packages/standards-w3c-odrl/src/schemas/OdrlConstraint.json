@@ -89,7 +89,7 @@
 							"type": "string"
 						},
 						"@type": {
-							"$ref": "https://schema.twindev.org/odrl/DataType"
+							"type": "string"
 						}
 					},
 					"required": [
@@ -117,7 +117,7 @@
 			"description": "Reference to the right operand."
 		},
 		"dataType": {
-			"$ref": "https://schema.twindev.org/odrl/DataType",
+			"type": "string",
 			"description": "The data type of the right operand."
 		},
 		"unit": {

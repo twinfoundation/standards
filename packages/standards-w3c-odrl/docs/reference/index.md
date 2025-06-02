@@ -1,13 +1,19 @@
 # @twin.org/standards-w3c-odrl
 
+## Classes
+
+- [OdrlDataTypes](classes/OdrlDataTypes.md)
+
 ## Interfaces
 
 - [IOdrlAction](interfaces/IOdrlAction.md)
+- [IOdrlAgreement](interfaces/IOdrlAgreement.md)
 - [IOdrlAsset](interfaces/IOdrlAsset.md)
 - [IOdrlAssetCollection](interfaces/IOdrlAssetCollection.md)
 - [IOdrlConstraint](interfaces/IOdrlConstraint.md)
 - [IOdrlDuty](interfaces/IOdrlDuty.md)
 - [IOdrlLogicalConstraint](interfaces/IOdrlLogicalConstraint.md)
+- [IOdrlOffer](interfaces/IOdrlOffer.md)
 - [IOdrlParty](interfaces/IOdrlParty.md)
 - [IOdrlPartyCollection](interfaces/IOdrlPartyCollection.md)
 - [IOdrlPermission](interfaces/IOdrlPermission.md)
@@ -15,6 +21,7 @@
 - [IOdrlPolicyMetadata](interfaces/IOdrlPolicyMetadata.md)
 - [IOdrlProhibition](interfaces/IOdrlProhibition.md)
 - [IOdrlRule](interfaces/IOdrlRule.md)
+- [IOdrlSet](interfaces/IOdrlSet.md)
 
 ## Type Aliases
 
@@ -22,7 +29,6 @@
 - [OdrlContexts](type-aliases/OdrlContexts.md)
 - [ActionType](type-aliases/ActionType.md)
 - [ConflictStrategyType](type-aliases/ConflictStrategyType.md)
-- [DataType](type-aliases/DataType.md)
 - [LeftOperandType](type-aliases/LeftOperandType.md)
 - [LogicalConstraintType](type-aliases/LogicalConstraintType.md)
 - [OdrlTypes](type-aliases/OdrlTypes.md)
@@ -38,7 +44,6 @@
 - [OdrlContexts](variables/OdrlContexts.md)
 - [ActionTypes](variables/ActionTypes.md)
 - [ConflictStrategyTypes](variables/ConflictStrategyTypes.md)
-- [DataType](variables/DataType.md)
 - [LeftOperandType](variables/LeftOperandType.md)
 - [LogicalConstraintType](variables/LogicalConstraintType.md)
 - [OdrlTypes](variables/OdrlTypes.md)

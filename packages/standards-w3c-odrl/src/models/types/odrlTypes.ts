@@ -79,7 +79,17 @@ export const OdrlTypes = {
 	/**
 	 * LogicalConstraint type.
 	 */
-	LogicalConstraint: "LogicalConstraint"
+	LogicalConstraint: "LogicalConstraint",
+
+	/**
+	 * ContextType.
+	 */
+	ContextType: "ContextType",
+
+	/**
+	 * PolicyMetadata type.
+	 */
+	PolicyMetadata: "PolicyMetadata"
 } as const;
 
 /**

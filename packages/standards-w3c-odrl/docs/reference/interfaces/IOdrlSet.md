@@ -1,16 +1,11 @@
-# Interface: IOdrlPolicy
+# Interface: IOdrlSet
 
-Interface representing an ODRL Policy.
+Interface representing an ODRL Set.
+A Set is a basic policy type with no specific party requirements.
 
 ## Extends
 
-- `IJsonLdNodeObject`
-
-## Extended by
-
-- [`IOdrlAgreement`](IOdrlAgreement.md)
-- [`IOdrlOffer`](IOdrlOffer.md)
-- [`IOdrlSet`](IOdrlSet.md)
+- [`IOdrlPolicy`](IOdrlPolicy.md)
 
 ## Indexable
 
@@ -25,22 +20,9 @@ Interface representing an ODRL Policy.
 The context for the policy.
 Must include "https://www.w3.org/ns/odrl.jsonld"
 
-#### Overrides
+#### Inherited from
 
-`IJsonLdNodeObject.@context`
-
-***
-
-### @type
-
-> **@type**: [`PolicyType`](../type-aliases/PolicyType.md)
-
-The type of policy.
-Must be one of: "Set", "Offer", "Agreement"
-
-#### Overrides
-
-`IJsonLdNodeObject.@type`
+[`IOdrlPolicy`](IOdrlPolicy.md).[`@context`](IOdrlPolicy.md#context)
 
 ***
 
@@ -51,6 +33,10 @@ Must be one of: "Set", "Offer", "Agreement"
 The unique identifier for the policy.
 Must be an IRI.
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`uid`](IOdrlPolicy.md#uid)
+
 ***
 
 ### profile?
@@ -59,6 +45,10 @@ Must be an IRI.
 
 The profile(s) this policy conforms to.
 IRIs identifying the ODRL Profile(s).
+
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`profile`](IOdrlPolicy.md#profile)
 
 ***
 
@@ -69,6 +59,10 @@ IRIs identifying the ODRL Profile(s).
 The assigner of the policy.
 Applies to all rules unless overridden at rule level.
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`assigner`](IOdrlPolicy.md#assigner)
+
 ***
 
 ### assignee?
@@ -78,6 +72,10 @@ Applies to all rules unless overridden at rule level.
 The assignee of the policy.
 Applies to all rules unless overridden at rule level.
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`assignee`](IOdrlPolicy.md#assignee)
+
 ***
 
 ### target?
@@ -85,6 +83,10 @@ Applies to all rules unless overridden at rule level.
 > `optional` **target**: `string` \| [`IOdrlAsset`](IOdrlAsset.md) \| (`string` \| [`IOdrlAsset`](IOdrlAsset.md))[]
 
 The target asset for the rule.
+
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`target`](IOdrlPolicy.md#target)
 
 ***
 
@@ -94,6 +96,10 @@ The target asset for the rule.
 
 The action associated with the rule.
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`action`](IOdrlPolicy.md#action)
+
 ***
 
 ### inheritFrom?
@@ -102,6 +108,10 @@ The action associated with the rule.
 
 The parent policy(ies) this policy inherits from.
 IRIs identifying the parent Policy(ies).
+
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`inheritFrom`](IOdrlPolicy.md#inheritfrom)
 
 ***
 
@@ -114,6 +124,10 @@ The conflict resolution strategy.
 - prohibit: Prohibitions override Permissions
 - invalid: Policy is void if conflicts exist (default)
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`conflict`](IOdrlPolicy.md#conflict)
+
 ***
 
 ### permission?
@@ -122,6 +136,10 @@ The conflict resolution strategy.
 
 The permissions in the policy.
 At least one of permission, prohibition, or obligation must be present.
+
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`permission`](IOdrlPolicy.md#permission)
 
 ***
 
@@ -132,6 +150,10 @@ At least one of permission, prohibition, or obligation must be present.
 The prohibitions in the policy.
 At least one of permission, prohibition, or obligation must be present.
 
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`prohibition`](IOdrlPolicy.md#prohibition)
+
 ***
 
 ### obligation?
@@ -140,3 +162,19 @@ At least one of permission, prohibition, or obligation must be present.
 
 The obligations in the policy.
 At least one of permission, prohibition, or obligation must be present.
+
+#### Inherited from
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`obligation`](IOdrlPolicy.md#obligation)
+
+***
+
+### @type
+
+> **@type**: `"Set"`
+
+The type must be "Set".
+
+#### Overrides
+
+[`IOdrlPolicy`](IOdrlPolicy.md).[`@type`](IOdrlPolicy.md#type)

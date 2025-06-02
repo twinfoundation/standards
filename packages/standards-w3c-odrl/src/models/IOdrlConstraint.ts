@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
-import type { DataType } from "./types/dataTypes";
 import type { LeftOperandType } from "./types/leftOperandTypes";
 import type { OperatorType } from "./types/operatorTypes";
 import type { StatusType } from "./types/statusTypes";
@@ -35,7 +34,7 @@ export interface IOdrlConstraint extends IJsonLdNodeObject {
 		| string
 		| {
 				"@value": string;
-				"@type"?: DataType;
+				"@type"?: string;
 		  }
 		| {
 				"@id": string;
@@ -49,7 +48,7 @@ export interface IOdrlConstraint extends IJsonLdNodeObject {
 	/**
 	 * The data type of the right operand.
 	 */
-	dataType?: DataType;
+	dataType?: string;
 
 	/**
 	 * The unit for the right operand value.
