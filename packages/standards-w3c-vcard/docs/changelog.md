@@ -1,5 +1,12 @@
 # @twin.org/standards-w3c-vcard - Changelog
 
+## [0.0.1-next.46](https://github.com/twinfoundation/standards/compare/standards-w3c-vcard-v0.0.1-next.45...standards-w3c-vcard-v0.0.1-next.46) (2025-06-03)
+
+
+### Features
+
+* update ts-to-schema generation ([0905daa](https://github.com/twinfoundation/standards/commit/0905daa4a344ed35fc37b7f12fcf9ce9d34e4bd6))
+
 ## [0.0.1-next.45](https://github.com/twinfoundation/standards/compare/standards-w3c-vcard-v0.0.1-next.44...standards-w3c-vcard-v0.0.1-next.45) (2025-06-02)
 
 
