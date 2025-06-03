@@ -5,7 +5,7 @@ import type { IOdrlAction } from "./IOdrlAction";
 import type { IOdrlAsset } from "./IOdrlAsset";
 import type { IOdrlConstraint } from "./IOdrlConstraint";
 import type { IOdrlParty } from "./IOdrlParty";
-import type { ActionType } from "./types/actionTypes";
+import type { ActionType } from "./types/actionType";
 
 /**
  * Base interface for ODRL Rules.

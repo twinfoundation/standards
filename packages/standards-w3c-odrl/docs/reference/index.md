@@ -42,14 +42,14 @@
 ## Variables
 
 - [OdrlContexts](variables/OdrlContexts.md)
-- [ActionTypes](variables/ActionTypes.md)
-- [ConflictStrategyTypes](variables/ConflictStrategyTypes.md)
+- [ActionType](variables/ActionType.md)
+- [ConflictStrategyType](variables/ConflictStrategyType.md)
 - [LeftOperandType](variables/LeftOperandType.md)
 - [LogicalConstraintType](variables/LogicalConstraintType.md)
 - [OdrlTypes](variables/OdrlTypes.md)
 - [OperatorType](variables/OperatorType.md)
 - [PolicyType](variables/PolicyType.md)
-- [RightOperandTypes](variables/RightOperandTypes.md)
+- [RightOperandType](variables/RightOperandType.md)
 - [RuleType](variables/RuleType.md)
 - [StatusType](variables/StatusType.md)
-- [UriActionTypes](variables/UriActionTypes.md)
+- [UriActionType](variables/UriActionType.md)

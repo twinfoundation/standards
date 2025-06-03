@@ -8,9 +8,9 @@ Base interface for ODRL Rules.
 
 ## Extended by
 
+- [`IOdrlDuty`](IOdrlDuty.md)
 - [`IOdrlPermission`](IOdrlPermission.md)
 - [`IOdrlProhibition`](IOdrlProhibition.md)
-- [`IOdrlDuty`](IOdrlDuty.md)
 
 ## Indexable
 

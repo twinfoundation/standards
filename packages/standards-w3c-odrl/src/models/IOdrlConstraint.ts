@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: Apache-2.0.
 
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
-import type { LeftOperandType } from "./types/leftOperandTypes";
-import type { OperatorType } from "./types/operatorTypes";
-import type { StatusType } from "./types/statusTypes";
+import type { LeftOperandType } from "./types/leftOperandType";
+import type { OperatorType } from "./types/operatorType";
+import type { StatusType } from "./types/statusType";
 
 /**
  * Interface for ODRL Constraints.

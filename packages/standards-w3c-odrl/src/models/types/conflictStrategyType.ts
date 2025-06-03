@@ -5,7 +5,7 @@
  * The types for ODRL Conflict Resolution Strategies.
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
-export const ConflictStrategyTypes = {
+export const ConflictStrategyType = {
 	/**
 	 * Permission type.
 	 */
@@ -25,5 +25,4 @@ export const ConflictStrategyTypes = {
 /**
  * The types for ODRL Conflict Resolution Strategies.
  */
-export type ConflictStrategyType =
-	(typeof ConflictStrategyTypes)[keyof typeof ConflictStrategyTypes];
+export type ConflictStrategyType = (typeof ConflictStrategyType)[keyof typeof ConflictStrategyType];

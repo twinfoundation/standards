@@ -53,5 +53,5 @@
 		"uninstall",
 		"watermark"
 	],
-	"description": "The types for ODRL Actions."
+	"description": "The types for ODRL Actions. Simple action types (for direct string usage)   The types for ODRL Actions."
 }

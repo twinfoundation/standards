@@ -4,7 +4,7 @@
 import type { IJsonLdNodeObject } from "@twin.org/data-json-ld";
 import type { IOdrlConstraint } from "./IOdrlConstraint";
 import type { IOdrlLogicalConstraint } from "./IOdrlLogicalConstraint";
-import type { ActionType } from "./types/actionTypes";
+import type { ActionType } from "./types/actionType";
 
 /**
  * Interface for ODRL Actions.

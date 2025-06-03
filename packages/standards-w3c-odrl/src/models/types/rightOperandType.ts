@@ -5,7 +5,7 @@
  * Right operand types for ODRL constraints
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
-export const RightOperandTypes = {
+export const RightOperandType = {
 	/**
 	 * Reference to policy usage events
 	 */
@@ -17,4 +17,4 @@ export const RightOperandTypes = {
 /**
  * The types for ODRL Right Operand Types.
  */
-export type RightOperandType = (typeof RightOperandTypes)[keyof typeof RightOperandTypes];
+export type RightOperandType = (typeof RightOperandType)[keyof typeof RightOperandType];

@@ -53,5 +53,5 @@
 		"odrl:uninstall",
 		"odrl:watermark"
 	],
-	"description": "The types for ODRL Actions. Simple action types (for direct string usage)"
+	"description": "The types for ODRL Actions. URI action types (for use with rdf:value/@id)   The types for ODRL Actions. Simple action types (for direct string usage)"
 }

@@ -1,5 +1,5 @@
 {
 	"type": "string",
 	"const": "odrl:policyUsage",
-	"description": "The types for ODRL Right Operand Types."
+	"description": "Right operand types for ODRL constraints   The types for ODRL Right Operand Types."
 }

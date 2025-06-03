@@ -6,7 +6,7 @@
  * URI action types (for use with rdf:value/@id)
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
-export const UriActionTypes = {
+export const UriActionType = {
 	/**
 	 * To use the Asset - actions that involve general usage by parties.
 	 */
@@ -266,4 +266,4 @@ export const UriActionTypes = {
  * The types for ODRL Actions.
  * Simple action types (for direct string usage)
  */
-export type UriActionType = (typeof UriActionTypes)[keyof typeof UriActionTypes];
+export type UriActionType = (typeof UriActionType)[keyof typeof UriActionType];

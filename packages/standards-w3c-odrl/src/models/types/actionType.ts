@@ -6,7 +6,7 @@
  * Simple action types (for direct string usage)
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
-export const ActionTypes = {
+export const ActionType = {
 	/**
 	 * To use the Asset - actions that involve general usage by parties.
 	 */
@@ -266,4 +266,4 @@ export const ActionTypes = {
 /**
  * The types for ODRL Actions.
  */
-export type ActionType = (typeof ActionTypes)[keyof typeof ActionTypes];
+export type ActionType = (typeof ActionType)[keyof typeof ActionType];

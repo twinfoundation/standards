@@ -6,10 +6,20 @@
 			"description": "The context for the policy. Must include \"https://www.w3.org/ns/odrl.jsonld\""
 		},
 		"@id": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"anyOf": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				}
+			]
 		},
 		"@included": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"$ref": "https://schema.twindev.org/odrl/JsonLdIncludedBlock"
 		},
 		"@graph": {
 			"anyOf": [
@@ -45,11 +55,11 @@
 		"@reverse": {
 			"type": "object",
 			"additionalProperties": {
-				"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+				"type": "string"
 			}
 		},
 		"@index": {
-			"$ref": "https://schema.twindev.org/odrl/JsonLdKeyword"
+			"type": "string"
 		},
 		"uid": {
 			"type": "string",

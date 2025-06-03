@@ -9,9 +9,9 @@ import type { IOdrlParty } from "./IOdrlParty";
 import type { IOdrlPermission } from "./IOdrlPermission";
 import type { IOdrlProhibition } from "./IOdrlProhibition";
 import type { OdrlContextType } from "./odrlContextType";
-import type { ActionType } from "./types/actionTypes";
-import type { ConflictStrategyType } from "./types/conflictStrategyTypes";
-import type { PolicyType } from "./types/policyTypes";
+import type { ActionType } from "./types/actionType";
+import type { ConflictStrategyType } from "./types/conflictStrategyType";
+import type { PolicyType } from "./types/policyType";
 
 /**
  * Interface representing an ODRL Policy.
