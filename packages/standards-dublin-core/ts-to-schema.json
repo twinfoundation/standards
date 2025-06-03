@@ -1,5 +1,5 @@
 {
 	"baseUrl": "https://schema.twindev.org/vcard/",
-	"types": ["./src/models/DublinCorePropertyType.ts"],
+	"types": ["./src/models/dublinCorePropertyType.ts"],
 	"externalReferences": {}
 }

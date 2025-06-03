@@ -1,10 +1,10 @@
 {
 	"baseUrl": "https://schema.twindev.org/did/",
 	"types": [
-		"./src/models/DidContexts.ts",
-		"./src/models/DidCryptoSuites.ts",
-		"./src/models/DidTypes.ts",
-		"./src/models/DidVerificationMethodType.ts",
+		"./src/models/didContexts.ts",
+		"./src/models/didCryptoSuites.ts",
+		"./src/models/didTypes.ts",
+		"./src/models/didVerificationMethodType.ts",
 		"./src/models/IDataIntegrityProof.ts",
 		"./src/models/IDidCredentialSchema.ts",
 		"./src/models/IDidCredentialStatus.ts",
