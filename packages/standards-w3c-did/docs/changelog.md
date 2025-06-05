@@ -1,5 +1,12 @@
 # @twin.org/standards-w3c-did - Changelog
 
+## [0.0.1-next.47](https://github.com/twinfoundation/standards/compare/standards-w3c-did-v0.0.1-next.46...standards-w3c-did-v0.0.1-next.47) (2025-06-05)
+
+
+### Features
+
+* update ts-to-schema generation ([ba4e76d](https://github.com/twinfoundation/standards/commit/ba4e76d677556a1817092f8079d4cce67dee94bc))
+
 ## [0.0.1-next.46](https://github.com/twinfoundation/standards/compare/standards-w3c-did-v0.0.1-next.45...standards-w3c-did-v0.0.1-next.46) (2025-06-03)
 
 

@@ -1,5 +1,20 @@
 # @twin.org/standards-w3c-odrl - Changelog
 
+## [0.0.1-next.47](https://github.com/twinfoundation/standards/compare/standards-w3c-odrl-v0.0.1-next.46...standards-w3c-odrl-v0.0.1-next.47) (2025-06-05)
+
+
+### Bug Fixes
+
+* incorrect base url for JSON-LD references in ODRL ([f66db7e](https://github.com/twinfoundation/standards/commit/f66db7ee8f3deaae96fe64bc67e3c93b593e9b8c))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/standards-w3c-vcard bumped from 0.0.1-next.46 to 0.0.1-next.47
+    * @twin.org/standards-dublin-core bumped from 0.0.1-next.46 to 0.0.1-next.47
+
 ## [0.0.1-next.46](https://github.com/twinfoundation/standards/compare/standards-w3c-odrl-v0.0.1-next.45...standards-w3c-odrl-v0.0.1-next.46) (2025-06-03)
 
 
