@@ -1,7 +1,6 @@
 {
 	"baseUrl": "https://schema.twindev.org/did/",
 	"types": [
-		"./src/models/didContexts.ts",
 		"./src/models/didCryptoSuites.ts",
 		"./src/models/didTypes.ts",
 		"./src/models/didVerificationMethodType.ts",

@@ -1,6 +1,6 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
-import { DataTypeHandlerFactory } from "@twin.org/data-core";
+import { DataTypeHandlerFactory, type IJsonSchema, JsonSchemaHelper } from "@twin.org/data-core";
 import { JsonLdDataTypes } from "@twin.org/data-json-ld";
 import { DublinCoreContexts, DublinCorePropertyType } from "@twin.org/standards-dublin-core";
 import { VCardContexts, VCardPropertyType } from "@twin.org/standards-w3c-vcard";
@@ -1660,6 +1660,95 @@ describe("OdrlDataTypes Validation", () => {
 			expect(typeof schema).toBe("object");
 
 			expect(schema).toHaveProperty("type");
+		}
+	});
+
+	it("should be able to validate context variants", async () => {
+		const testCases = [
+			{
+				data: "https://www.w3.org/ns/odrl/2/",
+				expect: true
+			},
+			{
+				data: "https://foo",
+				expect: false
+			},
+			{
+				data: ["https://www.w3.org/ns/odrl/2/"],
+				expect: false
+			},
+			{
+				data: ["https://foo"],
+				expect: false
+			},
+			{
+				data: ["https://www.w3.org/ns/odrl/2/", "https://www.w3.org/ns/odrl/2/"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://www.w3.org/ns/odrl/2/", "https://www.w3.org/ns/odrl/2/"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://foo"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://foo2"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://www.w3.org/ns/odrl/2/"],
+				expect: true
+			},
+			{
+				data: ["https://foo", "https://foo", "https://www.w3.org/ns/odrl/2/"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://www.w3.org/ns/odrl/2/", "https://foo"],
+				expect: false
+			},
+			{
+				data: ["https://foo", "https://www.w3.org/ns/odrl/2/", "https://foo2"],
+				expect: true
+			}
+		];
+
+		const schema: IJsonSchema = {
+			type: "object",
+			properties: {
+				"@context": {
+					anyOf: [
+						{
+							type: "string",
+							const: "https://www.w3.org/ns/odrl/2/"
+						},
+						{
+							type: "array",
+							minItems: 2,
+							prefixItems: [
+								{
+									$ref: "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+								}
+							],
+							items: true,
+							minContains: 1,
+							maxContains: 1,
+							contains: {
+								const: "https://www.w3.org/ns/odrl/2/"
+							},
+							uniqueItems: true
+						}
+					]
+				}
+			}
+		};
+
+		for (const testCase of testCases) {
+			console.log({ "@context": testCase.data });
+			const result = await JsonSchemaHelper.validate(schema, { "@context": testCase.data });
+			expect(result.result).toBe(testCase.expect);
 		}
 	});
 });

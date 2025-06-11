@@ -14,19 +14,16 @@ export interface IEndpoint extends IJsonLdNodeObject {
 	type: typeof GaiaXTypes.Endpoint | undefined;
 
 	/**
-	 *
 	 * The endpoint URL
 	 */
 	endpointURL: string;
 
 	/**
-	 *
 	 * The formal description
 	 */
 	formalDescription?: string;
 
 	/**
-	 *
 	 * Standards conformity
 	 */
 	standardConformity?: IJsonLdNodeObject;

@@ -1,9 +1,8 @@
 // Copyright 2024 IOTA Stiftung.
 // SPDX-License-Identifier: Apache-2.0.
 import { Url, Validation } from "@twin.org/core";
-import { DataTypeHandlerFactory } from "@twin.org/data-core";
+import { DataTypeHandlerFactory, type IJsonSchema } from "@twin.org/data-core";
 import { JsonLdProcessor } from "@twin.org/data-json-ld";
-import type { JSONSchema7 } from "json-schema";
 import { SchemaOrgContexts } from "../models/schemaOrgContexts";
 import { SchemaOrgTypes } from "../models/schemaOrgTypes";
 import GeoCoordinatesSchema from "../schemas/GeoCoordinates.json";
@@ -164,7 +163,7 @@ export class SchemaOrgDataTypes {
 				context: SchemaOrgContexts.ContextRoot,
 				type: SchemaOrgTypes.GeoCoordinates,
 				defaultValue: { longitude: 0, latitude: 0 },
-				jsonSchema: async () => GeoCoordinatesSchema as JSONSchema7,
+				jsonSchema: async () => GeoCoordinatesSchema as IJsonSchema,
 				validate: async (propertyName, value, failures, container) =>
 					SchemaOrgValidation.geoCoordinates(propertyName, value, failures)
 			})

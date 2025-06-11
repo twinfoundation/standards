@@ -9,7 +9,6 @@ import type { OdrlContexts } from "./odrlContexts";
  */
 export type OdrlContextType =
 	| typeof OdrlContexts.ContextRoot
-	| [typeof OdrlContexts.ContextRoot, ...IJsonLdContextDefinitionElement[]]
 	| [
 			...IJsonLdContextDefinitionElement[],
 			typeof OdrlContexts.ContextRoot,

@@ -31,5 +31,34 @@
 	],
 	"externalReferences": {
 		"IJsonLd(.*)": "https://schema.twindev.org/json-ld/JsonLd$1"
+	},
+	"overrides2": {
+		"OdrlContextType": {
+			"$schema": "https://json-schema.org/draft/2020-12/schema",
+			"$id": "https://schema.twindev.org/odrl/LeftOperandType",
+			"description": "The ODRL JSON-LD context type.",
+			"anyOf": [
+				{
+					"type": "string",
+					"const": "https://www.w3.org/ns/odrl/2/"
+				},
+				{
+					"type": "array",
+					"minItems": 2,
+					"prefixItems": [
+						{
+							"$ref": "https://schema.twindev.org/json-ld/JsonLdContextDefinitionElement"
+						}
+					],
+					"items": true,
+					"minContains": 1,
+					"maxContains": 1,
+					"contains": {
+						"const": "https://www.w3.org/ns/odrl/2/"
+					},
+					"uniqueItems": true
+				}
+			]
+		}
 	}
 }
