@@ -1,5 +1,12 @@
 # @twin.org/standards-gaia-x - Changelog
 
+## [0.0.1-next.48](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.47...standards-gaia-x-v0.0.1-next.48) (2025-06-11)
+
+
+### Features
+
+* update to latest JSON schema spec ([7a23930](https://github.com/twinfoundation/standards/commit/7a2393032d7f48bfb20d3a484f981fb6dd83a92c))
+
 ## [0.0.1-next.47](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.46...standards-gaia-x-v0.0.1-next.47) (2025-06-05)
 
 
