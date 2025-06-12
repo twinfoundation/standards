@@ -35,7 +35,6 @@
 		"@twin.org/data-json-ld": "next",
 		"@twin.org/entity": "next",
 		"@twin.org/nameof": "next",
-		"@types/json-schema": "7.0.15",
 		"schema-dts": "1.1.5"
 	},
 	"devDependencies": {
