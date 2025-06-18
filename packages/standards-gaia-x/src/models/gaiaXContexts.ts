@@ -9,7 +9,7 @@ export const GaiaXContexts = {
 	/**
 	 * The Gaia-X LD Context
 	 */
-	GaiaXLdContext: "https://w3id.org/gaia-x/development"
+	ContextRoot: "https://w3id.org/gaia-x/development"
 } as const;
 
 /**

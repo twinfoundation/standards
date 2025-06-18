@@ -1,0 +1,15 @@
+{
+	"baseUrl": "https://schema.twindev.org/gaia-x/",
+	"types": [
+		"./src/models/IAddress.ts",
+		"./src/models/IDataResource.ts",
+		"./src/models/IDataExchangeComponent.ts",
+		"./src/models/IEndpoint.ts",
+		"./src/models/IParticipant.ts",
+		"./src/models/IRegistrationNumber.ts",
+		"./src/models/IServiceOffering.ts"
+	],
+	"externalReferences": {
+		"IJsonLd(.*)": "https://schema.twindev.org/json-ld/JsonLd$1"
+	}
+}
