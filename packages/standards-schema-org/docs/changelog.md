@@ -1,5 +1,12 @@
 # @twin.org/standards-schema-org - Changelog
 
+## [0.0.1-next.49](https://github.com/twinfoundation/standards/compare/standards-schema-org-v0.0.1-next.48...standards-schema-org-v0.0.1-next.49) (2025-06-18)
+
+
+### Features
+
+* unused dependencies ([f8bc5bf](https://github.com/twinfoundation/standards/commit/f8bc5bfbccdc6036cbac9a3b3ff91e3de90c8a9b))
+
 ## [0.0.1-next.48](https://github.com/twinfoundation/standards/compare/standards-schema-org-v0.0.1-next.47...standards-schema-org-v0.0.1-next.48) (2025-06-11)
 
 
