@@ -1,5 +1,12 @@
 # @twin.org/standards-gaia-x - Changelog
 
+## [0.0.1-next.49](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.48...standards-gaia-x-v0.0.1-next.49) (2025-06-18)
+
+
+### Features
+
+* add gaia-x schemas ([54c48df](https://github.com/twinfoundation/standards/commit/54c48df8c3eb0ce74d9b9a887ea81c10110fce76))
+
 ## [0.0.1-next.48](https://github.com/twinfoundation/standards/compare/standards-gaia-x-v0.0.1-next.47...standards-gaia-x-v0.0.1-next.48) (2025-06-11)
 
 
