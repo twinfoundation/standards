@@ -1,6 +1,6 @@
 {
 	"name": "@twin.org/standards-w3c-odrl",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Models which define the structure of W3C ODRL Standard",
 	"repository": {
 		"type": "git",
@@ -36,8 +36,8 @@
 		"@twin.org/data-core": "^0.0.1",
 		"@twin.org/data-json-ld": "^0.0.1",
 		"@twin.org/web": "^0.0.1",
-		"@twin.org/standards-w3c-vcard": "^0.0.0",
-		"@twin.org/standards-dublin-core": "^0.0.0"
+		"@twin.org/standards-w3c-vcard": "^0.0.1",
+		"@twin.org/standards-dublin-core": "^0.0.1"
 	},
 	"devDependencies": {
 		"@rollup/plugin-json": "6.1.0",
