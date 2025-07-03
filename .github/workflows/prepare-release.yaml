@@ -59,15 +59,16 @@ jobs:
 
       # Release please will not see any changes if next has been merged into main
       # This step ensures that release-please runs even if there are no conventional commits
+      # We create an empty commit through the GH API as using the git CLI will be prevented by branch protection rules
       - name: Force release by adding commit
         if: github.ref == 'refs/heads/main'
         run: |
           # Get current commit SHA
           CURRENT_SHA=$(gh api /repos/${{ github.repository }}/git/ref/heads/main --jq '.object.sha')
-          
+
           # Get tree SHA
           TREE_SHA=$(gh api /repos/${{ github.repository }}/git/commits/$CURRENT_SHA --jq '.tree.sha')
-          
+
           # Create new commit
           NEW_SHA=$(gh api /repos/${{ github.repository }}/git/commits \
             --method POST \
@@ -77,7 +78,7 @@ jobs:
             -f 'author[name]=github-actions[bot]' \
             -f 'author[email]=41898282+github-actions[bot]@users.noreply.github.com' \
             --jq '.sha')
-          
+
           # Update branch reference with force
           gh api /repos/${{ github.repository }}/git/refs/heads/main \
             --method PATCH \
