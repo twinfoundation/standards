@@ -61,14 +61,12 @@ jobs:
       # This step ensures that release-please runs even if there are no conventional commits
       - name: Force release by adding commit
         if: github.ref == 'refs/heads/main' # Only run this step if we are creating a production release
-        env:
-          # Use a personal access token with write permissions to the repository
-          REPO_URL: https://x-access-token:${{ secrets.GHA_RELEASE_TOKEN }}@github.com/${{ github.repository }}.git
         run: |
           # Create a commit to ensure release-please runs even if there are no conventional commits
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git remote set-url origin REPO_URL
+          # Use a personal access token with write permissions to the repository
+          git remote set-url origin "https://x-access-token:${{ secrets.GHA_RELEASE_TOKEN }}@github.com/${{ github.repository }}.git"
           git commit --allow-empty -m "feat: release to production"
           git push
 
