@@ -1,5 +1,20 @@
 # @twin.org/standards-w3c-odrl - Changelog
 
+## 0.0.1 (2025-07-03)
+
+
+### Features
+
+* release to production ([2ae4125](https://github.com/twinfoundation/standards/commit/2ae4125f305d4714b50036eb8a0bd47e4100a7be))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @twin.org/standards-w3c-vcard bumped from ^0.0.0 to ^0.0.1
+    * @twin.org/standards-dublin-core bumped from ^0.0.0 to ^0.0.1
+
 ## [0.0.1-next.49](https://github.com/twinfoundation/standards/compare/standards-w3c-odrl-v0.0.1-next.48...standards-w3c-odrl-v0.0.1-next.49) (2025-06-18)
 
 
