@@ -1,5 +1,12 @@
 # @twin.org/standards-w3c-vcard - Changelog
 
+## 0.0.1 (2025-07-03)
+
+
+### Features
+
+* release to production ([2ae4125](https://github.com/twinfoundation/standards/commit/2ae4125f305d4714b50036eb8a0bd47e4100a7be))
+
 ## [0.0.1-next.49](https://github.com/twinfoundation/standards/compare/standards-w3c-vcard-v0.0.1-next.48...standards-w3c-vcard-v0.0.1-next.49) (2025-06-18)
 
 
