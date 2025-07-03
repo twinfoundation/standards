@@ -1,0 +1,7 @@
+{
+	"error": {
+		"ldContext": {
+			"missing": "JSON-LD with url \"{url}\" not found"
+		}
+	}
+}

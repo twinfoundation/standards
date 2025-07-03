@@ -1,0 +1,26 @@
+{
+	"baseUrl": "https://schema.twindev.org/did/",
+	"types": [
+		"./src/models/didCryptoSuites.ts",
+		"./src/models/didTypes.ts",
+		"./src/models/didVerificationMethodType.ts",
+		"./src/models/IDataIntegrityProof.ts",
+		"./src/models/IDidCredentialSchema.ts",
+		"./src/models/IDidCredentialStatus.ts",
+		"./src/models/IDidDocument.ts",
+		"./src/models/IDidDocumentVerificationMethod.ts",
+		"./src/models/IDidLabel.ts",
+		"./src/models/IDidPresentationVerification.ts",
+		"./src/models/IDidService.ts",
+		"./src/models/IDidVerifiableCredential.ts",
+		"./src/models/IDidVerifiablePresentation.ts",
+		"./src/models/IJsonWebSignature2020Proof.ts",
+		"./src/models/IMultikey.ts",
+		"./src/models/proofTypes.ts",
+		"./src/models/IProof.ts"
+	],
+	"externalReferences": {
+		"IJsonLd(.*)": "https://schema.twindev.org/json-ld/JsonLd$1",
+		"IJwk": "https://schema.twindev.org/framework/Jwk"
+	}
+}

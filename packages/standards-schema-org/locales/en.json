@@ -1,0 +1,26 @@
+{
+	"data-type-names": {
+		"https://schema.org/Text": "Text",
+		"https://schema.org/URL": "Url",
+		"https://schema.org/Integer": "Integer",
+		"https://schema.org/Float": "Float",
+		"https://schema.org/Boolean": "Boolean",
+		"https://schema.org/Date": "ISO Date",
+		"https://schema.org/DateTime": "ISO Date Time",
+		"https://schema.org/Time": "ISO Time",
+		"https://schema.org/image": "Image",
+		"https://schema.org/GeoCoordinates": "Geo Coordinates",
+		"https://schema.org/StructuredValue": "Structured Value"
+	},
+	"error": {
+		"validation": {
+			"geo": {
+				"coordinatesNotObject": "The geo coordinates must be an object",
+				"coordinatesLatitudeNumber": "The latitude value must be a number",
+				"coordinatesLatitudeRange": "The latitude value must be between -90 and 90",
+				"coordinatesLongitudeNumber": "The longitude value must be a number",
+				"coordinatesLongitudeRange": "The longitude value must be between -180 and 180"
+			}
+		}
+	}
+}
